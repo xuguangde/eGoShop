@@ -1,0 +1,46 @@
+<view class="page-section-spacing">
+  <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+    <view id="demo1" class="scroll-view-item_H">
+      <view class="warehouseImg">
+        <image src="/img/cqk96.png"></image>
+      </view>
+      <view class="warehouseName">
+        这是仓库1
+      </view>
+    </view>
+    <view id="demo1" class="scroll-view-item_H">
+      <view class="scroll-view-item_d">
+        <view class="warehouseImg">
+          <image src="/img/cqk96.png"></image>
+        </view>
+        <view class="warehouseName">
+          这是仓库1
+        </view>
+      </view>
+    </view>
+     <view id="demo1" class="scroll-view-item_H">
+      <view class="warehouseImg">
+        <image src="/img/cqk96.png"></image>
+      </view>
+      <view class="warehouseName">
+        这是仓库1
+      </view>
+    </view>
+     <view id="demo1" class="scroll-view-item_H">
+      <view class="warehouseImg">
+        <image src="/img/cqk96.png"></image>
+      </view>
+      <view class="warehouseName">
+        这是仓库1
+      </view>
+    </view>
+     <view id="demo1" class="scroll-view-item_H">
+      <view class="warehouseImg">
+        <image src="/img/cqk96.png"></image>
+      </view>
+      <view class="warehouseName">
+        这是仓库1
+      </view>
+    </view>
+  </scroll-view>
+</view>

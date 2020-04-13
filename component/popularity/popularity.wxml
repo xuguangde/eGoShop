@@ -1,0 +1,36 @@
+<view>
+  <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+    <view class="popularity">
+      <view class="popularityImg">
+        <image src="/img/rqsp232x64.png"></image>
+      </view>
+      <view class="popularityName">
+        这是油漆
+      </view>
+      <view class="price">
+        <view class="priceOne">
+          <text>￥</text>777.00
+        </view>
+        <view class="priceTwo">
+          销量: 1000
+        </view>
+      </view>
+    </view>
+    <view class="popularity">
+      <view class="popularityImg">
+        <image src="/img/rqsp232x64.png"></image>
+      </view>
+      <view class="popularityName">
+        这是油漆
+      </view>
+      <view class="price">
+        <view class="priceOne">
+          <text>￥</text>777.00
+        </view>
+        <view class="priceTwo">
+          销量: 1000
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

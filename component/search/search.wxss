@@ -1,0 +1,21 @@
+
+.searchConetnt {
+  font-size: 36rpx;
+}
+.searchImg image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+}
+.searchWidth {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  height: 68rpx;
+  border-radius: 68rpx;
+  width: 520rpx;
+}
+.serchPtext {
+  font-size: 30rpx;
+}

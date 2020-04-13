@@ -1,13 +1,52 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="content">
+  <view class="header">
+    <view class="location">
+      <view class="locationName">
+        铁西区
+      </view>
+      <view class="jtcImg">
+        <image src="/img/jtc20.png"></image>
+      </view>
+    </view>
+    <search bind:search="search" ></search>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class='carousel'> 
+    <swiper class='carousel_swiper' bindchange='swiperChange' indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='2000' circular='true'>
+      <block wx:for="{{swiperImgUrls}}" wx:key="index">
+        <swiper-item >
+          <image class="carouselImg" src='{{item.img}}' mode='aspectFill' ></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 自定义指示点dot -->
+    <view class="dots">
+      <block wx:for="{{swiperImgUrls}}" wx:key="unique">
+        <view class='dot {{swiperCurrent == index ? "active" : ""}}'></view>
+      </block>
+    </view>
   </view>
+  <notice></notice>
+  <warehouse></warehouse>
+  <view class="arrondi">
+    <view class="xsms">
+      <image src="/img/xsms340x280.png"></image>
+    </view>
+    <view class="arrondiRight">
+      <view class="xsmsRight">
+        <image src="/img/xsms340x280.png"></image>
+      </view>
+      <view class="xsmsRight">
+        <image src="/img/xsms340x280.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="title">
+    <image src="/img/rqsp232x64.png"></image>
+  </view>
+  <popularity></popularity>
+  <view class="title">
+    <image src="/img/xpss234x64.png"></image>
+  </view>
+  <goodslist></goodslist>
 </view>

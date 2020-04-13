@@ -1,0 +1,51 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 140rpx;
+  margin-bottom: 128rpx;
+}
+.content {
+  padding: 0 60rpx;
+}
+.logo image{
+  height: 140rpx;
+  width: 140rpx;
+}
+.img image{
+  height: 44rpx;
+  width: 44rpx;
+}
+.phone,.img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.num {
+  font-size: 30rpx;
+  color: #333333;
+  border-right: 2rpx #999999 solid;
+  padding-right: 20rpx;
+  margin-left: 20rpx;
+}
+.phoneNum {
+  margin-left: 20rpx;
+}
+.yanzheng {
+  font-size: 30rpx;
+  color: #de443a;
+}
+.phoneNum input {
+  width: 350rpx;
+  font-size: 30rpx;
+}
+.inputPclass {
+  font-size: 30rpx;
+  color: #999999;
+}
+.two {
+  height: 98rpx;
+  border-bottom: 2rpx #efefef solid;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}

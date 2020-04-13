@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "search": "/component/search/search",
+    "notice": "/component/notice/notice",
+    "warehouse": "/component/warehouse/warehouse",
+    "popularity": "/component/popularity/popularity",
+    "goodslist": "/component/goodslist/goodslist"
+  }
 }

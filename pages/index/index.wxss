@@ -1,8 +1,77 @@
 /**index.wxss**/
+page{
+  background: #fff;
+}
 .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  background: #ffffff;
+  opacity: 0.5;
+  height: 10rpx;
+  width: 10rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+swiper-item{
+  height: 420rpx;
+}
+
+.carousel_swiper {
+  height: 420rpx;
+}
+
+.carousel_swiper image {
+  height: 420rpx;
+  width: 750rpx;
+}
+
+.active {
+  background: #ffffff;
+  height: 16rpx;
+  width: 16rpx;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.dots {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 450rpx;
+  right: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+}
+
+.carousel {
+  margin-bottom: 20rpx;
+}
+
+.jtcImg image {
+  height: 20rpx;
+  width: 20rpx;
+  margin-left: 10rpx;
+}
+
+.locationName {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
 }
 
 .userinfo-avatar {
@@ -18,4 +87,31 @@
 
 .usermotto {
   margin-top: 200px;
+}
+
+.xsms image{
+  width: 340rpx;
+  height: 280rpx;
+}
+.xsmsRight image {
+  width: 360rpx;
+  height: 135rpx;
+}
+
+.arrondi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.title {
+  width: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title image {
+  height: 64rpx;
+  width: 232rpx;
+  padding: 55rpx 0 30rpx 0;
 }

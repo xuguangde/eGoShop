@@ -1,0 +1,44 @@
+<!--pages/logon/logon.wxml-->
+<view class="content">
+  <view class="one">
+    <view class="logo">
+      <image src="/img/tu220.png"></image>
+    </view>
+    <view class="two">
+      <view class="phone">
+        <view class="img">
+          <image src="/img/sj44.png"></image>
+        </view>
+        <view class="num">
+          +86
+        </view>
+        <view class="phoneNum">
+          <input placeholder-class="inputPclass" placeholder="请输入手机号" type="number"></input>
+        </view>
+      </view>
+    </view>
+    <view class="two">
+      <view class="phone">
+        <view class="img">
+          <image src="/img/yzm44.png"></image>
+        </view>
+        <view class="phoneNum">
+          <input placeholder-class="inputPclass" placeholder="请输入验证码" type="number"></input>
+        </view>
+        <view class="yanzheng">
+          获取验证码
+        </view>
+      </view>
+    </view>
+    <view class="two">
+      <view class="phone">
+        <view class="img">
+          <image src="/img/yqm44.png"></image>
+        </view>
+        <view class="phoneNum">
+          <input placeholder-class="inputPclass" placeholder="请输入邀请码" type="number"></input>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

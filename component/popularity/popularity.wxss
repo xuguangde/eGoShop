@@ -1,0 +1,27 @@
+.popularityImg image {
+  height: 250rpx;
+  width: 425rpx;
+}
+.popularityName {
+  font-size: 30rpx;
+  color: #333333;
+}
+.priceOne {
+  color: #de443a;
+  font-size: 36rpx;
+}
+.priceOne text {
+  font-size: 24rpx;
+}
+.priceTwo {
+  font-size: 24rpx;
+  color: #999;
+}
+.scroll-view_H {
+  white-space: nowrap;
+}
+.popularity {
+  margin-left: 20rpx;
+  display: inline-block;
+  width: 425rpx;
+}

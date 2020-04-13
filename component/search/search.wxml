@@ -1,0 +1,10 @@
+<view class="searchConetnt">
+  <view class="searchWidth">
+    <view class="searchImg">
+      <image src="/img/ss32.png"></image>
+    </view>
+    <view class="searchInput">
+      <input bindinput="inputOn" placeholder-class="serchPtext" placeholder="请输入商品名称"></input>
+    </view>
+  </view>
+</view>

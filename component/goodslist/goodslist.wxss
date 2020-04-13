@@ -1,0 +1,40 @@
+.goods {
+  display: flex;
+  justify-content: space-between;
+  background: #f6f6f6;
+  padding: 0 20rpx;
+  flex-wrap: wrap;
+}
+.goodsBack {
+  background: #ffffff;
+  width: 345rpx;
+  margin-bottom: 20rpx;
+  border-radius: 12rpx;
+}
+.goodsImg image {
+  height: 260rpx;
+  width: 345rpx;
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
+}
+.goodsName {
+  font-size: 30rpx;
+  color: #333;
+}
+.goodsPrice {
+  display: flex;
+  align-items: center;
+  font-size: 36rpx;
+  color: #de443a;
+  padding-top: 15rpx;
+  padding-bottom: 30rpx;
+}
+.goodsNnit {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 12rpx;
+}
+.goodsPrice text,.goodsPrice view{
+  color: #de443a;
+  font-size: 24rpx;
+}

@@ -1,0 +1,8 @@
+<view>
+  <view class="notification_bar">
+    <view class="gong">公</view>
+    <view class="gao">告</view>
+    <image class="bar_left" src="/img/lb20.png" />
+    <view class="bar_text" animation="{{animationData}}">{{content}}</view>
+  </view>
+</view>
