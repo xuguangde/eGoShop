@@ -1,2 +1,18 @@
-<!--pages/shop/shop.wxml-->
-<text>pages/shop/shop.wxml</text>
+<!--index.wxml-->
+<view class="content">
+  <view class="header">
+    <view class="location">
+      <view class="locationName">
+        铁西区
+      </view>
+      <view class="jtcImg">
+        <image src="/img/jtc20.png"></image>
+      </view>
+    </view>
+    <search bind:search="search" ></search>
+  </view>
+  <view class="shopTwo">
+    <switchText bind:switch="switch" switchText="{{switchText}}"></switchText>
+  </view>
+  <shopList></shopList>
+</view>

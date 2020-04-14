@@ -1,0 +1,13 @@
+page {
+  background: #f6f6f6;
+}
+.searchText {
+  font-size: 36rpx;
+  color: #333;
+  margin-left: 40rpx;
+}
+.searchHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

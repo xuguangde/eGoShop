@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "搜索",
+  "usingComponents": {
+    "search": "/component/search/search",
+    "statusBar": "/component/statusBar/statusBar",
+    "searchList": "/component/searchList/searchList"
+  }
+}

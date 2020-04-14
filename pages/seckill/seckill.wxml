@@ -1,0 +1,36 @@
+<view>
+  <view>
+    <view class="backImg">
+      <image src="/img/di750x244.png"></image>
+    </view>
+    <view class="seckill">
+      <view class="title">
+        <view class="onTitle">
+          <view class="onOpen">正在疯抢</view>
+          <view class="onOpenH"></view>
+        </view>
+        <view class="onTitle">
+          <view class="onOpen">即将开始</view>
+          <view class="onOpenH"></view>
+        </view>
+      </view>
+      <view class="status">
+        <view class="nzImg">
+          <image src="/img/nz40.png"></image>
+        </view>
+        <view class="item">
+          17:30
+        </view>
+        <view class="onOpen">
+          正在疯抢
+        </view>
+      </view>
+      <view>
+        <view class="end">距离结束</view>
+        <view>00:</view>
+        <view>00:</view>
+        <view>00</view>
+      </view>
+    </view>
+  </view>
+</view>

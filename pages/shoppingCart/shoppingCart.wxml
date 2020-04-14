@@ -1,2 +1,201 @@
-<!--pages/shoppingCart/shoppingCart.wxml-->
-<text>pages/shoppingCart/shoppingCart.wxml</text>
+<view class="cartContent">
+  <view class="cart">
+    <view class="title">
+      <view class="opt">
+        <!-- <image src="/img/xzb44.png"></image> -->
+        <image src="/img/xza44.png"></image>
+      </view>
+      <view class="shopName">
+        这是店铺名称
+      </view>
+    </view>
+    <view class="goods">
+      <view class="opt">
+        <!-- <image src="/img/xzb44.png"></image> -->
+        <image src="/img/xza44.png"></image>
+      </view>
+      <view class="goodsImg">
+        <image src="/img/tu220.png"></image>
+      </view>
+      <view class="goodsRight">
+        <view class="goodsRightTop">
+          <view class="goodsName">
+            这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称
+          </view>
+          <view class="goodsDelete">
+            <image src="/img/sc44.png"></image>
+          </view>
+        </view>
+        <view class="goodsSpecs">
+          规格: 20/kg
+        </view>
+        <view class="goodsCart">
+          <view class="goodsPrice fontColor">
+            <view class="qian">￥</view>
+            <view class="goodsPriceText">2999</view>
+          </view>
+          <view class="goodsBottom">
+            <view class="goodsAdd">
+              <image src="/img/jian20.png"></image>
+            </view>
+            <view class="goodsNum">1</view>
+            <view class="goodsAdd">
+              <image src="/img/jia20.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="goods">
+      <view class="opt">
+        <!-- <image src="/img/xzb44.png"></image> -->
+        <image src="/img/xza44.png"></image>
+      </view>
+      <view class="goodsImg">
+        <image src="/img/tu220.png"></image>
+      </view>
+      <view class="goodsRight">
+        <view class="goodsRightTop">
+          <view class="goodsName">
+            这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称
+          </view>
+          <view class="goodsDelete">
+            <image src="/img/sc44.png"></image>
+          </view>
+        </view>
+        <view class="goodsSpecs">
+          规格: 20/kg
+        </view>
+        <view class="goodsCart">
+          <view class="goodsPrice fontColor">
+            <view class="qian">￥</view>
+            <view class="goodsPriceText">2999</view>
+          </view>
+          <view class="goodsBottom">
+            <view class="goodsAdd">
+              <image src="/img/jian20.png"></image>
+            </view>
+            <view class="goodsNum">1</view>
+            <view class="goodsAdd">
+              <image src="/img/jia20.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cart">
+    <view class="title">
+      <view class="opt">
+        <!-- <image src="/img/xzb44.png"></image> -->
+        <image src="/img/xza44.png"></image>
+      </view>
+      <view class="shopName">
+        这是店铺名称
+      </view>
+    </view>
+    <view class="goods">
+      <view class="opt">
+        <!-- <image src="/img/xzb44.png"></image> -->
+        <image src="/img/xza44.png"></image>
+      </view>
+      <view class="goodsImg">
+        <image src="/img/tu220.png"></image>
+      </view>
+      <view class="goodsRight">
+        <view class="goodsRightTop">
+          <view class="goodsName">
+            这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称
+          </view>
+          <view class="goodsDelete">
+            <image src="/img/sc44.png"></image>
+          </view>
+        </view>
+        <view class="goodsSpecs">
+          规格: 20/kg
+        </view>
+        <view class="goodsCart">
+          <view class="goodsPrice fontColor">
+            <view class="qian">￥</view>
+            <view class="goodsPriceText">2999</view>
+          </view>
+          <view class="goodsBottom">
+            <view class="goodsAdd">
+              <image src="/img/jian20.png"></image>
+            </view>
+            <view class="goodsNum">1</view>
+            <view class="goodsAdd">
+              <image src="/img/jia20.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="goods">
+      <view class="opt">
+        <!-- <image src="/img/xzb44.png"></image> -->
+        <image src="/img/xza44.png"></image>
+      </view>
+      <view class="goodsImg">
+        <image src="/img/tu220.png"></image>
+      </view>
+      <view class="goodsRight">
+        <view class="goodsRightTop">
+          <view class="goodsName">
+            这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称
+          </view>
+          <view class="goodsDelete">
+            <image src="/img/sc44.png"></image>
+          </view>
+        </view>
+        <view class="goodsSpecs">
+          规格: 20/kg
+        </view>
+        <view class="goodsCart">
+          <view class="goodsPrice fontColor">
+            <view class="qian">￥</view>
+            <view class="goodsPriceText">2999</view>
+          </view>
+          <view class="goodsBottom">
+            <view class="goodsAdd">
+              <image src="/img/jian20.png"></image>
+            </view>
+            <view class="goodsNum">1</view>
+            <view class="goodsAdd">
+              <image src="/img/jia20.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="footer">
+    <view class="footerOne">
+      <view class="contenrOne">
+        <view class="opt">
+          <!-- <image src="/img/xzb44.png"></image> -->
+          <image src="/img/xza44.png"></image>
+        </view>
+        <view class="ctrl">
+          全选
+        </view>
+      </view>
+      <view class="footerTwo">
+        <view class="heji">
+          <view class="hejiOne">
+            <view class="hejiText">
+              合计: 
+            </view>
+            <view class="footerPrice">
+              <view class="fontColor">￥</view>
+              <view class="fontColor">2222</view>
+            </view>
+          </view>
+          <view class="goShopping">
+            去结算
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>

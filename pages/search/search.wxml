@@ -1,0 +1,10 @@
+<view>
+  <view class="searchHeader">
+    <search bind:search="search" width="540rpx"></search>
+    <view class="searchText">
+      搜索
+    </view>
+  </view>
+</view>
+<statusBar></statusBar>
+<searchList></searchList>

@@ -1,5 +1,5 @@
 <view class="searchConetnt">
-  <view class="searchWidth">
+  <view class="searchWidth" style="width:{{width}}">
     <view class="searchImg">
       <image src="/img/ss32.png"></image>
     </view>

@@ -4,7 +4,14 @@
     "pages/logon/logon",
     "pages/my/my",
     "pages/shop/shop",
+    "pages/search/search",
     "pages/shoppingCart/shoppingCart",
+    "pages/seckill/seckill",
+    "component/shopList/shopList",
+    "component/statusBar/statusBar",
+    "component/searchList/searchList",
+    "component/switchText/switchText",
+    "component/seckill/seckill",
     "pages/logs/logs"
   ],
   "window":{

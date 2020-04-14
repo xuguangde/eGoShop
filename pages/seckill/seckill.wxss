@@ -1,0 +1,53 @@
+.backImg image {
+  height: 244rpx;
+  width: 750rpx;
+}
+.seckill {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.nzImg {
+  display: flex;
+  align-items: center;
+}
+.nzImg image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.onTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 116rpx;
+  
+}
+.onOpen {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #ffffff;
+}
+.onOpenH {
+  height: 6rpx;
+  width: 50rpx;
+  background: #ffffff;
+  margin-top: 20rpx;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item {
+  font-size: 36rpx;
+  color: #fff286;
+}
+.end {
+  font-size: 30rpx;
+  color: #ffffff;
+}

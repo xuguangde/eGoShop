@@ -9,7 +9,7 @@
         <image src="/img/jtc20.png"></image>
       </view>
     </view>
-    <search bind:search="search" ></search>
+    <search bind:search="search" width="520rpx" ></search>
   </view>
   <view class='carousel'> 
     <swiper class='carousel_swiper' bindchange='swiperChange' indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='2000' circular='true'>
