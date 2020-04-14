@@ -1,2 +1,156 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="content">
+  <view class="header">
+    <image class="headbgImage" src="/img/di750x280.png" ></image>
+    <view class='headerContent'>
+          <text>13812345678\n</text>
+
+          <view class="num">
+            <text style="font-size: 10px;">邀请码：</text> 
+            <text style="font-size: 10px;">789789</text>
+            <image class="copyLogo" src="/img/fz44.png"></image>
+          </view>
+         
+          <view class="yuanjiao">
+            <text>普通用户</text>
+          </view>
+    </view>
+  </view>
+
+  <view class="middle-num">
+    <view class="oner">
+        <view class="zi">
+          <text class="zier">3  <text class="zisan">张</text></text>
+          <text class="quan">优惠券</text>
+        </view>
+    </view>
+    <view class="twoer">|</view>
+    <view class="three">
+        <view class="zi">
+          <text class="zier">2000\n</text>
+          <text class="quan">积分</text>
+        </view>
+    </view> 
+  </view>   
+
+  <view class="mydingdan">
+    <view class="row1">
+        <view class="left">我的订单</view>
+        <view class="right">查看全部</view>
+        <image src="/img/jty20.png" class="jian"></image>
+    </view>
+  
+    <view style="display:flex;margin-top:20rpx" class="zhifu">
+        <view>
+              <image src="/img/dzfa56.png"></image>
+              <text>待支付</text>
+        </view>
+        <view>
+              <image src="/img/dfha56.png"></image>
+              <text>待发货</text>
+        </view>
+        <view>
+              <image src="/img/dsha56.png"></image>
+              <text>待收货</text>
+        </view>
+        <view>
+              <image src="/img/ywca56.png"></image>
+              <text>已完成</text>
+        </view>
+        <view>
+              <image src="/img/sha56.png"></image>
+              <text>售后</text>
+        </view>
+    </view>
+
+
+    <view class="liebiao">
+        <view class="row1">
+          <view class="left"> 
+              <image src="/img/yj40.png"></image>
+          </view>
+          
+          <view class="middle"  bindtap="wdmoney" >
+              <text >我的佣金</text>
+          </view>
+
+          <view class="right">
+              <image src="/img/jty20.png" ></image>
+          </view>
+        </view>
+                <view class="row1">
+          <view class="left"> 
+              <image src="/img/sc40.png"></image>
+          </view>
+          
+          <view class="middle">
+              <text >我的收藏</text>
+          </view>
+
+          <view class="right">
+              <image src="/img/jty20.png" ></image>
+          </view>
+        </view>
+          <view class="row1">
+          <view class="left"> 
+              <image src="/img/dzgl40.png"></image>
+          </view>
+          
+          <view class="middle">
+              <text >地址管理</text>
+          </view>
+
+          <view class="right">
+              <image src="/img/jty20.png" ></image>
+          </view>
+        </view>
+                <view class="row1">
+          <view class="left"> 
+              <image src="/img/sjrz40.png"></image>
+          </view>
+          
+          <view class="middle">
+              <text >商家入驻</text>
+          </view>
+
+          <view class="right">
+              <image src="/img/jty20.png" ></image>
+          </view>
+        </view>
+          <view class="row1">
+          <view class="left"> 
+              <image src="/img/gywm40.png"></image>
+          </view>
+          
+          <view class="middle">
+              <text >关于我们</text>
+          </view>
+
+          <view class="right">
+              <image src="/img/jty20.png" ></image>
+          </view>
+        </view>
+                <view class="row1">
+          <view class="left"> 
+              <image src="/img/kf40.png"></image>
+          </view>
+          
+          <view class="middle">
+              <text >客服电话</text>
+          </view>
+
+          <view class="right">
+              <image src="/img/jty20.png" ></image>
+          </view>
+        </view>
+
+
+    </view>
+
+
+  </view>
+
+ 
+
+
+</view>

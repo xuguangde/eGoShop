@@ -1,4 +1,4 @@
-// pages/my/my.js
+// pages/mymoney/mymoney.js
 Page({
 
   /**
@@ -7,19 +7,6 @@ Page({
   data: {
 
   },
-
-  wdmoney: function (e) {
-    wx.redirectTo({
-      url: '../../mymoney/mymoney',
-    })
-
-    // var ccc = e.currentTarget.dataset.id;//获取view中的药用currentTarget
-    // console.log(ccc);
-    // wx.navigateTo({
-    //   url: '../../kantie/kantie?Id=' + ccc,
-    // })
-  },
-
 
   /**
    * 生命周期函数--监听页面加载
