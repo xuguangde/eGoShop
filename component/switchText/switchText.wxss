@@ -1,0 +1,27 @@
+.switchTitle {
+  color: #de443a;
+  font-weight: bold;
+}
+.switchTitleTen {
+  color: #666666;
+  margin-bottom: 20rpx;
+}
+.switchTextC {
+  height: 6rpx;
+  width: 50rpx;
+  background: #de443a;
+  margin-top: 20rpx;
+}
+.switchTextOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.switchText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30rpx;
+  padding-top: 30rpx;
+}

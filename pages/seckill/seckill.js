@@ -1,11 +1,11 @@
-// pages/shop/shop.js
+// pages/seckill/seckill.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    switchText:[{text:'全部店铺',id:'0'},{text:'附近的店',id:'1'},{text:'人气排名',id:'2'}]
+
   },
 
   /**
@@ -14,10 +14,7 @@ Page({
   onLoad: function (options) {
 
   },
-  // 接收组件参数
-  switch(e){
-    console.log(e.detail)
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

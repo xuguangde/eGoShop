@@ -1,0 +1,34 @@
+.statusBarOne,.statusBarContent,.statusBarText,.statusBarjtb{
+  display: flex;
+  align-items: center;
+}
+.statusBarContent {
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 62rpx;
+}
+.statusBarText {
+  height: 88rpx;
+  background: #ffffff;
+}
+.statusBarText {
+  font-size: 26rpx;
+  color: #333333;
+}
+.fontColor {
+  color: #de443a;
+}
+.statusBarjtb image {
+  height: 20rpx;
+  width: 20rpx;
+  margin-left: 10rpx;
+}
+.statusBarjtbjtd {
+  display: flex;
+  align-items: center;
+}
+.statusBarjtbjtd image {
+  width: 20rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}

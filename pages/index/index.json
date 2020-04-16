@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "e件购商城",
   "usingComponents": {
     "search": "/component/search/search",
     "notice": "/component/notice/notice",

@@ -1,0 +1,30 @@
+<view class="shopListContent">
+  <view class="shopList">
+    <view class="shopListTwo">
+      <view class="shopListImg">
+        <image src="/img/tu100.png"></image>
+      </view>
+      <view  class="shopListOne">
+        <view class="shopListTitle">
+          这是标题
+        </view>
+        <view class="shopListText">
+          产品详情主要简介
+        </view>
+      </view>
+    </view>
+    <view class="shopTree">
+      <view class="shopListm">
+        444m
+      </view>
+      <view class="shopListOpen">
+        <view class="shopButton">
+          进店 
+        </view>
+        <view class="shopListJt">
+          <image src="/img/jt20.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

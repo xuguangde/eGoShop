@@ -1,0 +1,86 @@
+.searchListGoodsImg image {
+  height: 140rpx;
+  width: 140rpx;
+  border-radius: 12rpx;
+  margin-right: 20rpx;
+}
+.searchListOne,.searchListGoodsPrice,.searchListNumber{
+  display: flex;
+  align-items: center;
+}
+.searchListTitle text{
+  font-size: 18rpx;
+  color: #ffffff;
+  background: #fc594e;
+  border-radius: 4rpx;
+  margin-right: 8rpx;
+  height: 20rpx;
+  width: 42rpx;
+  text-align: center;
+  line-height: 20rpx;
+}
+.searchListOne {
+  padding: 0 20rpx;
+}
+.searchListNum {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.searchListTitleText {
+  display: flex;
+}
+.searchListTitle view:nth-child(1){
+  font-size: 24rpx;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.searchListGoodsPrice view:nth-child(1){
+  display: flex;
+  font-size: 24rpx;
+  align-items: flex-end;
+}
+.searchListGoodsPrice view:nth-child(2){
+  font-size: 36rpx;
+  display: flex;
+  align-items: flex-end;
+  line-height: 36rpx;
+}
+.searchListGoodsPrice view:nth-child(3){
+  margin-left: 20rpx;
+}
+.searchListNumOne {
+  font-size: 24rpx;
+  color: #999999;
+}
+.searchListRight {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 130rpx;
+}
+.searchListContent {
+  background: #ffffff;
+  border-radius: 12rpx;
+  width: 710rpx;
+  height: 180rpx;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+
+.searchListTitle,.searchListContent,.searchListGoodsImg,.searchList {
+  display: flex;
+  align-items: center;
+}
+.searchList {
+  justify-content: center;
+  flex-direction: column;
+}
+.searchListGoodsPrice {
+  align-items: flex-end;
+}

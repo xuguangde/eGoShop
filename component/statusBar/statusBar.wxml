@@ -1,0 +1,27 @@
+<view class="statusBarText">
+  <view class="statusBarContent">
+    <view class="statusBarOne" bindtap="status" data-index="0">
+      <view class="statusBarText {{index == 0?'fontColor':''}}">
+        综合排序
+      </view>
+      <view class="statusBarjtb">
+        <image wx:if="{{index == 0}}" src="/img/jtb20.png"></image>
+        <image wx:else src="/img/jta20.png"></image>
+      </view>
+    </view>
+    <view class="statusBarOne" bindtap="status" data-index="1">
+      <view class="statusBarText {{index == 1?'fontColor':''}}">
+        销量
+      </view>
+    </view>
+    <view class="statusBarOne" bindtap="status" data-index="2">
+      <view class="statusBarText {{index == 2?'fontColor':''}}">
+        人气排名
+      </view>
+      <view class="statusBarjtbjtd">
+        <image wx:if="{{index == 2}}" src="/img/jte20x30.png"></image>
+        <image wx:else src="/img/jtd20x30.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
