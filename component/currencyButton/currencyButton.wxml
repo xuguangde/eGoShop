@@ -1,0 +1,5 @@
+<view class="currencyButton">
+  <view class="currencyButtonText" style="width:{{width}}" bindtap="onClick">
+    {{text}}
+  </view>
+</view>

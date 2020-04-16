@@ -1,4 +1,4 @@
-// component/seckill/seckill.js
+// component/seckillList/seckillList.js
 Page({
 
   /**

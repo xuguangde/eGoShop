@@ -1,50 +1,26 @@
 <view class="goods">
-  <view class="goodsBack">
-    <view>
-      <view class="goodsImg">
-        <image src="/img/tu220.png"></image>
-      </view>
-      <view class="goodsName">
-        这是商品名称
-      </view>
-      <view class="goodsNnit">
-        20/KG
-      </view>
-      <view class="goodsPrice">
-        <text>￥</text>777.00<view>/通</view>
-      </view>
-    </view>
-  </view>
-  <view class="goodsBack">
-    <view>
-      <view class="goodsImg">
-        <image src="/img/tu220.png"></image>
-      </view>
-      <view class="goodsName">
-        这是商品名称
-      </view>
-      <view class="goodsNnit">
-        20/KG
-      </view>
-      <view class="goodsPrice">
-        <text>￥</text>777.00<view>/通</view>
+  <block wx:for="{{goodsList}}" wx:key="index">
+    <view class="goodsBack">
+      <view>
+        <view class="goodsImg">
+          <image src="{{item.img_id}}"></image>
+        </view>
+        <view class="goodsName">
+          {{item.goods_name}}
+        </view>
+        <!-- <view class="goodsNnit">
+          20/KG
+        </view> -->
+        <view class="goodsNnit">
+          已售：{{item.sales}}
+        </view>
+        <view class="goodsPrice">
+          <text>￥</text>777.00<view>/通</view>
+        </view>
+        <view class="shopCart" wx:if="{{cart == true}}">
+          <image src="/img/gwc58.png"></image>
+        </view>
       </view>
     </view>
-  </view>
-  <view class="goodsBack">
-    <view>
-      <view class="goodsImg">
-        <image src="/img/tu220.png"></image>
-      </view>
-      <view class="goodsName">
-        这是商品名称
-      </view>
-      <view class="goodsNnit">
-        20/KG
-      </view>
-      <view class="goodsPrice">
-        <text>￥</text>777.00<view>/通</view>
-      </view>
-    </view>
-  </view>
+  </block>
 </view>

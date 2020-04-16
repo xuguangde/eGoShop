@@ -1,0 +1,94 @@
+page {
+  background: #f6f6f6;
+}
+.headerLeft,.shopCollect,.header,.headerImg,.title,.hot,.shopDetailsFont{
+  display: flex;
+  align-items: center;
+}
+.shopDetailsFont {
+  justify-content: center;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+.hot {
+  padding: 30rpx 0 20rpx 20rpx;
+}
+.headerImg image {
+  height: 100rpx;
+  width: 100rpx;
+  margin-right: 20rpx;
+}
+.shopCollect {
+  justify-content: flex-end;
+}
+.shopHotText {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.header {
+  justify-content: space-between;
+  padding: 40rpx 20rpx 20rpx;
+  background: #ffffff;
+}
+.shopName {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+}
+.goodsNum {
+  font-size: 24rpx;
+  color: #333333;
+}
+.shopImg image {
+  height: 44rpx;
+  width: 44rpx;
+}
+.shopLookNum {
+  color: #999999;
+  font-size: 24rpx;
+}
+
+.titleImg image {
+  width: 56rpx;
+  height: 56rpx;
+}
+.titleText {
+  font-size: 20rpx;
+  color: #999999;
+}
+
+.shopHotImg image {
+  width: 66rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+}
+.shopDetailsText {
+  padding: 0 20rpx;
+}
+.shopDetailsHeng {
+  height: 1rpx;
+  color: #cccccc;
+  width: 100rpx;
+}
+.shopDetailsFontOne {
+  font-size: 26rpx;
+  color: #666666;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.title {
+  padding: 0 54rpx;
+  height: 128rpx;
+  justify-content: space-between;
+  background: #ffffff;
+  margin-top: 20rpx;
+}
+.fontColor {
+  color: #de443a;
+}
+.titleOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

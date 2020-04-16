@@ -25,12 +25,11 @@
           正在疯抢
         </view>
       </view>
-      <view>
+      <view class="endTime">
         <view class="end">距离结束</view>
-        <view>00:</view>
-        <view>00:</view>
-        <view>00</view>
+        <countdown></countdown>
       </view>
     </view>
   </view>
+  
 </view>

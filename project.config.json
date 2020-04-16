@@ -58,16 +58,16 @@
 			"current": -1,
 			"list": [
 				{
-					"id": -1,
-					"name": "pages/logs/logs",
-					"pathName": "pages/logs/logs",
+					"id": 0,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "注册登录",
-					"pathName": "pages/logon/logon",
+					"id": 1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
 					"query": "",
 					"scene": null
 				},
@@ -103,6 +103,28 @@
 					"id": -1,
 					"name": "秒杀",
 					"pathName": "pages/seckill/seckill",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "店铺详情",
+					"pathName": "pages/shopDetails/shopDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "礼包",
+					"pathName": "pages/giftPack/giftPack",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "套餐礼包",
+					"pathName": "pages/giftPack/giftPack",
+					"query": "",
 					"scene": null
 				}
 			]

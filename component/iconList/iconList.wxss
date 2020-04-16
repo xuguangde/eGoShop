@@ -1,0 +1,38 @@
+.iconList {
+  height: 100rpx;
+  background: #ffffff;
+  padding: 0 30rpx;
+}
+.iconList,.iconListContent,.iconListOne,.iconListPhone,.iconListImg {
+  display: flex;
+  align-items: center;
+}
+.iconListPhone {
+  border: 2rpx #14bf63 solid;
+  width: 120rpx;
+  height: 48rpx;
+  border-radius: 48rpx;
+}
+.iconListContent {
+  width: 100%;
+  justify-content: space-between;
+}
+.iconListImg image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 20rpx;
+}
+.iconListName {
+  font-size: 26rpx;
+  color: #333333;
+}
+.iconListPhoneImg image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.iconListPhoneText {
+  font-size: 26rpx;
+  color: #14bf63;
+}

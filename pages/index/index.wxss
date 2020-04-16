@@ -47,7 +47,7 @@ swiper-item{
   position: absolute;
   display: flex;
   align-items: center;
-  top: 450rpx;
+  top: 480rpx;
   right: 0;
 }
 
@@ -57,6 +57,7 @@ swiper-item{
   justify-content: space-between;
   padding: 0 30rpx;
   margin-bottom: 20rpx;
+  margin-top: 20rpx;
 }
 
 .carousel {
@@ -115,4 +116,88 @@ swiper-item{
   height: 64rpx;
   width: 232rpx;
   padding: 55rpx 0 30rpx 0;
+}
+/* 
+  弹出红包样式
+*/
+.redPackListImg,.redPackListNum,.redPackListTime,.redPackListImgOne,.redPackListImgTwo{
+  display: flex;
+  align-items: center;
+}
+.redPackListImg {
+  justify-content: center;
+}
+.redPackListNum,.redPackListTime{
+  justify-content: space-between;
+}
+.redPack {
+  background: #f6f6f6;
+  height: 866rpx;
+  width: 630rpx;
+  border-radius: 12rpx;
+}
+.redPackImg image{
+  height: 240rpx;
+  width: 630rpx;
+}
+.redPackListImgOne image{
+  height: 162rpx;
+  width: 426rpx;
+}
+.redPackListImgTwo image {
+  height: 162rpx;
+  width: 156rpx;
+}
+.redPackButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.redPackListOne {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.redPackListText {
+  position: absolute;
+  top: 0;
+  width: 582rpx;
+  padding: 20rpx 0;
+}
+.redPackListTextTitle {
+  font-size: 30rpx;
+  color: #333333;
+}
+.redPackListPrice {
+  margin-right: 20rpx;
+  height: 60rpx;
+  display:table-cell;
+}
+.redPackListNum,.redPackListTime{
+  padding: 0 30rpx;
+}
+.redPackListIcon,.redPackListStatus{
+  font-size: 24rpx;
+  color: #ffffff;
+}
+.redPackListTimeNum {
+  font-size: 24rpx;
+  color: #999999;
+}
+.redPackListPriceNum {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #ffffff;
+}
+.redPackListIcon,.redPackListPriceNum{
+  height: 60rpx;
+  display:table-cell;
+}
+.redPackButtomText,.redPackButtomTextRed{
+  font-size: 26rxp;
+  margin-top: 30rpx;
+}
+.redPackButtomText {
+  color: #999999;
 }

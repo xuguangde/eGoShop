@@ -25,6 +25,7 @@
   width: 710rpx;
   justify-content: space-between;
   height: 140rpx;
+  margin-top: 20rpx;
 }
 .shopListOne {
   margin-left: 20rpx;

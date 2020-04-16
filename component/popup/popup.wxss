@@ -1,0 +1,49 @@
+/* 设置背景遮罩层样式 */
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* 设置遮罩内容样式 */
+.maskContent {
+  width: 70%;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30rpx;
+}
+/* 设置关闭按钮图片的位置 */
+.closeImg {
+  position: fixed;
+  top: 40rpx;
+  right: 40rpx;
+}
+/* 设置关闭按钮宽高 */
+.closeImg_image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.btn{
+  width: 80%;
+  margin: 20rpx auto;
+  background: #ff6600;
+  color: #fff;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  text-align: center;
+  border-radius: 3px;
+}
+.input{
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 28rpx;
+  padding: 0 10rpx;
+  margin: 20rpx 0;
+  line-height: 60rpx;
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "套餐里包",
+  "usingComponents": {
+    "goodslist": "/component/goodslist/goodslist"
+  }
+}

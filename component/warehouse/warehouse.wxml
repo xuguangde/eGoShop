@@ -1,46 +1,14 @@
 <view class="page-section-spacing">
   <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
-    <view id="demo1" class="scroll-view-item_H">
-      <view class="warehouseImg">
-        <image src="/img/cqk96.png"></image>
-      </view>
-      <view class="warehouseName">
-        这是仓库1
-      </view>
-    </view>
-    <view id="demo1" class="scroll-view-item_H">
-      <view class="scroll-view-item_d">
+    <block wx:for="{{warehouse}}" wx:key="index">
+      <view id="demo1" class="scroll-view-item_H">
         <view class="warehouseImg">
-          <image src="/img/cqk96.png"></image>
+          <image src="{{item.pic}}"></image>
         </view>
         <view class="warehouseName">
-          这是仓库1
+          {{item.name}}
         </view>
       </view>
-    </view>
-     <view id="demo1" class="scroll-view-item_H">
-      <view class="warehouseImg">
-        <image src="/img/cqk96.png"></image>
-      </view>
-      <view class="warehouseName">
-        这是仓库1
-      </view>
-    </view>
-     <view id="demo1" class="scroll-view-item_H">
-      <view class="warehouseImg">
-        <image src="/img/cqk96.png"></image>
-      </view>
-      <view class="warehouseName">
-        这是仓库1
-      </view>
-    </view>
-     <view id="demo1" class="scroll-view-item_H">
-      <view class="warehouseImg">
-        <image src="/img/cqk96.png"></image>
-      </view>
-      <view class="warehouseName">
-        这是仓库1
-      </view>
-    </view>
+    </block>
   </scroll-view>
 </view>

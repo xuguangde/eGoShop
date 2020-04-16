@@ -10,6 +10,16 @@
   width: 345rpx;
   margin-bottom: 20rpx;
   border-radius: 12rpx;
+  position: relative;
+}
+.shopCart {
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+}
+.shopCart image{
+  width: 58rpx;
+  height: 58rpx;
 }
 .goodsImg image {
   height: 260rpx;

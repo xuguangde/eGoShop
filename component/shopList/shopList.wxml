@@ -1,30 +1,32 @@
 <view class="shopListContent">
-  <view class="shopList">
-    <view class="shopListTwo">
-      <view class="shopListImg">
-        <image src="/img/tu100.png"></image>
-      </view>
-      <view  class="shopListOne">
-        <view class="shopListTitle">
-          这是标题
+  <block wx:for="{{list}}" wx:key="index">
+    <view class="shopList">
+      <view class="shopListTwo">
+        <view class="shopListImg">
+          <image src="{{item.logo_img}}"></image>
         </view>
-        <view class="shopListText">
-          产品详情主要简介
+        <view  class="shopListOne">
+          <view class="shopListTitle">
+            {{item.store_name}}
+          </view>
+          <view class="shopListText">
+            {{item.store_goods}}
+          </view>
+        </view>
+      </view>
+      <view class="shopTree">
+        <view class="shopListm">
+          444m
+        </view>
+        <view class="shopListOpen">
+          <view class="shopButton" bindtap="onClick" data-data="{{item}}">
+            进店 
+          </view>
+          <view class="shopListJt">
+            <image src="/img/jt20.png"></image>
+          </view>
         </view>
       </view>
     </view>
-    <view class="shopTree">
-      <view class="shopListm">
-        444m
-      </view>
-      <view class="shopListOpen">
-        <view class="shopButton">
-          进店 
-        </view>
-        <view class="shopListJt">
-          <image src="/img/jt20.png"></image>
-        </view>
-      </view>
-    </view>
-  </view>
+  </block>
 </view>

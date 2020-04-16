@@ -1,18 +1,24 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logon/logon",
+    "pages/login/login",
     "pages/my/my",
     "pages/shop/shop",
     "pages/search/search",
     "pages/shoppingCart/shoppingCart",
     "pages/mymoney/mymoney",
     "pages/seckill/seckill",
+    "pages/shopDetails/shopDetails",
+    "pages/giftPack/giftPack",
     "component/shopList/shopList",
     "component/statusBar/statusBar",
     "component/searchList/searchList",
     "component/switchText/switchText",
-    "component/seckill/seckill",
+    "component/countdown/countdown",
+    "component/iconList/iconList",
+    "component/popup/popup",
+    "component/seckillList/seckillList",
+    "component/currencyButton/currencyButton",
     "pages/logs/logs"
 
   ],
@@ -56,5 +62,10 @@
     ]
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  }
 }

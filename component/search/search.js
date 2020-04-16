@@ -6,6 +6,10 @@ Component({
     width:{
       type: String,
       value: ''
+    },
+    disabled:{
+      type: String,
+      value: 'false'
     }
   },
 
@@ -20,6 +24,9 @@ Component({
   methods: {
     inputOn(e){
       this.triggerEvent('search',e.detail.value)
+    },
+    onClick(){
+      this.triggerEvent('onClick')
     }
   }
 })

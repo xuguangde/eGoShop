@@ -5,6 +5,8 @@
     "notice": "/component/notice/notice",
     "warehouse": "/component/warehouse/warehouse",
     "popularity": "/component/popularity/popularity",
-    "goodslist": "/component/goodslist/goodslist"
+    "popup": "/component/popup/popup",
+    "goodslist": "/component/goodslist/goodslist",
+    "currencyButton": "/component/currencyButton/currencyButton"
   }
 }
