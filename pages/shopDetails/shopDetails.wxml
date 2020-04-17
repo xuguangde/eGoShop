@@ -1,0 +1,65 @@
+<view>
+  <view class="header">
+    <view class="headerLeft">
+      <view class="headerImg">
+        <image src="{{data.logo_img}}"></image>
+      </view>
+      <view class="shopText">
+        <view class="shopName">{{data.store_name}}</view>
+        <view class="goodsNum">商品：{{data.num}}</view>
+      </view>
+    </view>
+    <view class="headerRight">
+      <view class="shopCollect">
+        <view class="shopImg shopPhone" bindtap="phoneCall">
+          <image src="/img/dh44.png"></image>
+        </view>
+        <view class="shopImg collectImg" bindtap="collectStore">
+          <image wx:if="{{collect == 0}}" src="/img/scb44.png"></image>
+          <image wx:else src="/img/sca44.png"></image>
+        </view>
+      </view>
+      <view class="shopLookNum">
+        浏览量：{{data.liulan}}
+      </view>
+    </view>
+  </view>
+  <view class="title">
+    <block wx:for="{{title}}" wx:key="index">
+      <view class="titleOne" bindtap="onClick" data-index="{{index}}">
+        <view class="titleImg">
+          <image wx:if="{{index == status}}" src="{{item.img}}"></image>
+          <image wx:else src="{{item.imgOne}}"></image>
+        </view>
+        <view class="{{index == status?'fontColor':''}} titleText">
+          {{item.text}}
+        </view>
+      </view>
+    </block>
+  </view>
+  <statusBar bind:statusBar="statusBar" wx:if="{{status == 1}}"></statusBar>
+  <view class="shopGoodsList">
+    <view class="hot" wx:if="{{status == 0}}">
+      <view class="shopHotImg">
+        <image src="/img/hot66x28.png"></image>
+      </view>
+      <view class="shopHotText">
+        热销推荐
+      </view>
+    </view>
+    <view class="shopDetailsFont" wx:if="{{status == 2}}">
+      <view class="shopDetailsHeng"></view>
+      <view class="shopDetailsFontOne">2月12日</view>
+      <view class="shopDetailsHeng"></view>
+    </view>
+    <goodslist wx:if="{{status != 3}}" goodsList="{{shopGoodsList}}"></goodslist>
+  </view>
+  <view class="shopDetailsText" wx:if="{{status == 3}}">
+    <view class="shopDetailsFont">
+      <view class="shopDetailsHeng"></view>
+      <view class="shopDetailsFontOne">店铺简介</view>
+      <view class="shopDetailsHeng"></view>
+    </view>
+    <iconList bind:phoneCall="phoneCall" iconList="{{iconList}}"></iconList>
+  </view>
+</view>

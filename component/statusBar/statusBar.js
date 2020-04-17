@@ -18,10 +18,11 @@ Component({
    */
   methods: {
     status(e){
-      console.log("77777",e.currentTarget.dataset.index)
+      // console.log("77777",e.currentTarget.dataset.index)
       this.setData({
         index: e.currentTarget.dataset.index
       })
+      this.triggerEvent('statusBar',e.currentTarget.dataset.index)
     }
   }
 })

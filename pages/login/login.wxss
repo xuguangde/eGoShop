@@ -11,6 +11,9 @@
   height: 140rpx;
   width: 140rpx;
 }
+.one {
+  margin-bottom: 120rpx;
+}
 .img image{
   height: 44rpx;
   width: 44rpx;

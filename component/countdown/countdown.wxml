@@ -1,0 +1,17 @@
+<view class="countdown">
+  <view class="countdownTime">
+    00
+  </view>
+  <view class="countdownTimeOne">
+    :
+  </view>
+  <view class="countdownTime">
+    00
+  </view>
+  <view class="countdownTimeOne">
+    :
+  </view>
+  <view class="countdownTime">
+    00
+  </view>
+</view>

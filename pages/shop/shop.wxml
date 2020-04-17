@@ -14,5 +14,5 @@
   <view class="shopTwo">
     <switchText bind:switch="switch" switchText="{{switchText}}"></switchText>
   </view>
-  <shopList></shopList>
+  <shopList bind:onClick="onClick" list="{{list}}"></shopList>
 </view>

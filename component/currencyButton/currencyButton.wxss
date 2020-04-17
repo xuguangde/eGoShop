@@ -1,0 +1,9 @@
+.currencyButtonText {
+  height: 88rpx;
+  color: #ffffff;
+  font-size: 36rpx;
+  background: linear-gradient(to right, #fc594e 0%,#ed443a 100%);
+  text-align: center;
+  line-height: 88rpx;
+  border-radius: 88rpx;
+}

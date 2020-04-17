@@ -1,0 +1,26 @@
+<view>
+  <view>
+    <view>
+      <image src="/img/tu220.png"></image>
+    </view>
+    <view>
+      <view>
+        <view>
+          这是商品名称
+        </view>
+        <view>
+          限量100件
+        </view> 
+      </view>
+      <view>
+        <view>
+          <view>￥</view>
+          <view>2000</view>
+        </view>
+        <view>
+          马上抢
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

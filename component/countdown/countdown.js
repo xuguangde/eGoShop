@@ -1,4 +1,4 @@
-// pages/logon/logon.js
+// component/countdown/countdown.js
 Page({
 
   /**

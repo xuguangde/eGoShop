@@ -9,13 +9,13 @@
         <image src="/img/jtc20.png"></image>
       </view>
     </view>
-    <search bind:search="search" width="520rpx" ></search>
+    <search disabled="true"  bind:onClick="search" width="520rpx" ></search>
   </view>
   <view class='carousel'> 
     <swiper class='carousel_swiper' bindchange='swiperChange' indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='2000' circular='true'>
       <block wx:for="{{swiperImgUrls}}" wx:key="index">
         <swiper-item >
-          <image class="carouselImg" src='{{item.img}}' mode='aspectFill' ></image>
+          <image class="carouselImg" src='{{item.pic}}' mode='aspectFill' ></image>
         </swiper-item>
       </block>
     </swiper>
@@ -26,27 +26,84 @@
       </block>
     </view>
   </view>
-  <notice></notice>
-  <warehouse></warehouse>
+  <notice contentList="{{contentList}}"></notice>
+  <warehouse warehouse="{{warehouse}}"></warehouse>
   <view class="arrondi">
-    <view class="xsms">
+    <view class="xsms" bindtap="seckill">
       <image src="/img/xsms340x280.png"></image>
     </view>
     <view class="arrondiRight">
-      <view class="xsmsRight">
-        <image src="/img/xsms340x280.png"></image>
+      <view class="xsmsRight" bindtap="giftPack" data-id="1">
+        <image src="/img/tclb360x135.png"></image>
       </view>
-      <view class="xsmsRight">
-        <image src="/img/xsms340x280.png"></image>
+      <view class="xsmsRight" bindtap="giftPack" data-id="2">
+        <image src="/img/yhqzq360x135.png"></image>
       </view>
     </view>
   </view>
   <view class="title">
     <image src="/img/rqsp232x64.png"></image>
   </view>
-  <popularity></popularity>
+  <popularity hotGoodsList="{{hotGoodsList}}"></popularity>
   <view class="title">
     <image src="/img/xpss234x64.png"></image>
   </view>
-  <goodslist></goodslist>
+  <goodslist goodsList="{{newGoodsList}}"></goodslist>
+  <popup flag="{{flag}}">
+    <view class="redPack">
+      <view class="redPackContent">
+        <view class="redPackImg">
+          <image src="/img/di630x240.png"></image>
+        </view>
+        <scroll-view scroll-y="true" style="width: 100%;height:380rpx;margin-top:50rpx;">
+          <view class="redPackList">
+            <block wx:for="{{redPack}}" wx:key="index">
+              <view class="redPackListOne">
+                <view class="redPackListImg">
+                  <view class="redPackListImgOne">
+                    <image src="/img/ayhq426x162.png"></image>
+                  </view>
+                  <view class="redPackListImgTwo">
+                    <image src="/img/ayhq156x162.png"></image>
+                  </view>
+                </view>
+                <view class="redPackListText">
+                  <view class="redPackListNum">
+                    <view class="redPackListTextTitle">
+                      {{item.name}}
+                    </view>
+                    <view class="redPackListPrice">
+                      <view class="redPackListIcon">
+                        ￥
+                      </view>
+                      <view class="redPackListPriceNum">
+                        {{item.jprice}}
+                      </view>
+                    </view>
+                  </view>
+                  <view class="redPackListTime">
+                    <view class="redPackListTimeNum">
+                      有效期至{{item.end_time}}
+                    </view>
+                    <view class="redPackListStatus">
+                      满{{item.mprice}}可用
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+        </scroll-view>
+        
+        <view class="redPackButton">
+          <currencyButton width="460rpx" text="确定" bind:onClick="popup"></currencyButton>
+        </view>
+        <view class="redPackButton">
+          <view class="redPackButtomText">已发放 在</view>
+          <view class="fontColor redPackButtomTextRed">我的—优惠券</view>
+          <view class="redPackButtomText">查看</view>
+        </view>
+      </view>
+    </view> 
+  </popup>
 </view>

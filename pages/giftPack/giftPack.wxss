@@ -1,0 +1,14 @@
+page {
+  background: #f6f6f6;
+}
+.giftImg image {
+  height: 180rpx;
+  width: 710rpx;
+}
+.giftImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}

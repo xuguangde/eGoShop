@@ -32,6 +32,16 @@ App({
         }
       }
     })
+    // 获取定位经纬度
+    wx.getLocation({
+      type: 'wgs84', //返回可以用于wx.openLocation的经度
+      success:function(res){
+        wx.setStorage({
+          data: res,
+          key: 'location',
+        })
+      },
+    })
   },
   globalData: {
     userInfo: null

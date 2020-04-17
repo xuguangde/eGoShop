@@ -1,0 +1,22 @@
+<block wx:for="{{iconList}}" wx:key="index">
+  <view class="iconList" wx:if="{{item.text}}">
+    <view class="iconListContent">
+      <view class="iconListOne">
+        <view class="iconListImg">
+          <image src="{{item.img}}"></image>
+        </view>
+        <view class="iconListName">
+          {{item.text}}
+        </view>
+      </view>
+      <view class="iconListPhone" bindtap="phoneCall" wx:if="{{item.type}}">
+        <view class="iconListPhoneImg">
+          <image src="/img/bh24.png"></image>
+        </view>
+        <view class="iconListPhoneText">
+          拨号
+        </view>
+      </view>
+    </view>
+  </view>
+</block>

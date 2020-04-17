@@ -1,0 +1,17 @@
+.countdown,.countdownTime {
+  display: flex;
+  align-items: center;
+
+}
+.countdownTime {
+  width: 30rpx;
+  height: 30rpx;
+  color: #ffffff;
+  font-size: 24rpx;
+  background: #333333;
+  border-radius: 6rpx;
+  justify-content: center;
+}
+.countdownTimeOne {
+  color: #ffffff;
+}

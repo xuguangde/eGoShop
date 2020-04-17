@@ -3,7 +3,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    
+    list: {
+      type: Array,
+      value: []
+    }
   },
 
   /**
@@ -15,6 +18,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    
+    onClick(e){
+      this.triggerEvent('onClick',e.currentTarget.dataset.data)
+    }
   }
 })

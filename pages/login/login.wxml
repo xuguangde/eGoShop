@@ -13,7 +13,7 @@
           +86
         </view>
         <view class="phoneNum">
-          <input placeholder-class="inputPclass" placeholder="请输入手机号" type="number"></input>
+          <input bindinput="inputedit" data-name="phone" value="{{phone}}" placeholder-class="inputPclass" placeholder="请输入手机号" type="number"></input>
         </view>
       </view>
     </view>
@@ -23,10 +23,10 @@
           <image src="/img/yzm44.png"></image>
         </view>
         <view class="phoneNum">
-          <input placeholder-class="inputPclass" placeholder="请输入验证码" type="number"></input>
+          <input bindinput="inputedit" data-name="code" value="{{code}}" placeholder-class="inputPclass" placeholder="请输入验证码" type="number"></input>
         </view>
-        <view class="yanzheng">
-          获取验证码
+        <view class="yanzheng" bindtap="{{safety.state?'':'sendSms'}}">
+          {{!safety.state?'获取验证码':safety.time}}
         </view>
       </view>
     </view>
@@ -36,9 +36,10 @@
           <image src="/img/yqm44.png"></image>
         </view>
         <view class="phoneNum">
-          <input placeholder-class="inputPclass" placeholder="请输入邀请码" type="number"></input>
+          <input bindinput="inputedit" data-name="action_code" value="{{action_code}}" placeholder-class="inputPclass" placeholder="请输入邀请码" type="text"></input>
         </view>
       </view>
     </view>
   </view>
+  <currencyButton bind:onClick="login"></currencyButton>
 </view>

@@ -1,0 +1,8 @@
+<view class="content">
+  <view class="giftImg">
+    <image src="{{swiperImgUrls[0].pic}}"></image>
+  </view>
+  <view class="giftList">
+    <goodslist cart="false" goodsList="{{shopGoodsList}}"></goodslist>
+  </view>
+</view>
