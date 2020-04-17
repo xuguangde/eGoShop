@@ -1,2 +1,22 @@
 <!--pages/mymoney/mymoney.wxml-->
-<text>pages/mymoney/mymoney.wxml</text>
+<view class="content">
+  <view class="top">
+    <view class="topLeft">
+      <image src="/img/wh44.png"></image>
+      <text>佣金说明</text>
+    </view>
+    <view class="topRight">
+      <text>收支明细</text>
+    </view>
+  </view>
+
+  <view class="middle">
+    <image src="/img/ymoney.png"></image>
+    <text style="font-size:26rpx;color:#333333;">账户余额（元）</text>
+    <text class="yuMoney">100</text>
+    <button type="primary" bindtap="" id="index">提现</button>
+  </view>
+
+
+
+</view>

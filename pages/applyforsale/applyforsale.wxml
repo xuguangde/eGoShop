@@ -1,0 +1,47 @@
+<!--pages/applyforsale/applyforsale.wxml-->
+<!--pages/settlein/settlein.wxml-->
+<view class="content">
+  <view class="row">
+    <text class="ser" style="margin-left:30rpx;margin-top:30rpx;">请选择申请的服务类型:</text>
+  </view>
+
+  <view class="row">
+    <text class="name">退货退款</text>
+  </view>
+
+  <view class="row">
+    <text class="name">仅退款（不需要退货）</text>
+  </view>
+
+  <view class="rowjust">
+    <text class="name">退款金额</text>
+    <input class="shuru" type="text" placeholder="请输入退款金额" style="text-align:right;margin-right:30rpx;"></input>
+  </view>  
+
+  <view class="rowjust">
+    <text class="name">退款原因</text>
+    <view>
+        <text class="shuru" > 请选择</text>
+        <image src="/img/jty20.png"></image>
+    </view>
+  </view>
+
+  <view class="colm">
+    <text class="tuikuan">退款说明</text>
+    <text class="shuru">选填</text>
+  </view>
+
+  <view class="rows" style="height:288rpx">
+    <text class="idinfo">上传凭证</text>
+    <text class="ser">（最多上传5张）</text>
+    <view class="addCamera">
+    <image src="/img/jia58.png"></image>
+  </view>
+  </view>    
+
+   <view class="goShopping">
+            提交
+   </view>
+
+
+</view>

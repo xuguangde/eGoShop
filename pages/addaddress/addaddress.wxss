@@ -1,0 +1,30 @@
+/* pages/addaddress/addaddress.wxss */
+page{
+
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 108rpx;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.name{
+  font-size: 30rpx;
+  color: #333333;
+  margin-left: 30rpx;
+  margin-right: 60rpx;
+}
+
+.shuru{
+  font-size: 30rpx;
+  color: #999999;
+}
+
+image{
+  margin-left: 170rpx;
+  width: 30rpx;
+  height: 30rpx;
+}

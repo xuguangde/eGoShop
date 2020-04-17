@@ -1,0 +1,26 @@
+<view class="content">
+    <view class="fu">
+         <view class="rower">
+            <text class="name">张三</text>
+            <text class="phone">13898989898</text> 
+         </view>
+
+      <text style="font-size:24rpx;color:#333333;margin-left:20rpx">沈阳市铁西区千元财富广场222222</text>
+
+      <view class="zimo">
+            <view>
+                <image src="/img/xza44.png" class="dui"></image>
+                <text class="moren">已设为默认</text>
+            </view>
+            <view>
+                <image src="/img/bj32.png"></image>
+                <text class="bianji">编辑</text>
+                <image src="/img/sc32.png"></image>
+                <text class="shanchu" bindtap="del" data-sid="">删除</text>
+            </view>     
+      </view>
+    </view>
+
+    <button bindtap="adddizhi">新增地址</button>
+     
+</view>

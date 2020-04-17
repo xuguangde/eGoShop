@@ -1,0 +1,67 @@
+/* pages/settlein/settlein.wxss */
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 108rpx;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.name{
+  font-size: 30rpx;
+  color: #333333;
+  margin-left: 30rpx;
+  margin-right: 60rpx;
+}
+
+.shuru{
+  font-size: 30rpx;
+  color: #999999;
+}
+
+image{
+  width: 70rpx;
+  height: 70rpx;
+}
+
+
+.addCamera{
+  background: #f6f6f6;
+  height: 140rpx;
+  width: 140rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+  border-radius: 12rpx;
+}
+
+
+.rows{
+  margin-left: 30rpx;
+  height: 328rpx;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.rows .idinfo{
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.goShopping {
+  height: 88rpx;
+  width: 690rpx;
+  color: #ffffff;
+  background: linear-gradient(to right, #fc594e 0%,#de443a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 88rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 60rpx;
+  margin-bottom: 30rpx;
+  margin-left: 32rpx;
+}

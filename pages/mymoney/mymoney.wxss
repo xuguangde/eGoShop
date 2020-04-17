@@ -1,1 +1,59 @@
 /* pages/mymoney/mymoney.wxss */
+.top{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding-left: 22rpx;
+padding-top: 40rpx;
+padding-right:30rpx; 
+
+}
+
+.topLeft{
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.top image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.top text{
+  font-size: 26rpx;
+  color: #333333;
+}
+
+.middle{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 100rpx;
+}
+
+.middle text{
+text-align: center;
+margin-top: 30rpx;
+}
+
+.middle image{
+  width: 128rpx;
+  height: 128rpx;
+  margin-bottom: 30rpx;
+}
+
+.middle button{
+margin-top: 120rpx;
+font-size: 36rpx;
+font-weight: bold;
+height: 88rpx;
+border-radius: 50rpx;
+width: 330rpx;
+}
+
+.yuMoney{
+  font-size: 60rpx;
+  color: #333333;
+  font-weight: bold;
+}

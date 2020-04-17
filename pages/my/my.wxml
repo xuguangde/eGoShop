@@ -83,7 +83,7 @@
               <image src="/img/sc40.png"></image>
           </view>
           
-          <view class="middle">
+          <view class="middle" bindtap="wdsoucang">
               <text >我的收藏</text>
           </view>
 
@@ -96,7 +96,7 @@
               <image src="/img/dzgl40.png"></image>
           </view>
           
-          <view class="middle">
+          <view class="middle" bindtap="dizhi">
               <text >地址管理</text>
           </view>
 

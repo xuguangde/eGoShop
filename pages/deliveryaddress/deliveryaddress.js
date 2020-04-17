@@ -1,4 +1,4 @@
-// pages/my/my.js
+// pages/deliveryaddress/deliveryaddress.js
 Page({
 
   /**
@@ -8,32 +8,20 @@ Page({
 
   },
 
-  wdmoney: function (e) {
+  adddizhi: function (e) {
     wx.redirectTo({
-      url: '../mymoney/mymoney',
+      url: '../addaddress/addaddress',
     })
-
-    // var ccc = e.currentTarget.dataset.id;//获取view中的药用currentTarget
-    // console.log(ccc);
-    // wx.navigateTo({
-    //   url: '../../kantie/kantie?Id=' + ccc,
-    // })
   },
 
-  wdsoucang: function (e) {
-    wx.redirectTo({
-      url: '../mycollection/mycollection',
+  del: function (e) {
+    wx.showModal({
+      title: '删除确认',
+      content: '确认要删除该收件地址吗？',
     })
   },
 
 
-  dizhi: function (e) {
-    wx.redirectTo({
-      url: '../deliveryaddress/deliveryaddress',
-    })
-
-
-  },
 
   /**
    * 生命周期函数--监听页面加载

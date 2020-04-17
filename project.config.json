@@ -103,6 +103,42 @@
 					"id": -1,
 					"name": "秒杀",
 					"pathName": "pages/seckill/seckill",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家入驻",
+					"pathName": "pages/settlein/settlein",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的佣金",
+					"pathName": "pages/mymoney/mymoney",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "地址管理",
+					"pathName": "pages/deliveryaddress/deliveryaddress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新增地址",
+					"pathName": "pages/addaddress/addaddress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请售后",
+					"pathName": "pages/applyforsale/applyforsale",
+					"query": "",
 					"scene": null
 				}
 			]

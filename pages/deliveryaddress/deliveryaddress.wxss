@@ -1,0 +1,74 @@
+/* pages/deliveryaddress/deliveryaddress.wxss */
+page{
+
+background: #f6f6f6;
+}
+
+.content{
+   padding: 20rpx;
+
+}
+
+.fu{
+   background: #fff;
+   border-radius: 30rpx;  
+}
+
+.rower{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding-top: 40rpx;
+}
+
+.zimo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.zimo image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.zimo view{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.name{
+  font-size: 30rpx;
+  color: #333333;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+
+.phone{
+  color:#999999;
+  font-size: 24rpx; 
+}
+
+.dui{
+  margin: 12rpx;
+}
+
+.moren{
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.shanchu{
+  font-size: 24rpx;
+  color: #666666;
+  margin-right: 20rpx;
+}
+
+
+.bianji{
+  margin-left: 6rpx;
+  font-size: 24rpx;
+  color: #666666;
+  margin-right: 60rpx;
+}

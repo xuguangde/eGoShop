@@ -1,0 +1,33 @@
+<!--pages/addaddress/addaddress.wxml-->
+<view class="content">
+  <view class="row">
+    <text class="name">收货人</text>
+    <input class="shuru" type="text" placeholder="请输入收货人姓名"></input>
+  </view>
+
+  <view class="row">
+    <text class="name">联系电话</text>
+    <input class="shuru" type="text" placeholder="请输入联系电话"></input>
+  </view>
+  
+  <view class="row">
+    <text class="name">所在地区</text>
+    <input class="shuru" type="text" placeholder="请选择所在地区"></input>
+    <image src="/img/jty20.png"></image>
+  </view>
+
+  <view class="row">
+    <text class="name">定位地址</text>
+    <input class="shuru" type="text"></input>
+     <image src="/img/jty20.png"></image>
+  </view>
+
+   <view class="row">
+    <text class="name">详细地址</text>
+    <input class="shuru" type="text" placeholder="请输入详细地址"></input>
+  </view>   
+
+  <button class="" style="margin-top:120rpx" bindtap="baocunaddress">保存地址</button>    
+
+
+</view>

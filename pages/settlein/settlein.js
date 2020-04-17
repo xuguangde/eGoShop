@@ -1,37 +1,10 @@
-// pages/my/my.js
+// pages/settlein/settlein.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-  },
-
-  wdmoney: function (e) {
-    wx.redirectTo({
-      url: '../mymoney/mymoney',
-    })
-
-    // var ccc = e.currentTarget.dataset.id;//获取view中的药用currentTarget
-    // console.log(ccc);
-    // wx.navigateTo({
-    //   url: '../../kantie/kantie?Id=' + ccc,
-    // })
-  },
-
-  wdsoucang: function (e) {
-    wx.redirectTo({
-      url: '../mycollection/mycollection',
-    })
-  },
-
-
-  dizhi: function (e) {
-    wx.redirectTo({
-      url: '../deliveryaddress/deliveryaddress',
-    })
-
 
   },
 
