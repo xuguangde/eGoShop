@@ -5,13 +5,13 @@
     </view>
     <view class="seckill">
       <view class="title">
-        <view class="onTitle">
-          <view class="onOpen">正在疯抢</view>
-          <view class="onOpenH"></view>
+        <view class="onTitle" bindtap="onClick" data-id="0">
+          <view class="onOpen {{index == 0?'':'onOpenOne'}}">正在疯抢</view>
+          <view class="onOpenH" wx:if="{{index == 0}}"></view>
         </view>
-        <view class="onTitle">
-          <view class="onOpen">即将开始</view>
-          <view class="onOpenH"></view>
+        <view class="onTitle" bindtap="onClick" data-id="1">
+          <view class="onOpen {{index == 1?'':'onOpenOne'}}">即将开始</view>
+          <view class="onOpenH" wx:if="{{index == 1}}"></view>
         </view>
       </view>
       <view class="status">
@@ -31,5 +31,5 @@
       </view>
     </view>
   </view>
-  
+  <seckillList seckillList="data"></seckillList>
 </view>

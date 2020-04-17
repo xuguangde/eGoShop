@@ -1,0 +1,79 @@
+<view class="specsPopup maskOne">
+  <view class="specsPopupOne">
+    <view class="specsPopupSpecs">
+      <view class="specsPopupTt">
+        <view class="specsPopupGoodsImg">
+          <image src="/img/tu220.png"></image>
+        </view>
+        <view class="specsPopupTitle">
+          <view class="specsPopupPrice">
+            <view class="specsPopupIcon fontColor">￥</view>
+            <view class="specsPopupPriceNum fontColor">220</view>
+          </view>
+          <view class="specsPopupStock">
+            库存 2200件
+          </view>
+        </view>
+      </view>
+      <view class="specsPopupClose" bindtap="close">
+        <image src="/img/x44.png"></image>
+      </view>
+    </view>
+    <view class="specsPopupTwo">
+      <view class="specsPopupSpecsText">
+        规格
+      </view>
+      <view class="specsPopupSpecsNum">
+        <view class="specsPopupList">
+          10Kg
+        </view>
+        <view class="specsPopupList specsPopupListOne">
+          20Kg
+        </view>
+      </view>
+    </view>
+    <view class="specsPopupTwo">
+      <view class="specsPopupSpecsText">
+        规格
+      </view>
+      <view class="specsPopupSpecsNum">
+        <view class="specsPopupList">
+          10Kg
+        </view>
+        <view class="specsPopupList specsPopupListOne">
+          20Kg
+        </view>
+      </view>
+    </view>
+    <view class="specsPopupTwo">
+      <view class="specsPopupSpecsText">
+        规格
+      </view>
+      <view class="specsPopupSpecsNum">
+        <view class="specsPopupList">
+          10Kg
+        </view>
+        <view class="specsPopupList specsPopupListOne">
+          20Kg
+        </view>
+      </view>
+    </view>
+    <view class="specsPopupNum">
+      <view class="specsPopupNumText">
+        数量
+      </view>
+      <view class="specsPopupNumAdd">
+        <view class="specsPopupNumAddImg">
+          <image src="/img/jian20.png"></image>
+        </view>
+        <view class="specsPopupNumOne">22</view>
+        <view class="specsPopupNumAddImg">
+          <image src="/img/jia20.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="specsPopupButton">
+    <view class="specsPopupText">确定</view>
+  </view>
+</view>

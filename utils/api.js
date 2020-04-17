@@ -17,4 +17,6 @@ var hostApi = "http://symc.shengguweb.com/index.php/index";  //本地测试地�
   GetSetmealList: hostApi + "/index/GetSetmealList", //获取套餐礼包
   getFirstUserCouponList: hostApi + "/user/getFirstUserCouponList", //首页弹窗优惠券
   GetCouponList: hostApi + "/index/GetCouponList", //优惠券商品
+  getSeckillList: hostApi + "/index/getSeckillList", // 秒杀产品
+  aboutStore: hostApi + "/store/aboutStore", // 关于店铺
  }

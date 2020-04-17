@@ -1,42 +1,42 @@
-// pages/seckill/seckill.js
-var api = require("../../utils/api.js");
-var util = require("../../utils/util.js");
+// pages/commodity/commodity.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    data:[],
-    index:'0'
+    swiperImgUrls:[
+      {pic:'https://symc.shengguweb.com/uploads/images/20200415/061c1665945294f2db86536d2600aff8.png'},
+      {pic:'https://symc.shengguweb.com/uploads/images/20200415/061c1665945294f2db86536d2600aff8.png'},
+      {pic:'https://symc.shengguweb.com/uploads/images/20200415/061c1665945294f2db86536d2600aff8.png'},
+      {pic:'https://symc.shengguweb.com/uploads/images/20200415/061c1665945294f2db86536d2600aff8.png'},
+    ],
+    flag: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getSeckillList()
+    
   },
-  onClick(e){
-    console.log(e.currentTarget.dataset.id)
+  specs(){
     this.setData({
-      index: e.currentTarget.dataset.id
+      flag: false
     })
   },
-  getSeckillList(){
-    var that = this
-    util.request(api.getSeckillList,{type:'2'}).then(
-      res => {
-        if(res.data.retcode == 1) {
-          that.setData({
-            data: res.data.data
-          })
-        } else {
-          util.msg(res.data.msg)
-        }
-      }
-    )
+  close(){
+    this.setData({
+      flag: true
+    })
   },
+  swiperChange(e) {
+    const that = this;
+    that.setData({
+      swiperCurrent: e.detail.current
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

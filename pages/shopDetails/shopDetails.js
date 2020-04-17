@@ -35,6 +35,7 @@ Page({
       collect: JSON.parse(options.data).collect
     })
     this.goodsList(JSON.parse(options.data).id)  // 商品列表
+    this.aboutStore(JSON.parse(options.data).id) // 关于店铺
     this.data.iconList[0].text = JSON.parse(options.data).store_name
     this.data.iconList[1].text = JSON.parse(options.data).phone
     this.data.iconList[2].text = JSON.parse(options.data).store_add
@@ -42,6 +43,16 @@ Page({
       iconList: this.data.iconList
     })
   },
+  aboutStore(id){
+    util.request(api.aboutStore,{store_id: this.data.data.id,uid: wx.getStorageSync('user').id}).then(
+      res => {
+        this.setData({
+          collect: res.data.data.collect
+        })
+      }
+    )
+  },
+  // 取消关注店铺
   collectStore(){
     util.request(api.collectStore,{store_id: this.data.data.id,uid: wx.getStorageSync('user').id}).then(
       res => {

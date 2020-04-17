@@ -156,6 +156,13 @@
 >>>>>>> f5f20a0517eeb0eec6d3037f88d6b6e9f3d88843
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/commodity/commodity",
+					"query": "",
+					"scene": null
 				}
 			]
 		}
