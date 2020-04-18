@@ -1,0 +1,141 @@
+.specsPopup,.specsPopupGoodsImg,.specsPopupPrice,.specsPopupList,.specsPopupNumAdd,.specsPopupNumAddImg,.specsPopupNumOne,.specsPopupText,.specsPopupButton{
+  display: flex;
+  align-items: center;
+}
+.specsPopup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+  width: 750rpx;
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
+}
+.specsPopupTitle {
+  margin-left: 40rpx;
+}
+.specsPopupSpecsText,.specsPopupNumText{
+  font-size: 30rpx;
+  color: #333333;
+}
+.specsPopupSpecsText {
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.specsPopupSpecsNum {
+  display: flex;
+}
+.specsPopupList {
+  height: 48rpx;
+  width: 110rpx;
+  font-size: 26rpx;
+  border-radius: 6rpx;
+  color: #333333;
+  background: #f1f1f1;
+  justify-content: center;
+  margin-right: 40rpx;
+}
+
+.specsPopupNum {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 108rpx;
+}
+.specsPopup {
+  flex-direction: column;
+}
+.specsPopupButton {
+  width: 750rpx;
+  justify-content: center;
+  height: 107rpx;
+  border-top: 1rpx #f1f1f1 solid;
+}
+.specsPopupSpecs {
+  width: 710rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30rpx;
+  margin-bottom: 10rpx;
+  border-bottom:2rpx #f6f6f6 solid;
+}
+.specsPopupOne {
+  padding: 20rpx 0;
+}
+.specsPopupPriceNum {
+  font-size: 48rpx;
+
+}
+.specsPopupStock {
+  font-size: 24rpx;
+  color: #999999;
+}
+.specsPopupIcon {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.specsPopupTt {
+  display: flex;
+}
+.specsPopupGoodsImg image{
+  width: 220rpx;
+  height: 220rpx;
+}
+.specsPopupNumAddImg image {
+  height: 20rpx;
+  width: 20rpx;
+}
+.specsPopupNumAddImg {
+  height: 50rpx;
+  width: 50rpx;
+  justify-content: center;
+  background: #f1f1f1;
+}
+.specsPopupNumOne {
+  font-size: 26rpx;
+  color: #333333;
+  height: 50rpx;
+  padding: 0 10rpx;
+  border-left: 2rpx #ffffff solid;
+  border-right: 2rpx #ffffff solid;
+  background: #f1f1f1;
+}
+.specsPopupText {
+  background: linear-gradient(to right, #fc594e 0%,#ed443a 100%);
+  height: 88rpx;
+  color: #ffffff;
+  border-radius: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 690rpx;
+}
+.fontColor {
+  color: #de443a;
+}
+.specsPopupClose image {
+  height: 44rpx;
+  width: 44rpx;
+}
+.specsPopupListOne {
+  background: #ffeeed;
+  color: #fb584d;
+  border: 1rpx #fb584d solid;
+  box-sizing: border-box;
+}
+.maskOne {
+  animation:fadeInUp 500ms 0s ease both;
+}
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      -webkit-transform: translateY(500rpx);
+      transform: translateY(500rpx)
+  }
+
+  100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0)
+  }
+}

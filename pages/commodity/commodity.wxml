@@ -1,0 +1,62 @@
+<view class="content">
+  <commoditySwiper swiperImgUrls="{{swiperImgUrls}}"></commoditySwiper>
+  <view class="two">
+    <view class="title">
+      商品标题商品标题商品标题商品标题商品标题商品标题
+    </view>
+    <view class="titlePrice">
+      <view class="price">
+        <view class="priceIcon fontColor">￥</view>
+        <view class="priceNum fontColor">222.00</view>
+        <view class="priceSui">(含税)</view>
+        <view class="priceOne">购买商品可得积分</view>
+      </view>
+      <view class="shopNum">
+        销量：7777
+      </view>
+    </view>
+  </view>
+  <view class="three" bindtap="specs">
+    <view class="specs">
+      <view class="specsText">
+        选择规格
+      </view>
+      <view class="specsJt">
+        <image src="/img/jty20.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="footer">
+  <view class="footerOne">
+    <view class="footerLeft">
+      <view class="footerLeftOne">
+        <view class="footerLeftImg">
+          <image src="/img/dp44.png"></image>
+        </view>
+        <view class="footerLeftShop">
+          店铺
+        </view>
+      </view>
+      <view class="footerLeftOne">
+        <view class="footerLeftImg">
+          <image src="/img/scb44.png"></image>
+        </view>
+        <view class="footerLeftShop">
+          收藏
+        </view>
+      </view>
+    </view>
+    <view class="footerButton">
+      <view class="footerButtonAdd">
+        加入购物车
+      </view>
+      <view class="footerButtonLiji">
+        立即购买
+      </view>
+    </view>
+  </view>
+  <popup flag="{{flag}}">
+    <specsPopup bind:close="close"></specsPopup>
+  </popup>
+</view>

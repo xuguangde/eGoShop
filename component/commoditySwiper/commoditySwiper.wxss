@@ -1,0 +1,22 @@
+.carouselImg {
+  height: 700rpx;
+  width: 750rpx;
+}
+.carousel_swiper {
+  height: 700rpx;
+}
+.commodityNum {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  color: #ffffff;
+  width: 80rpx;
+  height: 48rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 48rpx;
+  right: 20rpx;
+  top: 630rpx;
+}

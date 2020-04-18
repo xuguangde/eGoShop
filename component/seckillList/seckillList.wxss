@@ -1,1 +1,68 @@
-/* component/seckillList/seckillList.wxss */
+.seckillListImg image {
+  height: 220rpx;
+  width: 220rpx;
+}
+.seckillListName {
+  font-size: 26rpx;
+  color: #333333;
+}
+.seckillListNum {
+  border: 1rpx #de443a solid;
+  padding: 2rpx 4rpx;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  color: #de443a;
+  display: inline-block;
+}
+.seckillListOne,.seckillListPrice,.seckillListRight,.seckillListButton,.seckillListImg{
+  display: flex;
+  align-items: center;
+}
+.seckillList {
+  background: #ffffff;
+  padding: 20rpx 0;
+  margin: 20rpx 20rpx 0;
+}
+.seckillListOne {
+  padding: 0 20rpx;
+}
+.seckillListImg {
+  margin-right: 20rpx;
+}
+.seckillListRight {
+  display: flex;
+  justify-content: space-between;
+}
+.seckillListPrice {
+  height: 60rpx;
+  display:table-cell;
+}
+.seckillListPriceIcon {
+  font-size: 30rpx;
+  font-weight: bold;
+  display:table-cell;
+}
+.seckillListPriceNum {
+  font-size: 48rpx;
+  font-weight: bold;
+  display:table-cell;
+}
+.seckillListButton {
+  background: #de443a;
+  height: 58rpx;
+  width: 140rpx;
+  border-radius: 58rpx;
+  color: #ffffff;
+  justify-content: center;
+  font-size: 30rpx;
+}
+.seckillListTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 220rpx;
+}
+.seckillListRight {
+  width: 100%;
+}

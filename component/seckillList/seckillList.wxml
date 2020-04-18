@@ -1,23 +1,51 @@
-<view>
-  <view>
-    <view>
+<block wx:for="{{seckillList}}">
+  <view class="seckillList">
+    <view class="seckillListOne">
+      <view class="seckillListImg">
+        <image src="/img/tu220.png"></image>
+      </view>
+      <view class="seckillListTwo">
+        <view class="seckillListText">
+          <view class="seckillListName">
+            这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称
+          </view>
+          <view class="seckillListNum">
+            限量100件
+          </view> 
+        </view>
+        <view class="seckillListRight">
+          <view class="seckillListPrice">
+            <view class="seckillListPriceIcon fontColor">￥</view>
+            <view class="seckillListPriceNum fontColor">2000</view>
+          </view>
+          <view class="seckillListButton">
+            马上抢
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+<view class="seckillList">
+  <view class="seckillListOne">
+    <view class="seckillListImg">
       <image src="/img/tu220.png"></image>
     </view>
-    <view>
-      <view>
-        <view>
-          这是商品名称
+    <view class="seckillListTwo">
+      <view class="seckillListText">
+        <view class="seckillListName">
+          这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称
         </view>
-        <view>
+        <view class="seckillListNum">
           限量100件
         </view> 
       </view>
-      <view>
-        <view>
-          <view>￥</view>
-          <view>2000</view>
+      <view class="seckillListRight">
+        <view class="seckillListPrice">
+          <view class="seckillListPriceIcon fontColor">￥</view>
+          <view class="seckillListPriceNum fontColor">2000</view>
         </view>
-        <view>
+        <view class="seckillListButton">
           马上抢
         </view>
       </view>

@@ -16,7 +16,7 @@
       </view>
       <view class="shopTree">
         <view class="shopListm">
-          444m
+          {{item.dist}}
         </view>
         <view class="shopListOpen">
           <view class="shopButton" bindtap="onClick" data-data="{{item}}">

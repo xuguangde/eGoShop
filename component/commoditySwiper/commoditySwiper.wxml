@@ -1,0 +1,14 @@
+<view class="header">
+    <view class="headerOne">
+      <swiper class='carousel_swiper' bindchange='swiperChange' indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='2000' circular='true'>
+        <block wx:for="{{swiperImgUrls}}" wx:key="index">
+          <swiper-item >
+            <image class="carouselImg" src='{{item.pic}}' mode='aspectFill' ></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="commodityNum">
+      {{swiperCurrent + 1}}/{{swiperImgUrls.length}}
+    </view>
+  </view>
