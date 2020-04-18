@@ -1,0 +1,26 @@
+<!--pages/mycouponone.wxml-->
+<view class="content">
+  <view class="row">
+    <view class="col">
+      <view>
+        <text class="qq">￥</text>        
+        <text class="money">5</text>
+      </view>
+      <text class="bt">满15可用</text>
+    </view>
+
+    <image src="/img/byhq536x162.png" class="right"></image>
+    <view class="hang">
+      <text class="cx">双11畅享红包</text>
+      <view class="hui">
+         <text>有效期至</text>
+         <text class="time">2019.12.01</text>
+         <text class="use">立即使用</text>
+      </view>
+    </view>  
+  </view>
+
+
+
+</view>
+

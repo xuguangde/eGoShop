@@ -1,0 +1,7 @@
+<!--pages/nocoupon/nocoupon.wxml-->
+<view class="content">
+  <image src="/img/kyhq364x308.png"></image>
+  <text>暂无相关优惠券哦~</text>
+</view>
+
+

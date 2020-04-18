@@ -1,0 +1,52 @@
+/* pages/mycollect/mycollect.wxss */
+
+page{
+  background: #f6f6f6;
+}
+
+.row {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  margin: 20rpx;
+  border-radius: 15rpx;
+}
+
+.row .shangpin{
+  height: 140rpx;
+  width: 150rpx;
+  border: 1px solid #f6f6f6;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  width: 400rpx;
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+}
+
+
+.col .bt{
+  font-size: 24rpx;
+  color: #333333;
+  margin-bottom: 15rpx;
+}
+
+.qq{
+  font-size: 24rpx;
+  color: #de443a;
+}
+
+.money{
+  font-size: 36rpx;
+  color: #de443a;
+}
+
+.gwc{
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+}

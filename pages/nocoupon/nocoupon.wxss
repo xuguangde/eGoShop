@@ -1,0 +1,23 @@
+/* pages/nocoupon/nocoupon.wxss */
+
+page{
+  background: #f6f6f6;
+}
+
+image{
+  width: 364rpx;
+  height: 308rpx;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 250rpx;
+}
+
+.content text{
+  margin-top: 30rpx;
+  font-size: 26rpx;
+  color: #999999;
+}

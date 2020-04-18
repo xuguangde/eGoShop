@@ -1,0 +1,14 @@
+<!--pages/mycollectshop/mycollectshop.wxml-->
+<view class="content">
+  <view class="row">
+    <image src="/img/tu100.png" class="shangpin"></image>
+
+    <view class="col">
+      <text class="title">多乐士（总店）</text>
+      <text class="jieshao">主营产品详细介绍主营产品</text>
+    </view>
+  </view>
+
+
+
+</view>

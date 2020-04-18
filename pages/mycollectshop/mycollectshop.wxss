@@ -1,0 +1,44 @@
+/* pages/mycollectshop/mycollectshop.wxss */
+
+page{
+  background: #f6f6f6;
+}
+
+.row {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20rpx;
+  margin: 20rpx;
+  border-radius: 15rpx;
+  height: 140rpx;
+}
+
+.row .shangpin{
+  height: 100rpx;
+  width: 100rpx;
+  border: 1px solid #f6f6f6;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  width: 400rpx;
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+}
+
+
+.col .title{
+  font-size: 30rpx;
+  color: #333333;
+  margin-bottom: 10rpx;
+  font-weight: bold;
+}
+
+.jieshao{
+  font-size: 24rpx;
+  color: #999999;
+}
+
