@@ -139,15 +139,18 @@ function conversiontime(timestamp) {
 // 时间戳差
 function getDifValue(nowtimestamp, beforetimestamp) {
 	return new Promise(function(resolve) {
-		var difValue = nowtimestamp - beforetimestamp;
-		// var day = Math.floor(difValue  / 60 / 60 / 24); //天
+		var difValue = (nowtimestamp*1000) - (beforetimestamp*1000);
+		console.log('时间差',difValue)
+		var day = Math.floor(difValue / 1000 / 60 / 60 / 24);//天
 		difValue = difValue % (1000 * 60 * 60 * 24);
-		// var hour = Math.floor(difValue  / 60 / 60); //小时
+		var hour = Math.floor(difValue / 1000 / 60 / 60);//小时
 		difValue = difValue % (1000 * 60 * 60);
-		var min = Math.floor(difValue / 60); //分钟
+		var min = Math.floor(difValue / 1000 / 60);//分钟
 		difValue = difValue % (1000 * 60);
-		var second = Math.floor(difValue / 60 / 60);
+		var second = Math.floor(difValue / 1000);
 		var data = {
+			'day': day,
+			'hour': hour,
 			'min': min,
 			'second': second
 		}

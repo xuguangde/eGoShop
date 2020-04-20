@@ -29,25 +29,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(JSON.parse(options.data))
     this.setData({
-      data: JSON.parse(options.data),
-      collect: JSON.parse(options.data).collect
+      id: options.id
     })
-    this.goodsList(JSON.parse(options.data).id)  // 商品列表
-    this.aboutStore(JSON.parse(options.data).id) // 关于店铺
-    this.data.iconList[0].text = JSON.parse(options.data).store_name
-    this.data.iconList[1].text = JSON.parse(options.data).phone
-    this.data.iconList[2].text = JSON.parse(options.data).store_add
-    this.setData({
-      iconList: this.data.iconList
+    this.goodsList(options.id)  // 商品列表
+    this.aboutStore(options.id) // 关于店铺
+  },
+  // 跳转商品
+  goods(e){
+    wx.navigateTo({
+      url: '/pages/commodity/commodity?id='+ e.detail,
     })
   },
   aboutStore(id){
-    util.request(api.aboutStore,{store_id: this.data.data.id,uid: wx.getStorageSync('user').id}).then(
+    util.request(api.aboutStore,{store_id: id,uid: wx.getStorageSync('user').id}).then(
       res => {
+        this.data.iconList[0].text = res.data.data.store_name
+        this.data.iconList[1].text = res.data.data.phone
+        this.data.iconList[2].text = res.data.data.store_add
         this.setData({
-          collect: res.data.data.collect
+          collect: res.data.data.collect,
+          iconList: this.data.iconList,
+          data: res.data.data
         })
       }
     )

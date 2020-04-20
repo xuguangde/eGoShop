@@ -21,6 +21,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    
+    warehouse(e){
+      this.triggerEvent('warehouse',e.currentTarget.dataset.id)
+    }
   }
 })

@@ -1,7 +1,7 @@
 <view class="page-section-spacing">
   <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
     <block wx:for="{{warehouse}}" wx:key="index">
-      <view id="demo1" class="scroll-view-item_H">
+      <view id="demo1" class="scroll-view-item_H" bindtap="warehouse" data-id="{{item.id}}">
         <view class="warehouseImg">
           <image src="{{item.pic}}"></image>
         </view>

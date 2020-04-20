@@ -1,0 +1,59 @@
+<view class="searchScroll">
+  <search disabled="true"  bind:onClick="search" width="690rpx" ></search>
+</view>
+<view class="content">
+  <view class="contentOne">
+    <view class="contentTt">
+      <scroll-view class="scroll">
+        <view class="classiftOneName {{indexTwo == 99?'classiftOneNameBack':''}}" bindtap="whole">
+          <view class="{{indexTwo == 99?'classiftOneNameOne':''}}">
+            全部
+          </view>
+        </view>
+        <block wx:for="{{towList}}" wx:key="index">
+          <view class="classiftOneName {{indexTwo == index?'classiftOneNameBack':''}}" data-index="{{index}}" data-id="{{item.id}}" bindtap="towClick">
+            <view class="{{indexTwo == index?'classiftOneNameOne':''}}">
+              {{item.name}}
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="classiftGoods">
+    <scroll-view>
+      <block wx:for="{{list}}" wx:key="index"> 
+        <view class="goodsClassift" bindtap="goods" data-id="{{item.id}}">
+          <view class="goodsClassImg">
+            <image src="{{item.img_id}}"></image>
+          </view>
+          <view class="goodsRight">
+            <view class="goodsName">
+              {{item.goods_name}}
+            </view>
+            <view class="goodsRightBotton">
+              <view class="goodsPriceLink">
+                <view class="goodsPriceIcon fontColor">￥</view>
+                <view class="goodsPricePrice fontColor">{{item.price}}</view>
+              </view>
+              <view class="goodsCart">
+                <image src="/img/gwc58.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="scrollTwo">
+    <scroll-view class="scroll scrollTwoBack">
+      <block wx:for="{{threeList}}" wx:key="index">
+        <view class="classiftOneName" data-id="{{item.id}}" bindtap="threeClick">
+          <view class="scorllFont">
+            {{item.name}}
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

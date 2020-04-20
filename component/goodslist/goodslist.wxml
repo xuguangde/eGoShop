@@ -1,6 +1,6 @@
 <view class="goods">
   <block wx:for="{{goodsList}}" wx:key="index">
-    <view class="goodsBack">
+    <view class="goodsBack" bindtap="goodslist" data-id="{{item.id}}">
       <view>
         <view class="goodsImg">
           <image src="{{item.img_id}}"></image>
@@ -15,7 +15,7 @@
           已售：{{item.sales}}
         </view>
         <view class="goodsPrice">
-          <text>￥</text>777.00<view>/通</view>
+          <text>￥</text>{{item.price}}<view>/通</view>
         </view>
         <view class="shopCart" wx:if="{{cart == true}}">
           <image src="/img/gwc58.png"></image>

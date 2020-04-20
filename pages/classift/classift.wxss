@@ -1,0 +1,104 @@
+/* pages/classift/classift.wxss */
+.goodsClassift {
+  display: flex;
+  align-items: center;
+}
+.goodsClassImg image {
+  height: 140rpx;
+  width: 140rpx;
+}
+.goodsRightBotton,.goodsPriceLink{
+  display: flex;
+  align-items: center;
+}
+.goodsRight {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150rpx;
+  border-bottom: 2rpx #f6f6f6 solid;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.goodsClassift {
+  margin-left: 20rpx;
+}
+.goodsRightBotton {
+  justify-content: space-between;
+}
+.classiftGoods {
+  width: 590rpx;
+}
+.goodsPriceIcon {
+  font-size: 24rpx;
+}
+.goodsPricePrice {
+  font-size: 36rpx;
+}
+.goodsCart image {
+  height: 58rpx;
+  width: 58rpx;
+}
+.goodsName {
+  font-size: 24rpx;
+  color: #333333;
+}
+.contentTt{
+  display: flex;
+  position: fixed;
+  background: green;
+  height: 100%;
+}
+.scroll {
+  width: 160rpx;
+  background: #f6f6f6;
+}
+.contentOne {
+  width: 160rpx;
+}
+.classiftOneName {
+  font-size: 28rpx;
+  color: #333333;
+  height: 98rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.classiftOneNameBack {
+  background: #ffffff;
+}
+.classiftOneNameOne {
+  width: 150rpx;
+  border-left: 6rpx #df443a solid;
+  box-sizing: border-box;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  color: #df443a;
+}
+.content {
+  display: flex;
+}
+.scrollTwo {
+  position: fixed;
+  top: 110rpx;
+  left: 160rpx;
+}
+.scorllFont {
+  color: #666666;
+}
+.scrollTwoBack {
+  background: #ffffff;
+  border-right: 2rpx #f6f6f6 solid;
+}
+.searchScroll {
+  width: 100%;
+  display: flex;
+  background: #ffffff;
+  justify-content: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}

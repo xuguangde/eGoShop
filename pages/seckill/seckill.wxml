@@ -21,15 +21,16 @@
         <view class="item">
           17:30
         </view>
-        <view class="onOpen">
+        <view class="onOpenTwo">
           正在疯抢
         </view>
       </view>
       <view class="endTime">
-        <view class="end">距离结束</view>
-        <countdown></countdown>
+        <view class="end">距离{{index == 0?"结束":"开始"}}</view>
+        <countdown wx:if="{{type == 0}}" end_time="{{end_time}}" start_time="{{timestamp}}"></countdown>
+        <countdown wx:if="{{type == 1}}" end_time="{{start_time}}" start_time="{{timestamp}}"></countdown>
       </view>
     </view>
   </view>
-  <seckillList seckillList="data"></seckillList>
+  <seckillList seckillList="{{data}}"></seckillList>
 </view>

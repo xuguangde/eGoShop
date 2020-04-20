@@ -10,6 +10,7 @@
     "pages/seckill/seckill",
     "pages/shopDetails/shopDetails",
     "pages/giftPack/giftPack",
+    "pages/classift/classift",
     "pages/commodity/commodity",
     "component/shopList/shopList",
     "component/commoditySwiper/commoditySwiper",

@@ -2,17 +2,17 @@
   <commoditySwiper swiperImgUrls="{{swiperImgUrls}}"></commoditySwiper>
   <view class="two">
     <view class="title">
-      商品标题商品标题商品标题商品标题商品标题商品标题
+      {{goods_name}}
     </view>
     <view class="titlePrice">
       <view class="price">
         <view class="priceIcon fontColor">￥</view>
-        <view class="priceNum fontColor">222.00</view>
-        <view class="priceSui">(含税)</view>
-        <view class="priceOne">购买商品可得积分</view>
+        <view class="priceNum fontColor">{{price}}</view>
+        <view class="priceSui" >(含税)</view>
+        <view class="priceOne" wx:if="{{is_ji == 1}}">购买商品可得积分</view>
       </view>
       <view class="shopNum">
-        销量：7777
+        销量：{{data.sales}}
       </view>
     </view>
   </view>
@@ -27,10 +27,13 @@
     </view>
   </view>
 </view>
+<view>
+  <rich-text nodes="{{content}}"></rich-text>
+</view>
 <view class="footer">
   <view class="footerOne">
     <view class="footerLeft">
-      <view class="footerLeftOne">
+      <view class="footerLeftOne" wx:if="{{data.type == 6}}" bindtap="shop">
         <view class="footerLeftImg">
           <image src="/img/dp44.png"></image>
         </view>
@@ -38,9 +41,10 @@
           店铺
         </view>
       </view>
-      <view class="footerLeftOne">
+      <view class="footerLeftOne" bindtap="collectGoods">
         <view class="footerLeftImg">
-          <image src="/img/scb44.png"></image>
+          <image wx:if="{{collect == 1}}" src="/img/sca44.png"></image>
+          <image wx:if="{{collect != 1}}" src="/img/scb44.png"></image>
         </view>
         <view class="footerLeftShop">
           收藏
@@ -48,15 +52,15 @@
       </view>
     </view>
     <view class="footerButton">
-      <view class="footerButtonAdd">
+      <view class="footerButtonAdd" bindtap="specs">
         加入购物车
       </view>
-      <view class="footerButtonLiji">
+      <view class="footerButtonLiji" bindtap="specs">
         立即购买
       </view>
     </view>
   </view>
   <popup flag="{{flag}}">
-    <specsPopup bind:close="close"></specsPopup>
+    <specsPopup bind:onClick="onClick" bind:close="close" spec="{{spec}}" img_id="{{data.img_id}}"></specsPopup>
   </popup>
 </view>

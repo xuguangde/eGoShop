@@ -8,7 +8,10 @@ Page({
    */
   data: {
     data:[],
-    index:'0'
+    index:'0',
+    end_time:'',
+    start_time:'',
+    timestamp:'',
   },
 
   /**
@@ -22,16 +25,26 @@ Page({
     this.setData({
       index: e.currentTarget.dataset.id
     })
+    this.getSeckillList()
   },
   getSeckillList(){
     var that = this
-    util.request(api.getSeckillList,{type:'2'}).then(
+    util.request(api.getSeckillList,{type: Number(this.data.index) + 1,}).then(
       res => {
         if(res.data.retcode == 1) {
+          var timestamp = Date.parse(new Date())/1000
+          console.log('当前时间',timestamp)
           that.setData({
-            data: res.data.data
+            data: res.data.data.lists,
+            start_time: res.data.data.list.start_time,
+            timestamp: Date.parse(new Date())/1000,
+            end_time: res.data.data.list.end_time,
+            type: that.data.index
           })
         } else {
+          that.setData({
+            data: res.data.data.lists
+          })
           util.msg(res.data.msg)
         }
       }

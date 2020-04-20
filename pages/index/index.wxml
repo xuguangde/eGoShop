@@ -27,7 +27,7 @@
     </view>
   </view>
   <notice contentList="{{contentList}}"></notice>
-  <warehouse warehouse="{{warehouse}}"></warehouse>
+  <warehouse bind:warehouse="warehouse" warehouse="{{warehouse}}"></warehouse>
   <view class="arrondi">
     <view class="xsms" bindtap="seckill">
       <image src="/img/xsms340x280.png"></image>
@@ -44,11 +44,11 @@
   <view class="title">
     <image src="/img/rqsp232x64.png"></image>
   </view>
-  <popularity hotGoodsList="{{hotGoodsList}}"></popularity>
+  <popularity hotGoodsList="{{hotGoodsList}}" bind:goodslist="goodslist"></popularity>
   <view class="title">
     <image src="/img/xpss234x64.png"></image>
   </view>
-  <goodslist goodsList="{{newGoodsList}}"></goodslist>
+  <goodslist  goodsList="{{newGoodsList}}" bind:goodslist="goodslist"></goodslist>
   <popup flag="{{flag}}">
     <view class="redPack">
       <view class="redPackContent">

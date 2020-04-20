@@ -33,6 +33,12 @@ Page({
       animation: true,
     })
   },
+  // 跳转分类
+  warehouse(e){
+    wx.navigateTo({
+      url: '/pages/classift/classift?id=' + e.detail,
+    })
+  },
   swiperChange(e) {
     const that = this;
     that.setData({
@@ -52,6 +58,12 @@ Page({
     this.GetPopularityList()  //获取人气产品
     this.GetNewGoodsList()  //新品上市
     this.getFirstUserCouponList()  //弹窗优惠券
+  },
+  // 跳转商品详情
+  goodslist(e){
+    wx.navigateTo({
+      url: '/pages/commodity/commodity?id='+ e.detail,
+    })
   },
   getFirstUserCouponList(){
     var that = this

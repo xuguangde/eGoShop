@@ -1,4 +1,6 @@
 // pages/shoppingCart/shoppingCart.js
+var api = require("../../utils/api.js");
+var util = require("../../utils/util.js");
 Page({
 
   /**
@@ -12,9 +14,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
+  getCartList(){
+    util.request(api.getCartList,{uid: wx.getStorageSync('user').id}).then(
+      res =>{
+        if(res.data.retcode == 1){
 
+        } else {
+          util.msg(res.data.msg)
+        }
+      }
+    )
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -26,7 +37,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getCartList()
   },
 
   /**

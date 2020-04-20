@@ -19,4 +19,12 @@ var hostApi = "http://symc.shengguweb.com/index.php/index";  //本地测试地�
   GetCouponList: hostApi + "/index/GetCouponList", //优惠券商品
   getSeckillList: hostApi + "/index/getSeckillList", // 秒杀产品
   aboutStore: hostApi + "/store/aboutStore", // 关于店铺
+  getGoodsDetailInfo: hostApi + "/index/getGoodsDetailInfo", // 商品详情
+  collectGoods: hostApi + "/user/collectGoods", // 收藏商品
+  getTwoCategoryList: hostApi + "/index/getTwoCategoryList", // 二级分类
+  getThreeCategoryList: hostApi + "/index/getThreeCategoryList", // 三级分类
+  getCategroyGoodsLsit: hostApi + "/index/getCategroyGoodsLsit", // 根据分类ID获取商品列表
+  getUserinfo: hostApi + "/user/getUserinfo", // 根据分类ID获取商品列表
+  addCart: hostApi + "/cart/addCart", // 根据分类ID获取商品列表
+  getCartList: hostApi + "/cart/getCartList", // 根据分类ID获取商品列表
  }

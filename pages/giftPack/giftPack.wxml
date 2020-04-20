@@ -3,6 +3,6 @@
     <image src="{{swiperImgUrls[0].pic}}"></image>
   </view>
   <view class="giftList">
-    <goodslist cart="false" goodsList="{{shopGoodsList}}"></goodslist>
+    <goodslist  bind:goodslist="goodslist" cart="false" goodsList="{{shopGoodsList}}"></goodslist>
   </view>
 </view>

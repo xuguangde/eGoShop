@@ -20,14 +20,14 @@ Component({
   attached(){
   },
   observers:{
-    'goodsList':function(){
-      console.log(this.data.goodsList)
-    }
+    
   },
   /**
    * 组件的方法列表
    */
   methods: {
-    
+    goodslist(e){
+      this.triggerEvent('goodslist',e.currentTarget.dataset.id)
+    }
   }
 })
