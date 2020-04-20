@@ -1,0 +1,5 @@
+<!--pages/integraldescription/integraldescription.wxml-->
+<view class="content">
+  <text class="title">积分使用说明</text>
+  <text class="con">后台上传积分使用规则：100积分=1元，后台设置。后台上传积分使用规则：100积分=1元。后台设置</text>
+</view>

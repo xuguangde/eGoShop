@@ -1,0 +1,25 @@
+<!--pages/setupbankcard/setupbankcard.wxml-->
+<!--pages/addaddress/addaddress.wxml-->
+<view class="content">
+  <view class="row">
+    <text class="name">开户行</text>
+    <input class="shuru" type="text" placeholder="请输入开户行"></input>
+  </view>
+
+  <view class="row">
+    <text class="name">账户名</text>
+    <input class="shuru" type="text" placeholder="请输入账户名"></input>
+  </view>
+  
+  <view class="row">
+    <text class="name">银行卡号</text>
+    <input class="shuru" type="text" placeholder="请输入银行卡号"></input>
+  </view>  
+
+  <view class="goShopping">
+            确定
+  </view>
+
+
+</view>
+

@@ -1,0 +1,33 @@
+<!--pages/cashout/cashout.wxml-->
+<!--pages/addaddress/addaddress.wxml-->
+<view class="content">
+  <view class="row">
+    <text class="name">设置银行卡</text>
+    <image src="/img/jty20.png"></image>
+  </view>
+
+  <view class="moneyrow">
+    <text class="name">提现金额</text>
+    <view class="shurufu">
+        <text class="qian">￥</text>    
+        <input class="shuru" type="text" ></input>
+    </view>
+ 
+    <view class="linefu">
+        <view class="line"></view>
+    </view>
+
+    <view class="tixian">
+      <text>可提现金额</text>
+      <text>10.00元</text>
+    </view>
+   
+    <view class="goShopping">
+            提现
+    </view>  
+  </view>
+  
+  
+
+
+</view>

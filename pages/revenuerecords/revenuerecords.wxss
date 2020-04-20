@@ -1,0 +1,36 @@
+/* pages/revenuerecords/revenuerecords.wxss */
+/* pages/withdrawalsrecord/withdrawalsrecord.wxss */
+.row{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding-top: 36rpx;
+padding-right: 30rpx;
+padding-left: 30rpx;
+background: #ffffff;
+height: 150rpx;
+margin-top: 20rpx;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+}
+
+.add{
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.datetime{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 30rpx;
+}
+
+.rowright text{
+  font-size: 30rpx;
+  color: #de443a;
+  font-weight: bold;
+}
+

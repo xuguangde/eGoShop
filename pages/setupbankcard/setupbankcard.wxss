@@ -1,0 +1,41 @@
+/* pages/setupbankcard/setupbankcard.wxss */
+/* pages/addaddress/addaddress.wxss */
+page{
+
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 108rpx;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.name{
+  font-size: 30rpx;
+  color: #333333;
+  margin-left: 30rpx;
+  margin-right: 60rpx;
+}
+
+.shuru{
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.goShopping {
+  height: 88rpx;
+  width: 690rpx;
+  color: #ffffff;
+  background: linear-gradient(to right, #1acc6c 0%,#14bf63 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 88rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 120rpx;
+  margin-bottom: 30rpx;
+  margin-left: 32rpx;
+}

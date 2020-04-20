@@ -1,0 +1,10 @@
+<!--pages/withdrawalsrecord/withdrawalsrecord.wxml-->
+ <view class="row">
+    <view class="col">
+      <text class="add">提现成功</text>
+      <text class="datetime">2020.02.02 22:12:23</text>
+    </view>
+    <view class="rowright">
+       <text>-</text><text>45</text>
+    </view>
+  </view>

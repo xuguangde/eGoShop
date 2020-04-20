@@ -30,7 +30,17 @@
     "pages/mycollect/mycollect",
     "pages/mycollectshop/mycollectshop",
     "pages/mycouponone/mycouponone",
-    "pages/nocoupon/nocoupon"
+    "pages/nocoupon/nocoupon",
+    "pages/integraldetails/integraldetails",
+    "pages/integraldescription/integraldescription",
+    "pages/definiteanddetailed/definiteanddetailed",
+    "pages/withdrawalsrecord/withdrawalsrecord",
+    "pages/revenuerecords/revenuerecords",
+    "pages/setupbankcard/setupbankcard",
+    "pages/cashout/cashout",
+    "pages/waitingprocess/waitingprocess",
+    "pages/refunded/refunded",
+    "pages/customerserviceorder/customerserviceorder"
   ],
   "window": {
     "backgroundTextStyle": "light",

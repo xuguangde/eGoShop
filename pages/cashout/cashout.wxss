@@ -1,0 +1,91 @@
+/* pages/cashout/cashout.wxss */
+page{
+background: #f6f6f6;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 108rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  background: #ffffff;
+}
+
+.name{
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.shuru{
+  font-size: 80rpx;
+  color: #333333;
+  margin-left: 20rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  margin-top: 40rpx;
+  height: 75rpx;
+}
+
+image{
+  margin-left: 170rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.moneyrow{
+  display: flex;
+  flex-direction: column;
+  padding-left: 30rpx;
+  padding-top: 40rpx;
+  background: #ffffff;
+  margin-top: 20rpx;
+  height: 1000rpx;
+}
+
+.line{
+  height: 2rpx;
+  width: 690rpx;
+  background: #e4e4e4;
+
+}
+
+.linefu{
+  display: flex;
+  flex-direction: column;
+}
+
+.shurufu{
+  display: flex;
+  flex-direction: row;
+}
+
+.qian{
+  font-size: 48rpx;
+  color: #333333;
+  font-weight: bold;
+  margin-top: 40rpx;
+}
+
+.tixian{
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.goShopping {
+  height: 88rpx;
+  width: 690rpx;
+  color: #ffffff;
+  background: linear-gradient(to right, #1acc6c 0%,#14bf63 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 88rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 60rpx;
+  margin-bottom: 30rpx;
+}

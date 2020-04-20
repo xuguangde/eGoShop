@@ -1,0 +1,21 @@
+/* pages/integraldescription/integraldescription.wxss */
+.content{
+  display: flex;
+  flex-direction: column;
+  padding-top: 60rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.title{
+  font-size: 30rpx;
+  color: #333333;
+  font-weight: bold;
+}
+
+.con{
+  margin-top: 30rpx;
+  font-size: 26rpx;
+  color: #666666;
+}
+

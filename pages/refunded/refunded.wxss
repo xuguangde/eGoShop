@@ -1,0 +1,148 @@
+/* pages/refunded/refunded.wxss */
+page{
+  background: #f6f6f6;
+}
+.header{
+  flex-direction: row;
+  display: flex;
+  height: 200rpx;
+}
+
+.headbgImage{
+  height: 22%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.headerContent{
+  height: 20%;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+}
+
+.headerContent text{
+  font-size: 38rpx;
+  font-weight: bold;
+
+}
+
+.num{
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #ffffff;
+  opacity: 0.70;
+}
+
+
+.fu{
+  position: absolute;
+  z-index: 2;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  margin-left: 20rpx;
+  border-radius: 15rpx;
+  margin-top: -20rpx;
+  height: 320rpx;
+  width: 675rpx;
+}
+
+.row {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+
+.row .shangpin{
+  height: 220rpx;
+  width: 220rpx;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  width: 300rpx;
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+}
+
+
+.col .bt{
+  font-size: 24rpx;
+  color: #333333;
+}
+
+
+.priceRow{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50rpx;
+  margin-top: 8rpx;
+}
+
+.money{
+  font-size: 30rpx;
+}
+
+.monlogo{
+   font-size: 24rpx;
+}
+
+.nummon{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 16rpx;
+  text-align: right;
+}
+
+.guige{
+  margin-top: 40rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.allmoney{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40rpx;
+}
+
+.allmoney text{
+  font-size: 26rpx;
+}
+
+.fu2{
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  padding: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 15rpx;
+  margin-top: 355rpx;
+  height: 324rpx;
+  padding-top: 30rpx;
+}
+
+.tuilist{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tuilist text{
+  font-size: 30rpx;
+  color: #333333;
+}
+
+
+

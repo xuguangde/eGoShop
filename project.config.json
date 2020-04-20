@@ -34,6 +34,8 @@
 		"hidedInDevtools": []
 	},
 	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -121,8 +123,8 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "地址管理",
+					"id": 9,
+					"name": "收货地址",
 					"pathName": "pages/deliveryaddress/deliveryaddress",
 					"query": "",
 					"scene": null
@@ -173,6 +175,76 @@
 					"id": -1,
 					"name": "商品详情",
 					"pathName": "pages/commodity/commodity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "积分明细",
+					"pathName": "pages/integraldetails/integraldetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "积分说明",
+					"pathName": "pages/integraldescription/integraldescription",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收支明细",
+					"pathName": "pages/definiteanddetailed/definiteanddetailed",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现记录",
+					"pathName": "pages/withdrawalsrecord/withdrawalsrecord",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收入记录",
+					"pathName": "pages/revenuerecords/revenuerecords",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设置银行卡",
+					"pathName": "pages/setupbankcard/setupbankcard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请提现",
+					"pathName": "pages/cashout/cashout",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请详情-等待商家处理",
+					"pathName": "pages/waitingprocess/waitingprocess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请详情-已退款",
+					"pathName": "pages/refunded/refunded",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的订单-售后",
+					"pathName": "pages/customerserviceorder/customerserviceorder",
 					"query": "",
 					"scene": null
 				}

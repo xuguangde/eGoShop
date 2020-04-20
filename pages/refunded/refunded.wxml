@@ -1,0 +1,60 @@
+<!--pages/refunded/refunded.wxml-->
+<!--pages/waitingprocess/waitingprocess.wxml-->
+<!--pages/my/my.wxml-->
+<view class="content">
+  <view class="header">
+    <image class="headbgImage" src="/img/di750x240.png" ></image>
+    <view class='headerContent'>
+          <text>已退款</text>
+
+          <view class="num">
+            <text style="font-size: 10px;">此款项已汇入您的账户中</text> 
+          </view>  
+    </view>
+  </view>
+
+  <view class="fu">
+       <view class="row">
+        <image src="/img/tu220.png" class="shangpin"></image>
+
+        <view class="col">
+          <text class="bt">多乐士全效竹炭呼吸健康油漆多乐士全效竹炭呼吸健康油漆</text>
+          <view class="guige">
+            <text class="qq">规格：</text>        
+            <text class="money">20kg</text>
+          </view>
+        </view>
+
+        <view class="priceRow">
+          <text class="money"><text class="monlogo">￥</text>299.00</text>
+          <text class="nummon"><text>x</text>1</text>
+        </view>
+    </view>
+
+      <view class="allmoney">
+        <text>商品总金额：</text>
+        <text>￥299.00</text>
+      </view>
+  </view>
+   
+  <view class="fu2"> 
+    <view class="tuilist" style="margin-bottom:82rpx;">
+        <text>退款原因：</text>
+        <text>卖家缺货</text>
+    </view>
+    <view class="tuilist" style="margin-bottom:82rpx;">
+        <text>退款金额：</text>
+        <text>￥299.00</text>
+    </view>
+    <view class="tuilist">
+      <text>申请时间：</text>
+      <text>2019.11.29 18:11</text>
+    </view>  
+    
+  </view>
+
+
+
+
+</view>
+
