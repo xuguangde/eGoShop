@@ -1,10 +1,9 @@
-<!--pages/customerserviceorder/customerserviceorder.wxml-->
 <view class="content">
   <view class="header">
     <image class="headbgImage" src="/img/di750x240.png" ></image>
     <view class='headerContent'>
       <image src="/img/未标题-1.png" class="shangpin"></image>
-      <text>售后</text>
+      <text>待付款</text>
     </view>
   </view>
 
@@ -42,10 +41,6 @@
       <view class="allmoney">
         <text>商品总金额：</text>
         <text>￥299.00</text>
-      </view>
-
-      <view class="yuanjiao">
-        <text>申请售后</text>
       </view>
   </view>
    

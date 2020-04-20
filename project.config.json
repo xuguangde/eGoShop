@@ -247,6 +247,13 @@
 					"pathName": "pages/customerserviceorder/customerserviceorder",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的订单-待付款",
+					"pathName": "pages/obligation/obligation",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

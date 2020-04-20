@@ -40,7 +40,8 @@
     "pages/cashout/cashout",
     "pages/waitingprocess/waitingprocess",
     "pages/refunded/refunded",
-    "pages/customerserviceorder/customerserviceorder"
+    "pages/customerserviceorder/customerserviceorder",
+    "pages/obligation/obligation"
   ],
   "window": {
     "backgroundTextStyle": "light",
