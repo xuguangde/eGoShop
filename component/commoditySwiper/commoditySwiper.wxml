@@ -3,7 +3,7 @@
       <swiper class='carousel_swiper' bindchange='swiperChange' indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='2000' circular='true'>
         <block wx:for="{{swiperImgUrls}}" wx:key="index">
           <swiper-item >
-            <image class="carouselImg" src='{{item.pic}}' mode='aspectFill' ></image>
+            <image class="carouselImg" src='{{item}}' mode='aspectFill' ></image>
           </swiper-item>
         </block>
       </swiper>

@@ -38,6 +38,10 @@ page {
   background: #ffffff;
   margin-top: 20rpx;
 }
+.onOpenTwo {
+  font-size: 36rpx;
+  color: #ffffff;
+}
 .title {
   display: flex;
   justify-content: space-between;

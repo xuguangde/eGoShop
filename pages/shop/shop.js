@@ -55,7 +55,7 @@ Page({
   // 跳转店铺
   onClick(e) {
     wx.navigateTo({
-      url: '/pages/shopDetails/shopDetails?data=' + JSON.stringify(e.detail),
+      url: '/pages/shopDetails/shopDetails?id=' + e.detail,
     })
   },
   /**

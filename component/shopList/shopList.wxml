@@ -19,7 +19,7 @@
           {{item.dist}}
         </view>
         <view class="shopListOpen">
-          <view class="shopButton" bindtap="onClick" data-data="{{item}}">
+          <view class="shopButton" bindtap="onClick" data-data="{{item.id}}">
             进店 
           </view>
           <view class="shopListJt">

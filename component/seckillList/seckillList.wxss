@@ -62,7 +62,14 @@
   align-items: center;
   justify-content: space-between;
   height: 220rpx;
+  width: 100%;
+}
+.seckillListText {
+  width: 100%;
 }
 .seckillListRight {
   width: 100%;
+}
+.fontColor {
+  color: #de443a;
 }

@@ -20,60 +20,35 @@
       </view>
     </view>
     <view class="specsPopupTwo">
-      <view class="specsPopupSpecsText">
-        规格
-      </view>
-      <view class="specsPopupSpecsNum">
-        <view class="specsPopupList">
-          10Kg
+      <block wx:for="{{spec}}" wx:key="index">
+        <view class="specsPopupSpecsText">
+          {{item.spec_name}}
         </view>
-        <view class="specsPopupList specsPopupListOne">
-          20Kg
+        <view class="specsPopupSpecsNum">
+          <block wx:for="{{item.con}}" wx:for-item="itemOne" wx:for-index="indexOne" wx:key="indexOne">
+            <view class="specsPopupList {{itemOne.type == true?'specsPopupListOne':''}}" bindtap="spec" data-index="{{index}}" data-indexOne="{{indexOne}}">
+              {{itemOne.spec_name}}
+            </view>
+          </block>
         </view>
-      </view>
-    </view>
-    <view class="specsPopupTwo">
-      <view class="specsPopupSpecsText">
-        规格
-      </view>
-      <view class="specsPopupSpecsNum">
-        <view class="specsPopupList">
-          10Kg
-        </view>
-        <view class="specsPopupList specsPopupListOne">
-          20Kg
-        </view>
-      </view>
-    </view>
-    <view class="specsPopupTwo">
-      <view class="specsPopupSpecsText">
-        规格
-      </view>
-      <view class="specsPopupSpecsNum">
-        <view class="specsPopupList">
-          10Kg
-        </view>
-        <view class="specsPopupList specsPopupListOne">
-          20Kg
-        </view>
-      </view>
+      </block>
     </view>
     <view class="specsPopupNum">
       <view class="specsPopupNumText">
         数量
       </view>
       <view class="specsPopupNumAdd">
-        <view class="specsPopupNumAddImg">
+        <view class="specsPopupNumAddImg" bindtap="reduce">
           <image src="/img/jian20.png"></image>
         </view>
-        <view class="specsPopupNumOne">22</view>
-        <view class="specsPopupNumAddImg">
+        <view class="specsPopupNumOne">{{number}}</view>
+        <view class="specsPopupNumAddImg" bindtap="onAdd">
           <image src="/img/jia20.png"></image>
         </view>
       </view>
     </view>
   </view>
-  <view class="specsPopupButton">
+  <view class="specsPopupButton" bindtap="onClick">
     <view class="specsPopupText">确定</view>
   </view>
 </view>

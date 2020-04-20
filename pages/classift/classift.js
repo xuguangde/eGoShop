@@ -1,4 +1,4 @@
-// pages/giftPack/giftPack.js
+// pages/classift/classift.js
 var api = require("../../utils/api.js");
 var util = require("../../utils/util.js");
 Page({
@@ -7,70 +7,83 @@ Page({
    * 页面的初始数据
    */
   data: {
-    swiperImgUrls:[]
+    towList:[],
+    list:[],
+    threeList:[],
+    indexTwo: 99
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.id)
-    if(options.id == 1) {
-      this.GetSetmealList()
-      wx.setNavigationBarTitle({
-        title: '套餐礼包',
-      })
-    } else{
-      this.GetCouponList()
-      wx.setNavigationBarTitle({
-        title: '优惠券专区',
-      })
-    }
-    this.banner(options.id)
+    this.getTwoCategoryList(options.id)
+    this.whole()
   },
-  // 跳转商品详情
-  goodslist(e){
+  // 跳转商品
+  goods(e){
     wx.navigateTo({
-      url: '/pages/commodity/commodity?id='+ e.detail,
+      url: '/pages/commodity/commodity?id=' + e.currentTarget.dataset.id,
     })
   },
-  banner(id){
+  getTwoCategoryList(id){
     var that = this
-    var key = ''
-    if(id == 1) {
-      key = 'setmeal'
-    } else{
-      key = 'coupon'
-    }
-    util.request(api.getScrollinggraph,{key: key}).then(
-      res =>{
+    util.request(api.getTwoCategoryList,{cate_id:id}).then(
+      res => {
         if(res.data.retcode == 1){
           that.setData({
-            swiperImgUrls: res.data.data
+            towList:res.data.data
           })
         }
       }
     )
   },
-  GetCouponList(){
+  towClick(e){
     var that = this
-    util.request(api.GetCouponList,{uid: wx.getStorageSync('user').id}).then(
-      res =>{
+    this.setData({
+      indexTwo: e.currentTarget.dataset.index
+    })
+    util.request(api.getThreeCategoryList,{cate_id:e.currentTarget.dataset.id}).then(
+      res => {
         if(res.data.retcode == 1){
           that.setData({
-            shopGoodsList: res.data.data
+            threeList:res.data.data
+          })
+        } else{
+          util.msg(res.data.msg)
+          that.setData({
+            threeList:[]
           })
         }
       }
     )
   },
-  GetSetmealList(){
+  threeClick(e){
     var that = this
-    util.request(api.GetSetmealList,{uid: wx.getStorageSync('user').id}).then(
-      res =>{
+    util.request(api.getCategroyGoodsLsit,{cate_id_3:e.currentTarget.dataset.id}).then(
+      res => {
         if(res.data.retcode == 1){
           that.setData({
-            shopGoodsList: res.data.data
+            list:res.data.data,
+            threeList:[]
+          })
+        } else{
+          util.msg(res.data.msg)
+          that.setData({
+            threeList:[]
+          })
+        }
+      }
+    )
+  },
+  whole(){
+    var that = this
+    util.request(api.getCategroyGoodsLsit,{cate_id_3:''}).then(
+      res => {
+        if(res.data.retcode == 1){
+          that.setData({
+            list:res.data.data,
+            indexTwo: 99
           })
         }
       }

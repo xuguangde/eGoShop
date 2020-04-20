@@ -3,16 +3,22 @@
   <view class="header">
     <image class="headbgImage" src="/img/di750x280.png" ></image>
     <view class='headerContent'>
-          <text>13812345678\n</text>
-
+          <text>{{data.phone}}\n</text>
           <view class="num">
             <text style="font-size: 10px;">邀请码：</text> 
-            <text style="font-size: 10px;">789789</text>
+            <text style="font-size: 10px;">{{data.action_code}}</text>
             <image class="copyLogo" src="/img/fz44.png"></image>
           </view>
-         
-          <view class="yuanjiao">
+          <!-- <view class="yuanjiao" wx:if="{{data.level == 5}}">
             <text>普通用户</text>
+          </view> -->
+          <view class="yuanjiao" wx:if="{{data.level == 5}}">
+            <view class="vipBack">
+              <image src="/img/hyd142x32.png"></image>
+            </view>
+            <view class="vipName">
+              会员用户
+            </view>
           </view>
     </view>
   </view>
@@ -20,14 +26,14 @@
   <view class="middle-num">
     <view class="oner">
         <view class="zi">
-          <text class="zier">3  <text class="zisan">张</text></text>
+          <text class="zier">{{data.coupon}}  <text class="zisan">张</text></text>
           <text class="quan">优惠券</text>
         </view>
     </view>
     <view class="twoer">|</view>
     <view class="three">
         <view class="zi">
-          <text class="zier">2000\n</text>
+          <text class="zier">{{data.integral}}\n</text>
           <text class="quan">积分</text>
         </view>
     </view> 

@@ -14,7 +14,17 @@ page{
   width: 100%;
   z-index: 1;
 }
-
+.vipBack image {
+  height: 32rpx;
+  width: 142rpx;
+}
+.vipName {
+  position: absolute;
+  margin-left: 14rpx;
+  color: #ffe275;
+  align-items: center;
+  line-height: 20rpx;
+}
 .headerContent{
   height: 20%;
   position: absolute;
