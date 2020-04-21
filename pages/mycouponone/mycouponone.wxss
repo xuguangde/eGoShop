@@ -13,6 +13,7 @@ page{
   border-radius: 15rpx;
   margin-bottom: 8rpx;
   height: 140rpx;
+  position: relative;
 }
 
 .zuoimg{

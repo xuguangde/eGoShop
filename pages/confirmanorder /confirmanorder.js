@@ -1,37 +1,10 @@
-// pages/my/my.js
-var api = require("../../utils/api.js");
-var util = require("../../utils/util.js");
+// pages/confirmanorder /confirmanorder.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    data:''
-  },
-  navto(e){
-    wx.navigateTo({
-      url: e.currentTarget.dataset.url,
-    })
-  },
-  wdmoney: function (e) {
-    wx.navigateTo({
-      url: '../mymoney/mymoney',
-    })
-  },
-
-  wdsoucang: function (e) {
-    wx.navigateTo({
-      url: '/pages/mycollectshop/mycollectshop',
-    })
-  },
-
-
-  dizhi: function (e) {
-    wx.navigateTo({
-      url: '../deliveryaddress/deliveryaddress',
-    })
-
 
   },
 
@@ -40,18 +13,6 @@ Page({
    */
   onLoad: function (options) {
 
-  },
-  getUserinfo(){
-    var that = this
-    util.request(api.getUserinfo,{uid: wx.getStorageSync('user').id}).then(
-      res =>{
-        if(res.data.retcode == 1){
-          that.setData({
-            data: res.data.data
-          })
-        }
-      }
-    )
   },
 
   /**
@@ -65,7 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getUserinfo()  //获取个人信息
+
   },
 
   /**

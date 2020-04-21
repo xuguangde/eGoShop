@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "添加收货地址",
+  "usingComponents": {
+    "currencyButton": "/component/currencyButton/currencyButton",
+    "pickerOne": "/component/picker/picker"
+  }
 }

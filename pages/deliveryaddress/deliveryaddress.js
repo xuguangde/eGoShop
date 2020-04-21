@@ -1,11 +1,13 @@
 // pages/deliveryaddress/deliveryaddress.js
+var api = require("../../utils/api.js");
+var util = require("../../utils/util.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    addressList:[]
   },
 
   adddizhi: function (e) {
@@ -21,13 +23,18 @@ Page({
     })
   },
 
-
+  navto(e){
+    console.log(e)
+    wx.navigateTo({
+      url: '/pages/addaddress/addaddress?type=1'+'&data=' + JSON.stringify(e.currentTarget.dataset.data),
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -41,9 +48,22 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getUserShip()  //获取收货地址
   },
-
+  getUserShip(){
+    var that = this
+    util.request(api.getUserShip,{uid: wx.getStorageSync('user').id}).then(
+      res =>{
+        if(res.data.retcode == 1){
+          that.setData({
+            addressList: res.data.data
+          })
+        } else{
+          util.msg(res.data.msg)
+        }
+      }
+    )
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

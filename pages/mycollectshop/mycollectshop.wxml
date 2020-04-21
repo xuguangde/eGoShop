@@ -1,14 +1,15 @@
 <!--pages/mycollectshop/mycollectshop.wxml-->
 <view class="content">
-  <view class="row">
-    <image src="/img/tu100.png" class="shangpin"></image>
-
-    <view class="col">
-      <text class="title">多乐士（总店）</text>
-      <text class="jieshao">主营产品详细介绍主营产品</text>
-    </view>
+  <view class="shopTwo">
+    <switchText bind:switch="switch" switchText="{{switchText}}"></switchText>
   </view>
-
-
-
+  <block wx:for="{{collectStoreList}}">
+    <view class="row">
+      <image src="{{item.logo_img}}" class="shangpin"></image>
+      <view class="col">
+        <text class="title">{{item.store_name}}</text>
+        <text class="jieshao">{{item.store_goods}}</text>
+      </view>
+    </view>
+  </block>
 </view>

@@ -1,0 +1,8 @@
+<view class="nullPage">
+  <view class="nullPageImg">
+    <image src="{{img}}"></image>
+  </view>
+  <view class="nullPageImgFont">
+    {{text}}
+  </view>
+</view>

@@ -1,181 +1,63 @@
 <view class="cartContent">
+  <block wx:for="{{cartList}}" wx:key="index">
   <view class="cart">
     <view class="title">
-      <view class="opt">
-        <!-- <image src="/img/xzb44.png"></image> -->
-        <image src="/img/xza44.png"></image>
+      <view class="opt" bindtap="shopAll" data-index="{{index}}">
+        <image wx:if="{{item.type}}" src="/img/xza44.png"></image>
+        <image wx:else src="/img/xzb44.png"></image>
       </view>
       <view class="shopName">
-        这是店铺名称
+        {{item.name}}
       </view>
     </view>
-    <view class="goods">
-      <view class="opt">
-        <!-- <image src="/img/xzb44.png"></image> -->
-        <image src="/img/xza44.png"></image>
-      </view>
-      <view class="goodsImg">
-        <image src="/img/tu220.png"></image>
-      </view>
-      <view class="goodsRight">
-        <view class="goodsRightTop">
-          <view class="goodsName">
-            这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称
-          </view>
-          <view class="goodsDelete">
-            <image src="/img/sc44.png"></image>
-          </view>
+    <block wx:for="{{item.list}}" wx:for-item="itemOne" wx:for-index="indexOne" wx:key="index">
+      <view class="goods">
+        <view class="opt" bindtap="goodsAll" data-index="{{index}}" data-indexOne="{{indexOne}}">
+          <image wx:if="{{itemOne.type}}" src="/img/xza44.png"></image>
+          <image wx:else src="/img/xzb44.png"></image>
         </view>
-        <view class="goodsSpecs">
-          规格: 20/kg
+        <view class="goodsImg">
+          <image src="{{itemOne.goods_pic}}"></image>
         </view>
-        <view class="goodsCart">
-          <view class="goodsPrice fontColor">
-            <view class="qian">￥</view>
-            <view class="goodsPriceText">2999</view>
-          </view>
-          <view class="goodsBottom">
-            <view class="goodsAdd">
-              <image src="/img/jian20.png"></image>
+        <view class="goodsRight">
+          <view class="goodsRightTop">
+            <view class="goodsName">
+              {{itemOne.goods_name}}
             </view>
-            <view class="goodsNum">1</view>
-            <view class="goodsAdd">
-              <image src="/img/jia20.png"></image>
+            <view class="goodsDelete" bindtap="deleteCart" data-index="{{index}}" data-indexone="{{indexOne}}" data-id="{{itemOne.id}}">
+              <image src="/img/sc44.png"></image>
             </view>
           </view>
-        </view>
-      </view>
-    </view>
-    <view class="goods">
-      <view class="opt">
-        <!-- <image src="/img/xzb44.png"></image> -->
-        <image src="/img/xza44.png"></image>
-      </view>
-      <view class="goodsImg">
-        <image src="/img/tu220.png"></image>
-      </view>
-      <view class="goodsRight">
-        <view class="goodsRightTop">
-          <view class="goodsName">
-            这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称
+          <view class="goodsSpecs">
+            规格: {{itemOne.spec}}
           </view>
-          <view class="goodsDelete">
-            <image src="/img/sc44.png"></image>
-          </view>
-        </view>
-        <view class="goodsSpecs">
-          规格: 20/kg
-        </view>
-        <view class="goodsCart">
-          <view class="goodsPrice fontColor">
-            <view class="qian">￥</view>
-            <view class="goodsPriceText">2999</view>
-          </view>
-          <view class="goodsBottom">
-            <view class="goodsAdd">
-              <image src="/img/jian20.png"></image>
+          <view class="goodsCart">
+            <view class="goodsPrice fontColor">
+              <view class="qian">￥</view>
+              <view class="goodsPriceText">{{itemOne.goods_price}}</view>
             </view>
-            <view class="goodsNum">1</view>
-            <view class="goodsAdd">
-              <image src="/img/jia20.png"></image>
+            <view class="goodsBottom">
+              <view class="goodsAdd" bindtap="reduce" data-index="{{index}}" data-indexone="{{indexOne}}" data-id="{{itemOne.id}}" data-goodsNum="{{itemOne.goods_num}}">
+                <image src="/img/jian20.png"></image>
+              </view>
+              <view class="goodsNum">{{itemOne.goods_num}}</view>
+              <view class="goodsAdd">
+                <image src="/img/jia20.png" bindtap="goodsAdd" data-index="{{index}}" data-indexone="{{indexOne}}" data-id="{{itemOne.id}}"></image>
+              </view>
             </view>
           </view>
         </view>
       </view>
-    </view>
+    </block>
   </view>
-  <view class="cart">
-    <view class="title">
-      <view class="opt">
-        <!-- <image src="/img/xzb44.png"></image> -->
-        <image src="/img/xza44.png"></image>
-      </view>
-      <view class="shopName">
-        这是店铺名称
-      </view>
-    </view>
-    <view class="goods">
-      <view class="opt">
-        <!-- <image src="/img/xzb44.png"></image> -->
-        <image src="/img/xza44.png"></image>
-      </view>
-      <view class="goodsImg">
-        <image src="/img/tu220.png"></image>
-      </view>
-      <view class="goodsRight">
-        <view class="goodsRightTop">
-          <view class="goodsName">
-            这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称
-          </view>
-          <view class="goodsDelete">
-            <image src="/img/sc44.png"></image>
-          </view>
-        </view>
-        <view class="goodsSpecs">
-          规格: 20/kg
-        </view>
-        <view class="goodsCart">
-          <view class="goodsPrice fontColor">
-            <view class="qian">￥</view>
-            <view class="goodsPriceText">2999</view>
-          </view>
-          <view class="goodsBottom">
-            <view class="goodsAdd">
-              <image src="/img/jian20.png"></image>
-            </view>
-            <view class="goodsNum">1</view>
-            <view class="goodsAdd">
-              <image src="/img/jia20.png"></image>
-            </view>
-          </view>
-        </view>
-      </view>
-    </view>
-    <view class="goods">
-      <view class="opt">
-        <!-- <image src="/img/xzb44.png"></image> -->
-        <image src="/img/xza44.png"></image>
-      </view>
-      <view class="goodsImg">
-        <image src="/img/tu220.png"></image>
-      </view>
-      <view class="goodsRight">
-        <view class="goodsRightTop">
-          <view class="goodsName">
-            这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称
-          </view>
-          <view class="goodsDelete">
-            <image src="/img/sc44.png"></image>
-          </view>
-        </view>
-        <view class="goodsSpecs">
-          规格: 20/kg
-        </view>
-        <view class="goodsCart">
-          <view class="goodsPrice fontColor">
-            <view class="qian">￥</view>
-            <view class="goodsPriceText">2999</view>
-          </view>
-          <view class="goodsBottom">
-            <view class="goodsAdd">
-              <image src="/img/jian20.png"></image>
-            </view>
-            <view class="goodsNum">1</view>
-            <view class="goodsAdd">
-              <image src="/img/jia20.png"></image>
-            </view>
-          </view>
-        </view>
-      </view>
-    </view>
-  </view>
+  </block>
 </view>
-<view class="footer">
+<view class="footer" wx:if="{{cartList != ''}}">
     <view class="footerOne">
-      <view class="contenrOne">
+      <view class="contenrOne" bindtap="all">
         <view class="opt">
-          <!-- <image src="/img/xzb44.png"></image> -->
-          <image src="/img/xza44.png"></image>
+          <image wx:if="{{type}}" src="/img/xza44.png"></image>
+          <image wx:else src="/img/xzb44.png"></image>
         </view>
         <view class="ctrl">
           全选
@@ -189,7 +71,7 @@
             </view>
             <view class="footerPrice">
               <view class="fontColor">￥</view>
-              <view class="fontColor">2222</view>
+              <view class="fontColor">{{totalPrice}}</view>
             </view>
           </view>
           <view class="goShopping">
@@ -199,3 +81,4 @@
       </view>
     </view>
   </view>
+  <nullPage wx:if="{{cartList == ''}}" img="/img/kgwc364x308.png" text="购物车里空空如也~"></nullPage>

@@ -29,6 +29,10 @@ page{
   padding-left: 20rpx;
 }
 
+.shopTwo {
+  background: #ffffff;
+  padding: 0 164rpx;
+}
 
 .col .title{
   font-size: 30rpx;
