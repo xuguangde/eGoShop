@@ -2,6 +2,7 @@
 page{
   background: #f6f6f6;
 }
+
 .header{
   flex-direction: row;
   display: flex;

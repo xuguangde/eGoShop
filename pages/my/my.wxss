@@ -8,6 +8,16 @@ page{
   height: 200rpx;
 }
 
+.touxiang{
+    position: absolute;
+    z-index: 3;
+    width: 120rpx;
+    height: 120rpx;
+    right: 150rpx;
+    bottom: 100rpx;
+    border-radius: 25px;
+}
+
 .headbgImage{
   height: 25%;
   position: absolute;

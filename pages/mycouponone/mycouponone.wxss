@@ -15,15 +15,20 @@ page{
   height: 140rpx;
 }
 
+.zuoimg{
+  position: relative;
+  width: 886rpx;
+  height: 162rpx;
+  z-index: 2;
+}
+
 .col{
-  border-top-left-radius: 15rpx;
-  border-bottom-left-radius: 15rpx;
-  background: #de443a;
+  position: relative;
+  z-index: 3;
+  left: -150rpx;
   display: flex;
   flex-direction: column;
   height: 140rpx;
-  width: 186rpx;
-  border: 1px solid #f6f6f6;
   align-items: center;
   justify-content: center;
 }
@@ -42,19 +47,13 @@ page{
 
 
 .right{
-  height: 140rpx;
-  position: absolute;
-  left: 208rpx;
-  top: 30rpx;
-  width: 50%;
-  z-index: 1;
+
 }
 
 .hang{
-  position: absolute;
-  z-index: 2;
-  left: 250rpx;
-  top: 30rpx;
+  position: relative;
+  z-index: 1;
+ 
 }
 
 .cx{
@@ -74,7 +73,7 @@ page{
   border: 2rpx #de443a solid;
   border-radius: 30rpx;
   padding: 10rpx 30rpx;
-  margin-left: 80rpx;
+  margin-left: 120rpx;
   margin-bottom: 20rpx;
 }
 

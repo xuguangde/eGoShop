@@ -3,6 +3,7 @@
   <view class="header">
     <image class="headbgImage" src="/img/di750x280.png" ></image>
     <view class='headerContent'>
+          <image src="/img/person.jpg" class="touxiang"></image>
           <text>{{data.phone}}\n</text>
           <view class="num">
             <text style="font-size: 10px;">邀请码：</text> 

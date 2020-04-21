@@ -1,0 +1,71 @@
+/* pages/noreceivingaddress/noreceivingaddress.wxss */
+image{
+  width: 248rpx;
+  height: 174rpx;
+  margin-bottom: 40rpx;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120rpx;
+}
+
+.tijiao{
+  font-size: 36rpx;
+  color: #333333;
+  font-weight: bold;
+}
+
+.zifu{
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.row{
+  margin-top: 40rpx;
+}
+
+.logio{
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  color: #de443a;
+}
+
+.money{
+  font-size: 36rpx;
+  color: #de443a;
+}
+
+.ding{
+  margin-top: 120rpx;
+  font-size: 26rpx;
+  color: #999999;
+}
+
+.goShopping {
+  height: 88rpx;
+  width: 630rpx;
+  color: #ffffff;
+  background: linear-gradient(to right, #1acc6c 0%,#14bf63 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 88rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 535rpx;
+  margin-bottom: 30rpx;
+  position: absolute;
+  z-index: 1;
+}
+
+
+.goShopping image{
+  width: 34rpx;
+  height: 34rpx;
+  position: absolute;
+  z-index: 4;
+  left: 200rpx;
+}

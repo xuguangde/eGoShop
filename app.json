@@ -42,7 +42,13 @@
     "pages/waitingprocess/waitingprocess",
     "pages/refunded/refunded",
     "pages/customerserviceorder/customerserviceorder",
-    "pages/obligation/obligation"
+    "pages/obligation/obligation",
+    "pages/myorder/myorder",
+    "pages/noreceivingaddress/noreceivingaddress",
+    "pages/selectdeliveryaddress /selectdeliveryaddress ",
+    "pages/confirmanorder /confirmanorder",
+    "pages/shoppingnullcart/shoppingnullcart",
+    "pages/mynullcollection/mynullcollection"
   ],
   "window": {
     "backgroundTextStyle": "light",

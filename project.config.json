@@ -205,7 +205,8 @@
 					"pathName": "pages/integraldetails/integraldetails",
 					"query": "",
 					"scene": null
-				},{
+				},
+				{
 					"id": -1,
 					"name": "分类",
 					"pathName": "pages/classift/classift",
@@ -216,12 +217,97 @@
 					"id": -1,
 					"name": "我的",
 					"pathName": "pages/my/my",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "我的订单-待付款",
 					"pathName": "pages/obligation/obligation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的订单",
+					"pathName": "pages/myorder/myorder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的订单-售后",
+					"pathName": "pages/customerserviceorder/customerserviceorder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现记录",
+					"pathName": "pages/withdrawalsrecord/withdrawalsrecord",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收入记录",
+					"pathName": "pages/revenuerecords/revenuerecords",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "积分说明",
+					"pathName": "pages/integraldescription/integraldescription",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设置银行卡",
+					"pathName": "pages/setupbankcard/setupbankcard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请提现",
+					"pathName": "pages/applyforsale/applyforsale",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "确认订单-无收货地址",
+					"pathName": "pages/noreceivingaddress/noreceivingaddress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "确认订单-选择收货地址",
+					"pathName": "pages/selectdeliveryaddress /selectdeliveryaddress ",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "确认订单",
+					"pathName": "pages/confirmanorder /confirmanorder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购物车空页面",
+					"pathName": "pages/shoppingnullcart/shoppingnullcart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的收藏-空状态",
+					"pathName": "pages/mynullcollection/mynullcollection",
 					"query": "",
 					"scene": null
 				}

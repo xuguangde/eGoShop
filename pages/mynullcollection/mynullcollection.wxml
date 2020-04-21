@@ -1,0 +1,5 @@
+<!--pages/shoppingnullcart/shoppingnullcart.wxml-->
+<view class="content">
+  <image src="/img/ksc364x308.png"></image>
+  <text>还没有收藏哦~</text>
+</view>

@@ -1,6 +1,7 @@
 <!--pages/mycouponone.wxml-->
 <view class="content">
   <view class="row">
+    <image src="/img/byhq186x162.png" class="zuoimg"></image>
     <view class="col">
       <view>
         <text class="qq">￥</text>        
@@ -21,6 +22,7 @@
   </view>
 
 
+  
 
 </view>
 

@@ -1,0 +1,5 @@
+<!--pages/shoppingnullcart/shoppingnullcart.wxml-->
+<view class="content">
+  <image src="/img/kgwc364x308.png"></image>
+  <text>购物车空空如也~</text>
+</view>
