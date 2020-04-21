@@ -39,5 +39,7 @@ var hostApi = "http://symc.shengguweb.com/index.php/index";  //本地测试地�
   getUserShip: hostApi + "/user/getUserShip",   // 获取省市区
   removeShip: hostApi + "/user/removeShip",   // 删除地址
   editShip: hostApi + "/user/editShip",   // 编辑收货地址
-
+  getUserinfo: hostApi + "/user/getUserinfo", // 根据分类ID获取商品列表
+  addCart: hostApi + "/cart/addCart", // 根据分类ID获取商品列表
+  getCartList: hostApi + "/cart/getCartList", // 根据分类ID获取商品列表
  }
