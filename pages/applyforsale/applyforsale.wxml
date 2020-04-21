@@ -18,7 +18,7 @@
     <input class="shuru" type="text" placeholder="请输入退款金额" style="text-align:right;margin-right:30rpx;"></input>
   </view>  
 
-  <view class="rowjust">
+  <view class="rowjust" bindtap="showModal">
     <text class="name">退款原因</text>
     <view>
         <text class="shuru" > 请选择</text>

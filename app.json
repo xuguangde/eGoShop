@@ -48,7 +48,10 @@
     "pages/selectdeliveryaddress /selectdeliveryaddress ",
     "pages/confirmanorder /confirmanorder",
     "pages/shoppingnullcart/shoppingnullcart",
-    "pages/mynullcollection/mynullcollection"
+    "pages/mynullcollection/mynullcollection",
+    "pages/shoppingcart/shoppingcart",
+    "pages/reasonforrefund/reasonforrefund",
+    "pages/lianxi/lianxi"
   ],
   "window": {
     "backgroundTextStyle": "light",

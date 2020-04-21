@@ -1,0 +1,16 @@
+<view class="intro">
+
+  <!-- <image catchtap='open_tap' wx:if="{{isShow}}" src="/img/xzb44.png" class="coding_flash_image"></image>
+
+  <image wx:else catchtap='close_tap' src='/img/xzc44.png' class="coding_flash_image"></image> -->
+
+  <view>
+    <image catchtap='open' wx:if="{{iShow}}" src="{{url}}" data-msg="{{url}}" class="coding_flash_image"></image>haha
+
+    <image catchtap='open' wx:if="{{iShow}}" src="{{url}}" data-msg="{{url}}" class="coding_flash_image"></image>haha
+  </view>
+
+
+
+
+</view>

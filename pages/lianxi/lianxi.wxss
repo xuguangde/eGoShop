@@ -1,0 +1,9 @@
+image{
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.intro{
+  display: flex;
+  flex-direction: row;
+}

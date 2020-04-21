@@ -1,0 +1,23 @@
+<view class="modals modals-bottom-dialog">
+  <view class="rowTitle">
+    <text class="quxiao" bindtap="hideModal">取消</text>
+    <text class="title">退款原因</text>
+    <text class="sure">确定</text>
+  </view>
+
+  <view class="rowcontent">
+    <image src="/img/xzb44.png"></image>
+    <text>商品质量问题</text>
+  </view>
+
+  <view class="rowcontent">
+    <image src="/img/xzb44.png"></image>
+    <text>实物与描述不符</text>
+  </view>
+
+  <view class="rowcontent">
+    <image src="/img/xzb44.png"></image>
+    <text>商品无货/错发/漏发</text>
+  </view>
+
+</view>
