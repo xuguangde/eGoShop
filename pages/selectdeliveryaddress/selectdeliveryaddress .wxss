@@ -1,0 +1,201 @@
+
+page{
+  background: #f6f6f6;
+}
+
+.middle-num{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  width: 710rpx;
+  margin-left: 20rpx;
+  height: 108rpx;
+  border-radius: 5px;
+  margin-top: 20rpx;
+
+}
+
+.zuo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.middle-num .left{
+  width: 58rpx;
+  height: 58rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+
+.we text{
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.right{
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 18rpx;
+}
+
+.middle-num text,.yunfei{
+  font-size: 26rpx;
+  color: #333333;
+}
+
+
+.fu{
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  margin-left: 20rpx;
+  border-radius: 15rpx;
+  margin-top: 20rpx;
+  height: 413rpx;
+  width: 675rpx;
+}
+
+.tit{
+  font-size: 26rpx;
+  color: #333333;
+}
+
+.row {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rpx;
+}
+
+.row .shangpin{
+  height: 220rpx;
+  width: 220rpx;
+  border: 1rpx solid #f6f6f6;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rpx;
+  margin-left: 40rpx;
+}
+
+
+.col .bt{
+  font-size: 24rpx;
+  color: #333333;
+}
+
+
+.guige{
+  margin-top: 40rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.guige2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.allmoney{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 38rpx;
+}
+
+
+.fu2{
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  padding: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 15rpx;
+  margin-top: 20rpx;
+  height: 216rpx;
+  padding-top: 40rpx;
+}
+
+.tuilist{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tuilist text{
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.monlogo{
+  font-size: 24rpx;
+  color: #df443a;
+}
+
+.money{
+  font-size: 30rpx;
+  color: #df443a;
+}
+
+.wuyong{
+  margin-right: 18rpx;
+}
+
+.xza{
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 8rpx;
+}
+
+.tijiao{
+  position:fixed; 
+  bottom:0;
+  height: 107rpx;
+  background: #ffffff;
+  width: 100%;
+}
+
+.heji{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.monlogo2{
+  font-size: 30rpx;
+  color: #df443a;
+}
+
+.money2{
+  font-size: 36rpx;
+  color: #df443a;
+}
+
+.goShopping {
+  height: 88rpx;
+  width: 230rpx;
+  color: #ffffff;
+  background: linear-gradient(to right, #fc594e 0%,#de443a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 88rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+  margin-right: 30rpx;
+}
