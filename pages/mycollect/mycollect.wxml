@@ -2,7 +2,6 @@
 <view class="contentsp">
   <view class="rowsp">
     <image src="/img/tu140.png" class="shangpinsp"></image>
-
     <view class="colsp">
       <text class="btsp">多乐士全效竹炭呼吸健康油漆多乐士全效竹炭呼吸健康油漆</text>
       <view>
@@ -10,10 +9,6 @@
         <text class="moneysp">299</text>
       </view>
     </view>
-
     <image src="/img/gwc58.png" class="gwcsp"></image>
   </view>
-
-
-
 </view>

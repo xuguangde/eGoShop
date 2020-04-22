@@ -78,6 +78,7 @@ page {
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
+  width: 100%;
 }
 .title,.goods{
   padding-top: 15rpx;
@@ -124,6 +125,7 @@ page {
   flex-direction: column;
   justify-content: space-between;
   height: 200rpx;
+  width: 100%;
 }
 .goodsSpecs {
   font-size: 24rpx;

@@ -72,3 +72,9 @@ background: #f6f6f6;
   color: #666666;
   margin-right: 60rpx;
 }
+.button {
+  margin-top: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

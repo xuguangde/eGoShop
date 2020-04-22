@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "definiteList": "/component/definiteList/definiteList",
+    "switchText":"/component/switchText/switchText"
+  }
 }

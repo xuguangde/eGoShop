@@ -1,27 +1,19 @@
 <!--pages/integraldetails/integraldetails.wxml-->
 <view class="content">
-  <view class="top">
+  <view class="shopTwo" wx:if="{{type != 1}}">
+    <switchText bind:switch="switch" switchText="{{switchText}}"></switchText>
+  </view>
+  <view class="top" wx:if="{{type == 1}}">
     <view class="topLeft">
       <image src="/img/wh44.png"></image>
       <text>积分说明</text>
     </view>
     <view class="topRight">
       <text>当前积分：</text>
-      <text style="font-weight:bold;">0</text>
+      <text style="font-weight:bold;">{{data.integral}}</text>
     </view>
   </view>
 
-  <view class="row">
-    <view class="col">
-      <text class="add">积分增加</text>
-      <text class="datetime">2020.02.02 22:12:23</text>
-    </view>
-    <view class="rowright">
-       <text>+</text><text>180</text>
-    </view>
-  </view>
-
+  <definiteList list="{{list}}" type="{{type}}"></definiteList>
   <hr/>
-
-
 </view>

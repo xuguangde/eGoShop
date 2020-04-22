@@ -1,8 +1,4 @@
 /* pages/addaddress/addaddress.wxss */
-page{
-
-}
-
 .row{
   display: flex;
   flex-direction: row;
@@ -27,4 +23,11 @@ image{
   margin-left: 170rpx;
   width: 30rpx;
   height: 30rpx;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 120rpx;
 }

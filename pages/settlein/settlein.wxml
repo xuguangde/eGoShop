@@ -2,17 +2,17 @@
 <view class="content">
   <view class="row">
     <text class="name">姓名</text>
-    <input class="shuru" type="text" placeholder="请输入真实姓名"></input>
+    <input bindinput="inputedit" data-name="name" class="shuru" type="text" placeholder="请输入真实姓名"></input>
   </view>
 
   <view class="row">
     <text class="name">手机号</text>
-    <input class="shuru" type="text" placeholder="请输入手机号"></input>
+    <input bindinput="inputedit" data-name="phone" class="shuru" type="text" placeholder="请输入手机号"></input>
   </view>
 
   <view class="row">
     <text class="name">身份证号</text>
-    <input class="shuru" type="text" placeholder="请输入身份证号"></input>
+    <input  bindinput="inputedit" data-name="cardid" class="shuru" type="text" placeholder="请输入身份证号"></input>
   </view>
 
   <view class="rows">
@@ -32,12 +32,12 @@
    
   <view class="row">
     <text class="name">店铺名称</text>
-    <input class="shuru" type="text" placeholder="请输入店铺名称"></input>
+    <input bindinput="inputedit" data-name="shopname" class="shuru" type="text" placeholder="请输入店铺名称"></input>
   </view>
 
   <view class="row">
     <text class="name">主营商品</text>
-    <input class="shuru" type="text" placeholder="请输入店铺主营商品"></input>
+    <input bindinput="inputedit" data-name="shop_goods" class="shuru" type="text" placeholder="请输入店铺主营商品"></input>
   </view>  
 
   <view class="rows" style="height:288rpx">
@@ -47,7 +47,7 @@
   </view>
   </view>    
 
-   <view class="goShopping">
+   <view class="goShopping" bindtap="submit">
             提交申请
    </view>
 

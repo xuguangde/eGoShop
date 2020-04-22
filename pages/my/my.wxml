@@ -10,9 +10,9 @@
             <text style="font-size: 10px;">{{data.action_code}}</text>
             <image class="copyLogo" src="/img/fz44.png"></image>
           </view>
-          <!-- <view class="yuanjiao" wx:if="{{data.level == 5}}">
+          <view class="yuanjiao" wx:if="{{data.level == 5}}">
             <text>普通用户</text>
-          </view> -->
+          </view>
           <view class="yuanjiao" wx:if="{{data.level == 5}}">
             <view class="vipBack">
               <image src="/img/hyd142x32.png"></image>
@@ -26,13 +26,13 @@
 
   <view class="middle-num">
     <view class="oner">
-        <view class="zi">
+        <view class="zi" bindtap="navto" data-url="/pages/mycouponone/mycouponone">
           <text class="zier">{{data.coupon}}  <text class="zisan">张</text></text>
           <text class="quan">优惠券</text>
         </view>
     </view>
     <view class="twoer">|</view>
-    <view class="three">
+    <view class="three" bindtap="navto" data-url="/pages/integraldetails/integraldetails?type=1">
         <view class="zi">
           <text class="zier">{{data.integral}}\n</text>
           <text class="quan">积分</text>
@@ -116,7 +116,7 @@
               <image src="/img/sjrz40.png"></image>
           </view>
           
-          <view class="middle">
+          <view class="middle" bindtap="navto" data-url="/pages/settlein/settlein">
               <text >商家入驻</text>
           </view>
 

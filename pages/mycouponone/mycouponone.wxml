@@ -1,28 +1,25 @@
 <!--pages/mycouponone.wxml-->
 <view class="content">
-  <view class="row">
-    <image src="/img/byhq186x162.png" class="zuoimg"></image>
-    <view class="col">
-      <view>
-        <text class="qq">￥</text>        
-        <text class="money">5</text>
+
+  <block wx:for="{{couponList}}" wx:key="index">
+    <view class="row">
+      <view class="col">
+        <view>
+          <text class="qq">￥</text>        
+          <text class="money">{{item.jprice}}</text>
+        </view>
+        <text class="bt">满{{item.mprice}}可用</text>
       </view>
-      <text class="bt">满15可用</text>
+      <image src="/img/byhq536x162.png" class="right"></image>
+      <view class="hang">
+        <text class="cx">{{item.name}}</text>
+        <view class="hui">
+          <text>有效期至</text>
+          <text class="time">{{item.end_time}}</text>
+          <text class="use">立即使用</text>
+        </view>
+      </view>  
     </view>
-
-    <image src="/img/byhq536x162.png" class="right"></image>
-    <view class="hang">
-      <text class="cx">双11畅享红包</text>
-      <view class="hui">
-         <text>有效期至</text>
-         <text class="time">2019.12.01</text>
-         <text class="use">立即使用</text>
-      </view>
-    </view>  
-  </view>
-
-
-  
-
+  </block>
 </view>
 

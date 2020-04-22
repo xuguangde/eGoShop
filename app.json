@@ -13,6 +13,7 @@
     "pages/classift/classift",
     "pages/commodity/commodity",
     "component/shopList/shopList",
+    "component/picker/picker",
     "component/commoditySwiper/commoditySwiper",
     "component/statusBar/statusBar",
     "component/searchList/searchList",
@@ -26,6 +27,8 @@
     "component/specsPopup/specsPopup",
     "component/iconList/iconList",
     "component/popup/popup",
+    "component/definiteList/definiteList",
+    "component/nullPage/nullPage",
     "component/seckillList/seckillList",
     "component/currencyButton/currencyButton",
     "pages/mycollect/mycollect",
@@ -45,13 +48,11 @@
     "pages/obligation/obligation",
     "pages/myorder/myorder",
     "pages/noreceivingaddress/noreceivingaddress",
-    "pages/selectdeliveryaddress/selectdeliveryaddress ",
     "pages/shoppingnullcart/shoppingnullcart",
     "pages/mynullcollection/mynullcollection",
     "pages/shoppingcart/shoppingcart",
     "pages/reasonforrefund/reasonforrefund",
-    "pages/lianxi/lianxi",
-    "pages/confirmanorder /confirmanorder"
+    "pages/lianxi/lianxi"
   ],
   "window": {
     "backgroundTextStyle": "light",

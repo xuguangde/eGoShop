@@ -2,32 +2,39 @@
 <view class="content">
   <view class="row">
     <text class="name">收货人</text>
-    <input class="shuru" type="text" placeholder="请输入收货人姓名"></input>
+    <input value="{{name}}" bindinput="inputedit" data-name="name" class="shuru" type="text" placeholder="请输入收货人姓名"></input>
   </view>
 
   <view class="row">
     <text class="name">联系电话</text>
-    <input class="shuru" type="text" placeholder="请输入联系电话"></input>
+    <input value="{{phone}}" bindinput="inputedit" data-name="phone"  class="shuru" type="text" placeholder="请输入联系电话"></input>
   </view>
-  
+<picker 
+mode="multiSelector" 
+bindchange="bindMultiPickerChange" 
+bindcolumnchange="bindMultiPickerColumnChange"
+ value="{{multiIndex}}" 
+ range-key="name"
+ range="{{multiArray}}"
+ >
   <view class="row">
     <text class="name">所在地区</text>
-    <input class="shuru" type="text" placeholder="请选择所在地区"></input>
+    <input disabled="true" value="{{addressText}}" class="shuru" type="text" placeholder="请选择所在地区"></input>
     <image src="/img/jty20.png"></image>
   </view>
-
-  <view class="row">
+</picker>
+  <!-- <view class="row">
     <text class="name">定位地址</text>
     <input class="shuru" type="text"></input>
      <image src="/img/jty20.png"></image>
-  </view>
+  </view> -->
 
    <view class="row">
     <text class="name">详细地址</text>
-    <input class="shuru" type="text" placeholder="请输入详细地址"></input>
-  </view>   
-
-  <button class="" style="margin-top:120rpx" bindtap="baocunaddress">保存地址</button>    
-
-
+    <input class="shuru" value="{{address}}" bindinput="inputedit" data-name="address"  type="text" placeholder="请输入详细地址"></input>
+  </view> 
+  <view class="button">
+    <currencyButton bind:onClick="onClick" text="保存地址"></currencyButton>
+  </view>
+  <!-- <button class="" style="margin-top:120rpx" bindtap="baocunaddress">保存地址</button>     -->
 </view>

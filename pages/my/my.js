@@ -9,32 +9,28 @@ Page({
   data: {
     data:''
   },
-
+  navto(e){
+    wx.navigateTo({
+      url: e.currentTarget.dataset.url,
+    })
+  },
   wdmoney: function (e) {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../mymoney/mymoney',
     })
-
-    // var ccc = e.currentTarget.dataset.id;//获取view中的药用currentTarget
-    // console.log(ccc);
-    // wx.navigateTo({
-    //   url: '../../kantie/kantie?Id=' + ccc,
-    // })
   },
 
   wdsoucang: function (e) {
-    wx.redirectTo({
-      url: '../mycollection/mycollection',
+    wx.navigateTo({
+      url: '/pages/mycollectshop/mycollectshop',
     })
   },
 
 
   dizhi: function (e) {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../deliveryaddress/deliveryaddress',
     })
-
-
   },
 
   /**
@@ -42,6 +38,18 @@ Page({
    */
   onLoad: function (options) {
     this.getUserinfo()  //获取个人信息
+  },
+  getUserinfo(){
+    var that = this
+    util.request(api.getUserinfo,{uid: wx.getStorageSync('user').id}).then(
+      res =>{
+        if(res.data.retcode == 1){
+          that.setData({
+            data: res.data.data
+          })
+        }
+      }
+    )
   },
   getUserinfo(){
     var that = this
@@ -67,7 +75,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getUserinfo()  //获取个人信息
   },
 
   /**

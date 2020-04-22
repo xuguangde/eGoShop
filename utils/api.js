@@ -24,6 +24,21 @@ var hostApi = "http://symc.shengguweb.com/index.php/index";  //本地测试地�
   getTwoCategoryList: hostApi + "/index/getTwoCategoryList", // 二级分类
   getThreeCategoryList: hostApi + "/index/getThreeCategoryList", // 三级分类
   getCategroyGoodsLsit: hostApi + "/index/getCategroyGoodsLsit", // 根据分类ID获取商品列表
+  getUserinfo: hostApi + "/user/getUserinfo", // 获取个人信息
+  addCart: hostApi + "/cart/addCart", // 添加购购物车
+  getCartList: hostApi + "/cart/getCartList", // 获取购物车
+  collectGoodsList: hostApi + "/user/collectGoodsList", // 收藏商品列表
+  collectStoreList: hostApi + "/user/collectStoreList", // 收藏店铺列表
+  getUserCommission: hostApi + "/user/getUserCommission", // 收支明细详情
+  getUserIntegral: hostApi + "/user/getUserIntegral",   //积分明细
+  modifyCart: hostApi + "/cart/modifyCart",   //修改购物车
+  getUserCouponList: hostApi + "/user/getUserCouponList",   //我的优惠券
+  Applicationshop: hostApi + "/index/Applicationshop",   //商家入驻提交申请
+  vueSaveUserShip: hostApi + "/user/vueSaveUserShip",   //添加收货地址
+  Selarea: hostApi + "/user/Selarea",   // 获取省市区
+  getUserShip: hostApi + "/user/getUserShip",   // 获取省市区
+  removeShip: hostApi + "/user/removeShip",   // 删除地址
+  editShip: hostApi + "/user/editShip",   // 编辑收货地址
   getUserinfo: hostApi + "/user/getUserinfo", // 根据分类ID获取商品列表
   addCart: hostApi + "/cart/addCart", // 根据分类ID获取商品列表
   getCartList: hostApi + "/cart/getCartList", // 根据分类ID获取商品列表

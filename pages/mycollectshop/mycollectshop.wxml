@@ -1,14 +1,30 @@
 <!--pages/mycollectshop/mycollectshop.wxml-->
 <view class="content">
-  <view class="row">
-    <image src="/img/tu100.png" class="shangpin"></image>
-
-    <view class="col">
-      <text class="title">多乐士（总店）</text>
-      <text class="jieshao">主营产品详细介绍主营产品</text>
-    </view>
+  <view class="shopTwo">
+    <switchText bind:switch="switch" switchText="{{switchText}}"></switchText>
   </view>
-
-
-
+  <block wx:if="{{type == 0}}" wx:for="{{collectStoreList}}" wx:key="index">
+    <view class="row" bindtap="navto" data-url="/pages/shopDetails/shopDetails?id={{item.id}}">
+      <image src="{{item.logo_img}}" class="shangpin"></image>
+      <view class="col">
+        <text class="title">{{item.store_name}}</text>
+        <text class="jieshao">{{item.store_goods}}</text>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{type == 1}}" wx:for="{{collectGoodsList}}" wx:key="index">
+    <view class="contentsp">
+      <view class="rowsp" bindtap="navto" data-url="/pages/commodity/commodity?id={{item.id}}">
+        <image src="{{item.img_id}}" class="shangpinsp"></image>
+        <view class="colsp">
+          <text class="btsp">{{item.goods_name}}</text>
+          <view>
+            <text class="qqsp">￥</text>        
+            <text class="moneysp">{{item.goods_price}}</text>
+          </view>
+        </view>
+        <image src="/img/gwc58.png" class="gwcsp"></image>
+      </view>
+    </view>
+  </block>
 </view>

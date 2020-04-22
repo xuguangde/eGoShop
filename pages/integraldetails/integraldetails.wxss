@@ -69,3 +69,7 @@ width: 690rpx;
 height: 2rpx;
 color: red;
 }
+.shopTwo {
+  background: #ffffff;
+  padding: 0 130rpx;
+}
