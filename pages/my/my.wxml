@@ -10,9 +10,9 @@
             <text style="font-size: 10px;">{{data.action_code}}</text>
             <image class="copyLogo" src="/img/fz44.png"></image>
           </view>
-          <!-- <view class="yuanjiao" wx:if="{{data.level == 5}}">
+          <view class="yuanjiao" wx:if="{{data.level == 5}}">
             <text>普通用户</text>
-          </view> -->
+          </view>
           <view class="yuanjiao" wx:if="{{data.level == 5}}">
             <view class="vipBack">
               <image src="/img/hyd142x32.png"></image>

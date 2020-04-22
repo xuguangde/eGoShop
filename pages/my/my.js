@@ -31,8 +31,6 @@ Page({
     wx.navigateTo({
       url: '../deliveryaddress/deliveryaddress',
     })
-
-
   },
 
   /**

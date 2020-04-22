@@ -46,3 +46,53 @@ page{
   color: #999999;
 }
 
+/* 
+  商品收藏
+*/
+.rowsp {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  margin: 20rpx;
+  border-radius: 15rpx;
+}
+
+.rowsp .shangpinsp{
+  height: 140rpx;
+  width: 150rpx;
+  border: 1px solid #f6f6f6;
+}
+
+.colsp{
+  display: flex;
+  flex-direction: column;
+  width: 400rpx;
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+  justify-content: space-between;
+}
+
+
+.colsp .btsp{
+  font-size: 24rpx;
+  color: #333333;
+  margin-bottom: 15rpx;
+}
+
+.qqsp{
+  font-size: 24rpx;
+  color: #de443a;
+}
+
+.moneysp{
+  font-size: 36rpx;
+  color: #de443a;
+}
+
+.gwcsp{
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+}
