@@ -48,7 +48,6 @@
     "pages/obligation/obligation",
     "pages/myorder/myorder",
     "pages/noreceivingaddress/noreceivingaddress",
-    "pages/confirmanorder /confirmanorder",
     "pages/shoppingnullcart/shoppingnullcart",
     "pages/mynullcollection/mynullcollection"
   ],

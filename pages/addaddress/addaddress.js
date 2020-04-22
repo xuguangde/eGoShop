@@ -16,15 +16,16 @@ Page({
     address:'',
     addressText:'',
     type: 1,
+    dataOne:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
     if(options.type == 1){
       var data = JSON.parse(options.data)
+      this.data['dataOne'] = JSON.parse(options.data)
       this.setData({
         name: JSON.parse(options.data).name,
         phone: JSON.parse(options.data).mobile,
@@ -46,7 +47,21 @@ Page({
   },
   // 编辑地址
   editShip(){
-    util.request(api.editShip,{})
+    util.request(api.editShip,{
+      name: that.data['name'],
+      mobile: that.data['phone'],
+      address: that.data['address'],
+      province: that.data.multiArray[0][multiIndex[0]].id,
+      city: that.data.multiArray[1][multiIndex[1]].id,
+      area: that.data.multiArray[2][multiIndex[2]].id,
+      uid: wx.getStorageSync('user').id,
+      is_def:'',
+      id: that.data['dataOne'].id
+    }).then(
+      res =>{
+        
+      }
+    )
   },
   Selarea(){
     var that = this
