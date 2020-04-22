@@ -285,13 +285,6 @@
 				},
 				{
 					"id": -1,
-					"name": "确认订单-选择收货地址",
-					"pathName": "pages/selectdeliveryaddress /selectdeliveryaddress ",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "确认订单",
 					"pathName": "pages/confirmanorder /confirmanorder",
 					"query": "",
@@ -322,6 +315,13 @@
 					"id": -1,
 					"name": "pages/lianxi/lianxi",
 					"pathName": "pages/lianxi/lianxi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "确认订单选择收货地址",
+					"pathName": "pages/selectdeliveryaddress/selectdeliveryaddress",
 					"query": "",
 					"scene": null
 				}

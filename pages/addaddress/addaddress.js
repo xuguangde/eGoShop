@@ -47,6 +47,12 @@ Page({
   },
   // 编辑地址
   editShip(){
+    var province = ''
+    var city = ''
+    var area = ''
+    // if(){
+
+    // }
     util.request(api.editShip,{
       name: that.data['name'],
       mobile: that.data['phone'],
@@ -59,7 +65,7 @@ Page({
       id: that.data['dataOne'].id
     }).then(
       res =>{
-        
+
       }
     )
   },

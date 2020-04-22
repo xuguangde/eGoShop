@@ -52,7 +52,7 @@
     "pages/mynullcollection/mynullcollection",
     "pages/shoppingcart/shoppingcart",
     "pages/reasonforrefund/reasonforrefund",
-    "pages/lianxi/lianxi"
+    "pages/selectdeliveryaddress/selectdeliveryaddress"
   ],
   "window": {
     "backgroundTextStyle": "light",
