@@ -16,7 +16,8 @@ Page({
     address:'',
     addressText:'',
     type: 1,
-    dataOne:''
+    dataOne:'',
+    yesAddress: 0,
   },
 
   /**
@@ -25,6 +26,7 @@ Page({
   onLoad: function (options) {
     if(options.type == 1){
       var data = JSON.parse(options.data)
+      console.log(data)
       this.data['dataOne'] = JSON.parse(options.data)
       this.setData({
         name: JSON.parse(options.data).name,
@@ -47,25 +49,32 @@ Page({
   },
   // 编辑地址
   editShip(){
-    var province = ''
-    var city = ''
-    var area = ''
-    // if(){
-
-    // }
+    var that = this
+    var province = this.data['dataOne'].province
+    var city = this.data['dataOne'].city
+    var area = this.data['dataOne'].area
+    if(this.data.yesAddress == 1){
+      province = that.data.multiArray[0][that.data.multiIndex[0]].id
+      city = that.data.multiArray[1][that.data.multiIndex[1]].id
+      area = that.data.multiArray[2][that.data.multiIndex[2]].id
+    }
     util.request(api.editShip,{
       name: that.data['name'],
       mobile: that.data['phone'],
       address: that.data['address'],
-      province: that.data.multiArray[0][multiIndex[0]].id,
-      city: that.data.multiArray[1][multiIndex[1]].id,
-      area: that.data.multiArray[2][multiIndex[2]].id,
+      province: province,
+      city: city,
+      area: area,
       uid: wx.getStorageSync('user').id,
-      is_def:'',
+      is_def: that.data['dataOne'].is_def,
       id: that.data['dataOne'].id
     }).then(
       res =>{
-
+        if(res.data.retcode == 1){
+          wx.navigateBack({
+            delta: 1
+          })
+        }
       }
     )
   },
@@ -84,24 +93,25 @@ Page({
       }
     )
   },
+  // 确定后执行
   bindMultiPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e)
     var that = this
-    console.log(this.data.multiArray[0][e.detail.value[0]].name)
     this.setData({
       multiIndex: e.detail.value,
       addressText: this.data.multiArray[0][e.detail.value[0]].name + that.data.multiArray[1][e.detail.value[1]].name + that.data.multiArray[2][e.detail.value[2]].name
     })
+    this.data['yesAddress'] = 1
   },
+  // 滚动时执行
   bindMultiPickerColumnChange: function (e) {
     var data = this.data.multiArray
     if(e.detail.column == 0){
       data[1] = this.data.datadata[e.detail.value].city
-      console.log(this.data.datadata[e.detail.value])
       data[2] = this.data.datadata[e.detail.value].city[0].area
     }
     if(e.detail.column == 1){
-      data[2] = this.data.datadata[e.detail.value].city[0].area
+      data[2] = data[1][e.detail.value].area
     }
     this.setData({
       multiArray: data

@@ -8,8 +8,8 @@ Component({
       value: ''
     },
     disabled:{
-      type: String,
-      value: 'false'
+      type: Boolean,
+      value: false
     }
   },
 

@@ -6,7 +6,7 @@
     <view class="row">
       <text class="zifu">支付金额：</text>
       <text class="logio">￥</text>
-      <text class="money">309.00</text>
+      <text class="money">{{price}}</text>
     </view>
 
     <text class="ding">暂不支持线上付款请拨打电话确认您的订单</text>

@@ -270,8 +270,8 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "申请提现",
+					"id": 30,
+					"name": "申请退货退款",
 					"pathName": "pages/applyforsale/applyforsale",
 					"query": "",
 					"scene": null
@@ -280,13 +280,6 @@
 					"id": -1,
 					"name": "确认订单-无收货地址",
 					"pathName": "pages/noreceivingaddress/noreceivingaddress",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "确认订单",
-					"pathName": "pages/confirmanorder /confirmanorder",
 					"query": "",
 					"scene": null
 				},
@@ -323,6 +316,33 @@
 					"name": "确认订单选择收货地址",
 					"pathName": "pages/selectdeliveryaddress/selectdeliveryaddress",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现成功",
+					"pathName": "pages/withdrawalsrecord/withdrawalsrecord",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请提现",
+					"pathName": "pages/cashout/cashout",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "秒杀详情",
+					"pathName": "pages/commoditySeckill/commoditySeckill",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "优惠券列表",
+					"pathName": "pages/mycouponone/mycouponone",
 					"scene": null
 				}
 			]

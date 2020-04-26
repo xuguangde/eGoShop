@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "commoditySwiper": "/component/commoditySwiper/commoditySwiper",
+    "specsPopup": "/component/specsPopup/specsPopup",
+    "countdown": "/component/countdown/countdown",
+    "popup": "/component/popup/popup"
+  }
+}

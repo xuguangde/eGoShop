@@ -1,7 +1,7 @@
 <view class="content">
     <block wx:for="{{addressList}}" wx:key="index">
     <view class="fu">
-         <view class="rower">
+         <view class="rower" bindtap="fanhui" data-data="{{item}}">
             <text class="name">{{item.name}}</text>
             <text class="phone">{{item.mobile}}</text> 
          </view>
@@ -9,11 +9,11 @@
       <text style="font-size:24rpx;color:#333333;margin-left:20rpx">{{item.province_name}}{{item.city_name}}{{item.area_name}}{{item.address}}</text>
 
       <view class="zimo">
-            <view wx:if="{{item.is_def == 1}}">
+            <view wx:if="{{item.is_def == 1}}" bindtap="updShip" data-id="{{item.id}}" data-index="{{index}}">
                 <image src="/img/xza44.png" class="dui"></image>
                 <text class="moren">已设为默认</text>
             </view>
-            <view wx:else>
+            <view wx:else bindtap="updShip" data-id="{{item.id}}" data-index="{{index}}">
                 <image src="/img/xzb44.png" class="dui"></image>
                 <text class="moren">设为默认</text>
             </view>
@@ -21,7 +21,7 @@
                 <image bindtap="navto" data-data="{{item}}" src="/img/bj32.png"></image>
                 <text  bindtap="navto" data-data="{{item}}"  class="bianji">编辑</text>
                 <image src="/img/sc32.png"></image>
-                <text class="shanchu" bindtap="del" data-sid="">删除</text>
+                <text class="shanchu" bindtap="del" data-index="{{index}}" data-id="{{item.id}}" data-sid="">删除</text>
             </view>     
       </view>
     </view>

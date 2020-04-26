@@ -9,13 +9,8 @@ page{
 }
 
 .touxiang{
-    position: absolute;
-    z-index: 3;
-    width: 120rpx;
-    height: 120rpx;
-    right: 150rpx;
-    bottom: 100rpx;
-    border-radius: 25px;
+  width: 120rpx;
+  height: 120rpx;
 }
 
 .headbgImage{
@@ -206,12 +201,12 @@ font-size: 30rpx;
 color: #333333;
 font-weight: bold;
 width:5%;
+padding-top: 10rpx;
 }
 
 .liebiao .middle{
 font-size: 30rpx;
 color: #333333;
-font-weight: bold;
 width:30%;
 }
 
@@ -239,5 +234,24 @@ font-weight: bold;
   flex-direction: row;
   width: 100%;
   align-items: center;
-  border-bottom: 1px solid #f6f6f6;
+  border-bottom: 2rpx solid #000;
 }
+.button {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+.userinfo-avatar {  
+  overflow:hidden;  
+  display: block;  
+  width: 120rpx;  
+  height: 120rpx;  
+  margin-top: 30rpx; 
+  margin-left: 30rpx; 
+  border-radius: 50%;  
+  /* border: 2rpx solid #fff;   */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+  position: absolute;
+  z-index: 99999;
+} 

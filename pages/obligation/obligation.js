@@ -1,18 +1,32 @@
 // pages/obligation/obligation.js
+var api = require("../../utils/api.js");
+var util = require("../../utils/util.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    data:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    util.request(api.getOrderdetail,{id: options.id}).then(
+      res =>{
+        console.log(res)
+        if(res.data.retcode == 1){
+          that.setData({
+            data: res.data.data
+          })
+        } else{
+          util.msg(res.data.msg)
+        }
+      }
+    )
   },
 
   /**

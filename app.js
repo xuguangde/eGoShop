@@ -6,7 +6,6 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
     // 登录
     wx.login({
       success: res => {
@@ -43,6 +42,15 @@ App({
         })
       },
     })
+  },
+  onShow(){
+    if(wx.getStorageSync('user').id == undefined){
+      var user = {id:''}
+      wx.setStorage({
+        data: user,
+        key: 'user',
+      })
+    }
   },
   globalData: {
     userInfo: null,

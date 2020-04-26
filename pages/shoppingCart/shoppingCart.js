@@ -1,6 +1,8 @@
 // pages/shoppingCart/shoppingCart.js
 var api = require("../../utils/api.js");
 var util = require("../../utils/util.js");
+var app = getApp().globalData;
+var page = 1
 Page({
 
   /**
@@ -16,10 +18,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
   },
+  // 购物车列表
   getCartList(){
     var that = this;
-    util.request(api.getCartList,{uid: wx.getStorageSync('user').id}).then(
+    util.request(api.getCartList,{
+      uid: wx.getStorageSync('user').id,
+      page:page,
+      limit: app.limit
+    }).then(
       res =>{
         if(res.data.retcode == 1){
           var cartList = []
@@ -65,6 +73,7 @@ Page({
     })
     this.modifyCart(cid,cartList[e.currentTarget.dataset.index].list[e.currentTarget.dataset.indexone].goods_num)
   },
+  // 加入购物车
   goodsAdd(e){
     var cid = e.currentTarget.dataset.id
     var cartList = this.data.cartList
@@ -94,6 +103,7 @@ Page({
     })
     this.totalPrice()
   },
+  // 选择结算商品
   goodsAll(e){
     var that = this
     var index = e.currentTarget.dataset.index
@@ -181,32 +191,29 @@ Page({
       }
     )
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 去结算
+  settle(){
+    var that = this
+    var cartList = that.data.cartList
+    var id = ''
+    for(var i = 0;i<cartList.length;i++){
+      for(var n = 0;n < cartList[i].list.length;n++){
+        if(cartList[i].list[n].type){
+          id = id.concat(cartList[i].list[n].id+',')
+        }
+      }
+    }
+    console.log(id.substr(0, id.length - 1))
   },
-
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    page = 1
+    this.setData({
+      cartList:[]
+    })
     this.getCartList()
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
   },
 
   /**
@@ -220,13 +227,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    page++
+    this.getCartList()
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

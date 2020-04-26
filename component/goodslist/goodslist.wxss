@@ -30,6 +30,7 @@
 .goodsName {
   font-size: 30rpx;
   color: #333;
+  padding: 0 20rpx;
 }
 .goodsPrice {
   display: flex;
@@ -38,11 +39,13 @@
   color: #de443a;
   padding-top: 15rpx;
   padding-bottom: 30rpx;
+  padding-left: 20rpx;
 }
 .goodsNnit {
   font-size: 24rpx;
   color: #999;
   margin-top: 12rpx;
+  padding: 0 20rpx;
 }
 .goodsPrice text,.goodsPrice view{
   color: #de443a;

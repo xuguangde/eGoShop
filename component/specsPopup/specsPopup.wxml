@@ -8,10 +8,10 @@
         <view class="specsPopupTitle">
           <view class="specsPopupPrice">
             <view class="specsPopupIcon fontColor">￥</view>
-            <view class="specsPopupPriceNum fontColor">220</view>
+            <view class="specsPopupPriceNum fontColor">{{price}}</view>
           </view>
           <view class="specsPopupStock">
-            库存 2200件
+            库存 {{stock}}件
           </view>
         </view>
       </view>

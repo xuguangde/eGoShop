@@ -9,7 +9,7 @@
        <text>{{item.type == 1?"+":"-"}}</text><text>{{item.integral}}</text>
     </view>
     <view wx:else class="rowright {{item.type == 1?'':'rowrightOne'}}">
-       <text>{{item.type == 1?"+":"-"}}</text><text>{{item.price}}</text>
+      <text>{{item.type == 1?"+":"-"}}</text><text>{{item.price}}</text>
     </view>
   </view>
 </block>

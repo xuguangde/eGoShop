@@ -52,15 +52,15 @@
       </view>
     </view>
     <view class="footerButton">
-      <view class="footerButtonAdd" bindtap="specs">
+      <view class="footerButtonAdd" bindtap="specs" data-type="0">
         加入购物车
       </view>
-      <view class="footerButtonLiji" bindtap="specs">
+      <view class="footerButtonLiji" bindtap="specs" data-type="1">
         立即购买
       </view>
     </view>
   </view>
   <popup flag="{{flag}}">
-    <specsPopup bind:onClick="onClick" bind:close="close" spec="{{spec}}" img_id="{{data.img_id}}"></specsPopup>
+    <specsPopup stock="{{stock}}" price="{{price}}" number="{{num}}" bind:onClick="onClick" bind:onSpec="onSpec" bind:close="close" spec="{{spec}}" img_id="{{data.img_id}}"></specsPopup>
   </popup>
 </view>

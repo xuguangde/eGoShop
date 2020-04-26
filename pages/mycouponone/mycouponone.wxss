@@ -1,59 +1,79 @@
-/* pages/mycouponone.wxss */
-/* pages/mycollect/mycollect.wxss */
-
-page{
+page {
   background: #f6f6f6;
-}
-
-.row {
-  background: #ffffff;
+} 
+.backImg {
   display: flex;
-  flex-direction: row;
-  margin: 20rpx;
-  border-radius: 15rpx;
-  margin-bottom: 8rpx;
-  height: 140rpx;
-  position: relative;
-}
-
-.zuoimg{
-  position: relative;
-  width: 886rpx;
-  height: 162rpx;
-  z-index: 2;
-}
-
-.col{
-  position: relative;
-  z-index: 3;
-  left: -150rpx;
-  display: flex;
-  flex-direction: column;
-  height: 140rpx;
   align-items: center;
   justify-content: center;
-  width: 600rpx;
-  background: green;
 }
-
-.right{
-  width: 636rpx;
-  height: 160rpx;
+.imgOne image {
+  height: 162rpx;
+  width: 186rpx;
+}
+.imgTwo image {
+  height: 162rpx;
+  width: 536rpx;
+}
+.shopTwo {
+  background: #ffffff;
+  padding: 0 82rpx;
+  margin-bottom: 20rpx;
+}
+.imgTwo,.imgOne {
   position: relative;
-  z-index: 4;
-  left: -110rpx;
 }
-
-
-
-.col .bt,.qq{
+.text,.textTwo {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  width: 100%;
+  height: 150rpx;
+  color: #ffffff;
+}
+.cardName {
+  font-size: 30rpx;
+  color: #333333;
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+}
+.kong {
+  margin-top: 250rpx;
+}
+.buttom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40rpx;
+  padding-right: 20rpx;
+}
+.time {
+  color: #999999;
   font-size: 24rpx;
-  color: #f6f6f6;
 }
-
-.money{
+.button {
+  font-size: 26rpx;
+  color: #de443a;
+  border: 2rpx #de443a solid;
+  width: 150rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 48rpx;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.renmin {
+  font-size: 24rpx;
+}
+.price {
   font-size: 48rpx;
   font-weight: bold;
-  color: #f6f6f6;
 }
-
+.manjian {
+  font-size: 24rpx;
+}

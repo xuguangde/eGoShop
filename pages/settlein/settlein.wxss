@@ -44,11 +44,16 @@ image{
   height: 328rpx;
   border-bottom: 1px solid #f6f6f6;
 }
+.imgimg {
+  height: 140rpx;
+  width: 140rpx;
+}
 
 .rows .idinfo{
   font-size: 30rpx;
   color: #333333;
 }
+
 
 .goShopping {
   height: 88rpx;

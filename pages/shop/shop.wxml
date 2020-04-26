@@ -3,7 +3,16 @@
   <view class="header">
     <view class="location">
       <view class="locationName">
-        铁西区
+        <picker 
+          mode="multiSelector" 
+          bindchange="bindMultiPickerChange" 
+          bindcolumnchange="bindMultiPickerColumnChange"
+          value="{{multiIndex}}" 
+          range-key="name"
+          range="{{multiArray}}"
+          >
+          {{district}}
+        </picker>
       </view>
       <view class="jtcImg">
         <image src="/img/jtc20.png"></image>

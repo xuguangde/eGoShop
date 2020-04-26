@@ -1,58 +1,32 @@
 <view class="searchList">
-  <view class="searchListContent">
-    <view class="searchListOne">
-      <view class="searchListGoodsImg">
-        <image src="/img/tu140.png"></image>
-      </view>
-      <view class="searchListRight">
-        <view class="searchListTitle">
-          <view class="searchListTitleText"><text>自营</text>这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题</view>
+  <block wx:for="{{goodsList}}" wx:key="index">
+    <view class="searchListContent" bindtap="navto" data-id="{{item.id}}">
+      <view class="searchListOne">
+        <view class="searchListGoodsImg">
+          <image src="{{item.img_id}}"></image>
         </view>
-        <view class="searchListNum">
-          <view class="searchListGoodsPrice">
-            <view class="fontColor">￥</view>
-            <view class="fontColor">2222</view>
-            <view class="searchListNumOne">销量:</view>
-            <view class="searchListNumOne">221212121</view>
+        <view class="searchListRight">
+          <view class="searchListTitle">
+            <view class="searchListTitleText"><text wx:if="{{item.type != 6}}">自营</text>{{item.goods_name}}</view>
           </view>
-          <view class="searchListNumber">
-            <view class="searchListNumOne">
-              浏览量:
+          <view class="searchListNum">
+            <view class="searchListGoodsPrice">
+              <view class="fontColor">￥</view>
+              <view class="fontColor">{{item.price}}</view>
+              <view class="searchListNumOne">销量:</view>
+              <view class="searchListNumOne">{{item.sales}}</view>
             </view>
-            <view class="searchListNumOne">
-              12121212
-            </view>
-          </view>
-        </view>
-      </view>
-    </view>
-  </view>
-  <view class="searchListContent">
-    <view class="searchListOne">
-      <view class="searchListGoodsImg">
-        <image src="/img/tu140.png"></image>
-      </view>
-      <view class="searchListRight">
-        <view class="searchListTitle">
-          <view class="searchListTitleText"><text>自营</text>这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题这是产品标题</view>
-        </view>
-        <view class="searchListNum">
-          <view class="searchListGoodsPrice">
-            <view class="fontColor">￥</view>
-            <view class="fontColor">2222</view>
-            <view class="searchListNumOne">销量:</view>
-            <view class="searchListNumOne">221212121</view>
-          </view>
-          <view class="searchListNumber">
-            <view class="searchListNumOne">
-              浏览量:
-            </view>
-            <view class="searchListNumOne">
-              12121212
+            <view class="searchListNumber">
+              <view class="searchListNumOne">
+                浏览量:
+              </view>
+              <view class="searchListNumOne">
+                {{item.liulan}}
+              </view>
             </view>
           </view>
         </view>
       </view>
     </view>
-  </view>
+  </block>
 </view>

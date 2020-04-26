@@ -1,6 +1,8 @@
 // pages/shop/shop.js
 var api = require("../../utils/api.js");
 var util = require("../../utils/util.js");
+var area = wx.getStorageSync('adcode');
+var district = wx.getStorageSync('district');
 Page({
 
   /**
@@ -8,7 +10,10 @@ Page({
    */
   data: {
     switchText:[{text:'全部店铺',id:'0'},{text:'附近的店',id:'1'},{text:'人气排名',id:'2'}],
-    list:[]
+    list:[],
+    district:'铁西区',
+    multiArray: [[], [], []],
+    multiIndex: [0, 0, 0],
   },
 
   /**
@@ -16,6 +21,7 @@ Page({
    */
   onLoad: function (options) {
     this.shopList()  //店铺列表
+    this.Selarea() // 获取城市列表
   },
   shopList(id){
     var that = this
@@ -36,7 +42,8 @@ Page({
       lat: wx.getStorageSync('location').latitude,
       keywords:'',
       is_near: is_near,
-      is_gas: is_gas
+      is_gas: is_gas,
+      area:area
     }).then(
       res =>{
         if(res.data.retcode == 1){
@@ -58,18 +65,64 @@ Page({
       url: '/pages/shopDetails/shopDetails?id=' + e.detail,
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  Selarea(){
+    var that = this
+    util.request(api.Selarea,{}).then(
+      res =>{
+        var data = that.data.multiArray
+        data[0] = res.data.data
+        data[1] = res.data.data[0].city
+        data[2] = res.data.data[0].city[0].area
+        that.setData({
+          multiArray: data,
+          datadata: res.data.data
+        })
+      }
+    )
   },
-
+   // 确定后执行
+   bindMultiPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', this.data.multiArray[2][e.detail.value[2]])
+    wx.setStorage({
+      data: this.data.multiArray[2][e.detail.value[2]].id,
+      key: 'adcode',
+    })
+    wx.setStorage({
+      data: that.data.multiArray[2][e.detail.value[2]].name,
+      key: 'district',
+    })
+    var that = this
+    this.setData({
+      multiIndex: e.detail.value,
+      district: that.data.multiArray[2][e.detail.value[2]].name,
+      addressText: this.data.multiArray[0][e.detail.value[0]].name + that.data.multiArray[1][e.detail.value[1]].name + that.data.multiArray[2][e.detail.value[2]].name
+    })
+    this.data['yesAddress'] = 1
+  },
+  // 滚动时执行
+  bindMultiPickerColumnChange: function (e) {
+    var data = this.data.multiArray
+    console.log(e.detail)
+    if(e.detail.column == 0){
+      data[1] = this.data.datadata[e.detail.value].city
+      data[2] = this.data.datadata[e.detail.value].city[0].area
+    }
+    if(e.detail.column == 1){
+      data[2] = data[1][e.detail.value].area
+    }
+    this.setData({
+      multiArray: data
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    district = wx.getStorageSync('district');
+    console.log(wx.getStorageSync('district'))
+    this.setData({
+      district:wx.getStorageSync('district')
+    })
   },
 
   /**

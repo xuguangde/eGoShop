@@ -7,13 +7,16 @@ Component({
       type: Array,
       value: []
     },
-    age: Number
+    switchIndex:{
+      type: Number,
+      value: 0
+    }
   },
   /**
    * 组件的初始数据
    */
   data: {
-    switchIndex: 0,
+    
   },
 
   /**

@@ -74,7 +74,7 @@
               <view class="fontColor">{{totalPrice}}</view>
             </view>
           </view>
-          <view class="goShopping">
+          <view class="goShopping" bindtap="settle">
             去结算
           </view>
         </view>

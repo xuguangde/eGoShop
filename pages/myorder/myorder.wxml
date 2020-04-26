@@ -1,42 +1,46 @@
 <!--pages/customerserviceorder/customerserviceorder.wxml-->
-<view class="quanbu">
-  <view class="fu">
-    <view class="top">
-      <view class="topleft">
-        <text>订单号</text>
-        <text>3252525345435</text>
+<view class="shopTwo">
+  <switchText switchIndex="{{switchIndex}}" bind:switch="switch" switchText="{{switchText}}"></switchText>
+</view>
+<block wx:for="{{orderList}}" wx:key="index">
+  <view class="quanbu" wx:if="{{orderList != ''}}">
+    <view class="fu">
+      <view class="top">
+        <view class="topleft">
+          <text>订单号</text>
+          <text>{{item.order_num}}</text>
+        </view>
+        <text class="dfk">{{item.status == 3?'已完成':item.status == 0?'待付款':item.status == 1?'待发货':item.status == 2?'待收货':item.status == 4?'售后':''}}</text>
+        <!-- <text class="dfk">{{item.status == 3?'已完成':item.status == 0?'代付款'}}</text> -->
       </view>
-      <text class="dfk">待付款</text>
-    </view>
 
-    <view class="row">
-      <image src="/img/tu220.png" class="shangpin"></image>
+      <view class="row" bindtap="order" data-id="{{item.id}}">
+        <image src="{{item.goods_pic}}" class="shangpin"></image>
 
-      <view class="col">
-        <text class="bt">多乐士全效竹炭呼吸健康油漆多乐士全效竹炭呼吸健康油漆</text>
-        <view class="guige">
-          <text class="qq">规格：</text>        
-          <text class="money">20kg</text>
+        <view class="col">
+          <text class="bt">{{item.goods_name}}</text>
+          <view class="guige">
+            <text class="qq" wx:if="{{item.spec != ''}}">规格：{{item.spec}}</text>      
+          </view>
+        </view>
+
+        <view class="priceRow">
+          <text class="money"><text class="monlogo">￥</text>{{item.goods_price}}</text>
+          <text class="nummon"><text>x</text>{{item.goods_num}}</text>
         </view>
       </view>
 
-      <view class="priceRow">
-        <text class="money"><text class="monlogo">￥</text>299.00</text>
-        <text class="nummon"><text>x</text>1</text>
+      <view class="allmoney">
+        <text>￥{{item.total_price}}</text>
+        <text>合计：</text>
+      </view>
+
+      <view class="yuanjiao" wx:if="{{item.status == 0}}">
+        <text class="fukuan" data-id="{{item.id}}" bindtap="payment">付款</text>
+        <text class="qx" bindtap="cancelOrder" data-id="{{item.id}}">取消订单</text>
       </view>
     </view>
-
-    <view class="allmoney">
-      <text>￥299.00</text>
-      <text>合计：</text>
-    </view>
-
-    <view class="yuanjiao">
-      <text class="fukuan">付款</text>
-      <text class="qx">取消订单</text>
-    </view>
   </view>
-</view>
-
+</block>
 
 

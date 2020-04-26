@@ -1,0 +1,62 @@
+<view class="content">
+  <commoditySwiper swiperImgUrls="{{swiperImgUrls}}"></commoditySwiper>
+  <view class="seckill">
+    <view class="seckillImg">
+      <image src="/img/di750x138.png"></image>
+    </view>
+    <view class="seckillContent">
+      <view class="seckillList">
+        <view class="seckillPrice">
+          <text class="seckillPriceIcon">￥</text>
+          <text class="seckillPriceText">{{price}}</text>
+          <text class="seckillPriceYj">￥{{data.yprice}}</text>
+        </view>
+        <view class="seckillNum">
+          剩余100件
+        </view>
+      </view>
+      <view class="seckillRight">
+        <view class="seckillRightOne">
+          <view class="seckillTimeImg">
+            <image src="/img/xsms160x32.png"></image>
+          </view>
+        </view>
+        <view class="seckillTimeText">
+          距离结束时间
+        </view>
+        <view class="seckillTime">
+          <countdown end_time="{{end_time}}" start_time="{{timestamp}}"></countdown>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="two">
+    <view class="title">
+      {{goods_name}}
+    </view>
+  </view>
+  <!-- <view class="three" bindtap="specs">
+    <view class="specs">
+      <view class="specsText">
+        选择规格
+      </view>
+      <view class="specsJt">
+        <image src="/img/jty20.png"></image>
+      </view>
+    </view>
+  </view> -->
+</view>
+<view>
+  <rich-text nodes="{{content}}"></rich-text>
+</view>
+<view class="footer">
+  <view class="footerOne" bindtap="{{buttontype == 0?'specs':''}}" data-type="1">
+    <view class="buttonFooter {{buttontype == 0?'':'buttonFooterOne'}}">
+      <view class="buttonText">马上抢</view>
+      <view class="buttonTextSeckill">秒杀价:{{price}}</view>
+    </view>
+  </view>
+  <popup flag="{{flag}}">
+    <specsPopup stock="{{stock}}" price="{{price}}" number="{{num}}" bind:onClick="onClick" bind:onSpec="onSpec" bind:close="close" spec="{{spec}}" img_id="{{data.img_id}}"></specsPopup>
+  </popup>
+</view>

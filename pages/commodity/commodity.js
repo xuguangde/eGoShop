@@ -15,6 +15,9 @@ Page({
     goods_name:'',
     data:'',
     collect: 0,
+    type:'',
+    num: 1,
+    stock:'0'
   },
 
   /**
@@ -23,7 +26,7 @@ Page({
   onLoad: function (options) {
     this.goodsDetails(options.id)
   },
-  
+  // 商品详情
   goodsDetails(id){
     var that = this
     util.request(api.getGoodsDetailInfo,{uid:wx.getStorageSync('user').id,goods_id:id}).then(
@@ -48,7 +51,68 @@ Page({
             data: res.data.data.info,
             collect: res.data.data.info.collect,
             is_ji: res.data.data.info.is_ji,
-            price: res.data.data.info.price
+            price: res.data.data.info.price,
+            stock: res.data.data.info.stock
+          })
+        }
+      }
+    )
+  },
+  // 获取购物车数量
+  onSpec(e){
+    var that = this
+    var spec = e.detail
+    var specNum =['','','','','']
+    var num = 0
+    for(var i = 0;i < spec.length;i++){
+      for(var n = 0;n < spec[i].con.length;n++){
+        if(spec[i].con[n].type){
+          num++
+          specNum[i] = spec[i].con[n].id
+        }
+      }
+    }
+    if(num != that.data.spec.length){
+      return 
+    }
+    util.request(api.chkcartnum,{
+      uid:wx.getStorageSync('user').id,
+      spec1:specNum[0],
+      spec2:specNum[1],
+      spec3:specNum[2],
+      spec4:specNum[3],
+      spec5:specNum[4],
+      goods_id: that.data.data.id
+    }).then(
+      res => {
+        if(res.data.retcode == 1){
+          if(res.data.data == 0){
+            that.setData({
+              num:1
+            })
+          }else{
+            that.setData({
+              num: res.data.data
+            })
+          }
+        }
+      }
+    ),
+    // 不同规格不同价格
+    util.request(api.Selspec,{
+      uid:wx.getStorageSync('user').id,
+      spec1:specNum[0],
+      spec2:specNum[1],
+      spec3:specNum[2],
+      spec4:specNum[3],
+      spec5:specNum[4],
+      goods_id: that.data.data.id
+    }).then(
+      res => {
+        if(res.data.retcode == 1){
+          that.setData({
+            stock: res.data.data[0].stock,
+            price: res.data.data[0].price
           })
         }
       }
@@ -56,16 +120,21 @@ Page({
   },
   // 添加购物车
   onClick(e){
-    console.log(e.detail)
     var that = this
+    var type = this.data.type
     var spec = e.detail
     var specNum =['','','','','']
+    var num = 0
     for(var i = 0;i < spec.length;i++){
       for(var n = 0;n < spec[i].con.length;n++){
-        if(spec[i].con[n]){
+        if(spec[i].con[n].type){
+          num++
           specNum[i] = spec[i].con[n].id
         }
       }
+    }
+    if(num != that.data.spec.length){
+      return util.msg('请选择规格')
     }
     util.request(api.addCart,{
       uid:wx.getStorageSync('user').id,
@@ -83,6 +152,11 @@ Page({
             cartId: res.data.data,
             flag: true
           })
+          if(type == 1){
+            wx.navigateTo({
+              url: '/pages/selectdeliveryaddress/selectdeliveryaddress?id=' + res.data.data,
+            })
+          }
         }
         util.msg(res.data.msg)
       }
@@ -107,9 +181,10 @@ Page({
       }
     )
   },
-  specs(){
+  specs(e){
     this.setData({
-      flag: false
+      flag: false,
+      type: e.currentTarget.dataset.type
     })
   },
   close(){

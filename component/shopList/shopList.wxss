@@ -9,6 +9,11 @@
   width: 100rpx;
   height: 100rpx;
 }
+.shopListImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .shopListTitle {
   font-size: 30rpx;
   color: #333333;

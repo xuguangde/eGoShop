@@ -1,17 +1,17 @@
 <view class="countdown">
   <view class="countdownTime">
-    {{hh < 9?"0" + hh:hh}}
+    {{hh < 10?"0" + hh:hh}}
   </view>
   <view class="countdownTimeOne">
     :
   </view>
   <view class="countdownTime">
-    {{mm < 9?'0' + mm:mm}}
+    {{mm < 10?'0' + mm:mm}}
   </view>
   <view class="countdownTimeOne">
     :
   </view>
   <view class="countdownTime">
-    {{ss < 9?'0' + ss:ss}}
+    {{ss < 10?'0' + ss:ss}}
   </view>
 </view>

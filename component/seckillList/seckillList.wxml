@@ -1,5 +1,5 @@
 <block wx:for="{{seckillList}}" wx:key="index">
-  <view class="seckillList">
+  <view class="seckillList" bindtap="seckillGoods" data-id="{{item.id}}">
     <view class="seckillListOne">
       <view class="seckillListImg">
         <image src="{{item.img_id}}"></image>

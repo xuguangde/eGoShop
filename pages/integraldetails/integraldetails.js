@@ -30,6 +30,23 @@ Page({
       this.getUserCommission()
     }
     this.getUserinfo()  //获取个人信息
+    this.jifen()  // 积分说明
+  },
+  // 积分说明
+  jifen(){
+    util.request(api.jifen,{}).then(
+      res =>{
+        this.setData({
+          content: res.data.data.content
+        })
+      }
+    )
+  },
+  // 跳转积分明细
+  navto(){
+    wx.navigateTo({
+      url: '/pages/rich/rich?content='+ encodeURIComponent(this.data.content),
+    })
   },
   switch(e){
     console.log(e)

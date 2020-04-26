@@ -27,6 +27,17 @@ Page({
     })
     this.getSeckillList()
   },
+  goodslist(e){
+    var time = 0
+    if(this.data.type == 0){
+      time = this.data.end_time
+    } else{
+      time = this.data.start_time
+    }
+    wx.navigateTo({
+      url: '/pages/commoditySeckill/commoditySeckill?id='+ e.detail + '&end_time='+ time + '&type='+this.data.type,
+    })
+  },
   getSeckillList(){
     var that = this
     util.request(api.getSeckillList,{type: Number(this.data.index) + 1,}).then(
@@ -61,7 +72,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      end_time: this.data.end_time,
+      start_time: this.data.start_time,
+      timestamp: Date.parse(new Date())/1000,
+      timeTrue: true
+    })
+    console.log('这里改变了吗',this.data.timestamp)
   },
 
   /**

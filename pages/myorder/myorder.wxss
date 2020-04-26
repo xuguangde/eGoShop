@@ -16,7 +16,10 @@ page{
   height: 460rpx;
   width: 680rpx;
 }
-
+.shopTwo {
+  background: #ffffff;
+  padding: 0 38rpx;
+}
 .row {
   background: #ffffff;
   display: flex;

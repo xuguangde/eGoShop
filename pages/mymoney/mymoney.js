@@ -1,4 +1,5 @@
-// pages/mymoney/mymoney.js
+var api = require("../../utils/api.js");
+var util = require("../../utils/util.js");
 Page({
 
   /**
@@ -6,6 +7,7 @@ Page({
    */
   data: {
     commission: 0,
+    content: '',
   },
 
   /**
@@ -14,6 +16,21 @@ Page({
   onLoad: function (options) {
     this.setData({
       commission: wx.getStorageSync('user').commission
+    })
+    this.yongjin() // 佣金明细
+  },
+  yongjin(){
+    util.request(api.yongjin,{}).then(
+      res =>{
+        this.setData({
+          content: res.data.data.content
+        })
+      }
+    )
+  },
+  navyongjin(){
+    wx.navigateTo({
+      url: '/pages/rich/rich?content='+ encodeURIComponent(this.data.content),
     })
   },
   navto(e){

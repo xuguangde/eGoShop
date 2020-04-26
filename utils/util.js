@@ -1,4 +1,5 @@
 //公共js，主要做表单验证，以及基本方法封装
+var api = require("api.js");
 const utils = {
 	isNullOrEmpty: function(value) {
 		//是否为空
@@ -176,7 +177,7 @@ function chooseImage(num){
 			sourceType: ['album'], //从相册选择
 			success: function (resOne) {
 				wx.uploadFile({  
-					url: api.Uploads,  
+					url: api.newupload,  
 					filePath: resOne.tempFilePaths[0],
 					name:"images",
 					formData: {},  

@@ -3,20 +3,20 @@
 <view class="content">
   <view class="row">
     <text class="name">开户行</text>
-    <input class="shuru" type="text" placeholder="请输入开户行"></input>
+    <input value="{{cardName}}" bindinput="inputedit" data-name="cardName" class="shuru" type="text" placeholder="请输入开户行"></input>
   </view>
 
   <view class="row">
     <text class="name">账户名</text>
-    <input class="shuru" type="text" placeholder="请输入账户名"></input>
+    <input value="{{name}}" bindinput="inputedit" data-name="name" class="shuru" type="text" placeholder="请输入账户名"></input>
   </view>
   
   <view class="row">
     <text class="name">银行卡号</text>
-    <input class="shuru" type="text" placeholder="请输入银行卡号"></input>
+    <input value="{{cardnum}}" bindinput="inputedit" data-name="cardnum" class="shuru" type="text" placeholder="请输入银行卡号"></input>
   </view>  
 
-  <view class="goShopping">
+  <view class="goShopping" bindtap="onClick">
             确定
   </view>
 

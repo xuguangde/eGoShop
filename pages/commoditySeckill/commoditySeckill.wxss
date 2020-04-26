@@ -1,0 +1,241 @@
+page {
+  background: #f6f6f6;
+}
+.carouselImg {
+  height: 700rpx;
+  width: 750rpx;
+}
+.carousel_swiper {
+  height: 700rpx;
+}
+.commodityNum {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  color: #ffffff;
+  width: 80rpx;
+  height: 48rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 48rpx;
+  right: 20rpx;
+  top: 630rpx;
+}
+.title,.shopNum{
+  font-size: 24rpx;
+  color: #333333;
+}
+.shopNum {
+  display: flex;
+  align-items: flex-end;
+}
+.two {
+  height: 146rpx;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.three {
+  height: 98rpx;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.specs {
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.specsText {
+  font-size: 30rpx;
+}
+.specsJt image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.title {
+  margin-top: 40rpx;
+  padding: 0 20rpx;
+}
+.priceIcon {
+  font-size: 24rpx;
+}
+.priceNum {
+  font-size: 36rpx;
+}
+.priceSui,.shopNum{
+  font-size: 24rpx;
+  color: #999999;
+}
+.priceSui {
+  padding:0 20rpx;
+}
+.price {
+  display: flex;
+}
+.titlePrice {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40rpx;
+  padding: 0 20rpx;
+}
+.priceOne {
+  width: 210rpx;
+  height: 32rpx;
+  background: #ffeeed;
+  color: #fb584d;
+  display: flex;
+  justify-content: center;
+  font-size: 24rpx;
+  border-radius: 6rpx;
+}
+.price {
+  display: table;
+}
+.priceIcon,.priceNum,.priceSui{
+  display: table-cell;
+}
+/* 
+  立即购买
+*/
+.footer,.footerLeft,.footerOne,.footerButton{
+  display: flex;
+  align-items: center;
+}
+.footer {
+  width: 100%;
+  height: 107rpx;
+  background: #ffffff;
+  border-top: 1rpx #cccccc solid;
+  position: fixed;
+  bottom: 0;
+}
+.footerLeftImg image {
+  width: 44rpx;
+  height: 44rpx;
+}
+.footerLeftShop {
+  font-size: 20rpx;
+  color: #666666;
+}
+.footerOne {
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 42rpx;
+  padding-right: 30rpx;
+}
+.footerButtonAdd,.footerButtonLiji{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 30rpx;
+  height: 88rpx;
+  width: 230rpx;
+}
+.footerButtonAdd {
+  border-top-left-radius: 88rpx;
+  border-bottom-left-radius: 88rpx;
+  background: linear-gradient(to right, #fca732 0%,#ff8328 100%);
+}
+.footerButtonLiji {
+  border-top-right-radius: 88rpx;
+  border-bottom-right-radius: 88rpx;
+  background: linear-gradient(to right, #fc594e 0%,#ed443a 100%);
+}
+.footerLeft .footerLeftOne:nth-child(2){
+  margin-left: 66rpx;
+}
+/* 
+  秒杀倒计时
+*/
+.seckill {
+  position: relative;
+}
+.seckillImg image {
+  height: 138rpx;
+  width: 750rpx;
+}
+.seckillTimeImg image {
+  width: 160rpx;
+  height: 32rpx;
+}
+.seckillPriceIcon {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.seckillPrice {
+  margin-top: 10rpx;
+}
+.seckillContent {
+  position: absolute;
+  top: 0;
+  height: 138rpx;
+  width: 750rpx;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.seckillList {
+  height: 138rpx;
+  margin-left: 20rpx;
+}
+.seckillPriceText {
+  font-size: 48rpx;
+  font-weight: bold;
+}
+.seckillPriceYj {
+  font-size: 30rpx;
+  text-decoration: line-through;
+  margin-left: 10rpx;
+}
+.seckillNum {
+  padding: 2rpx 20rpx;
+  background: #ed443a;
+  font-size: 30rpx;
+  border-radius: 36rpx;
+  bottom: 20rpx;
+  display: inline-block;
+}
+.seckillTimeText {
+  font-size: 24rpx;
+  color: #ff9c00;
+}
+.seckillRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+}
+.buttonFooter {
+  background: linear-gradient(to right, #fc594e 0%,#ed443a 100%);
+  height: 88rpx;
+  color: #ffffff;
+  border-radius: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.buttonText {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.buttonTextSeckill {
+  font-size: 24rpx;
+}
+.buttonFooterOne {
+  background: #999999;
+}

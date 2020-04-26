@@ -3,25 +3,42 @@
 const app = getApp()
 var api = require("../../utils/api.js");
 var util = require("../../utils/util.js");
+var bmap = require('../../libs/bmap-wx.min.js'); 
+var wxMarkerData = []; 
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     swiperImgUrls:[],
-    contentList:[{name:'欢迎进入小程序111'}],
+    contentList:[{name:'欢迎进入小程序'}],
     warehouse:[],
     swiperCurrent: 0,
     hotGoodsList:[],
     newGoodsList:[],
     redPack:[],
     flag: true,
+    rgcData:{},
+    district:'铁西区',
+    multiArray: [[], [], []],
+    multiIndex: [0, 0, 0],
   },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+  // 点击轮播
+  brnner(e){
+    wx.navigateTo({
+      url: '/pages/webview/webview?src=' + e.currentTarget.dataset.link,
+    })
+  },
+  brnnerGoods(e){
+    console.log(e)
+    wx.navigateTo({
+      url: '/pages/commodity/commodity?id=' + e.currentTarget.dataset.link,
     })
   },
   // 关闭红包窗口
@@ -52,12 +69,89 @@ Page({
     })
   },
   onLoad: function () {
+    
+    this.Selarea()  // 获取全国的省市区
     this.banner() // 轮播
     this.getNoticeList()  //公告
     this.getOneCategoryList()  //一级分类 仓库
     this.GetPopularityList()  //获取人气产品
     this.GetNewGoodsList()  //新品上市
     this.getFirstUserCouponList()  //弹窗优惠券
+    var that = this; 
+    // 新建百度地图对象 
+    var BMap = new bmap.BMapWX({ 
+        ak: 'Z4tAyfm8ftz1ZD8xRNB4oaTykb6rF65N' 
+    });  
+    var fail = function(data) { 
+        console.log(data) 
+    }; 
+    var success = function(data) { 
+      wx.setStorage({
+        data: data.originalData.result.addressComponent.adcode,
+        key: 'adcode',
+      })
+      that.setData({
+        district: data.originalData.result.addressComponent.district
+      })
+      wx.setStorage({
+        data: data.originalData.result.addressComponent.district,
+        key: 'district',
+      })
+    } 
+    // 发起regeocoding检索请求 
+    BMap.regeocoding({ 
+      fail: fail, 
+      success: success,  
+    });
+  },
+  Selarea(){
+    var that = this
+    util.request(api.Selarea,{}).then(
+      res =>{
+        var data = that.data.multiArray
+        data[0] = res.data.data
+        data[1] = res.data.data[0].city
+        data[2] = res.data.data[0].city[0].area
+        that.setData({
+          multiArray: data,
+          datadata: res.data.data
+        })
+      }
+    )
+  },
+  // 确定后执行
+  bindMultiPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', this.data.multiArray[2][e.detail.value[2]])
+    wx.setStorage({
+      data: this.data.multiArray[2][e.detail.value[2]].id,
+      key: 'adcode',
+    })
+    wx.setStorage({
+      data: this.data.multiArray[2][e.detail.value[2]].name,
+      key: 'district',
+    })
+    var that = this
+    this.setData({
+      multiIndex: e.detail.value,
+      district: that.data.multiArray[2][e.detail.value[2]].name,
+      addressText: this.data.multiArray[0][e.detail.value[0]].name + that.data.multiArray[1][e.detail.value[1]].name + that.data.multiArray[2][e.detail.value[2]].name
+    })
+    this.data['yesAddress'] = 1
+  },
+  // 滚动时执行
+  bindMultiPickerColumnChange: function (e) {
+    var data = this.data.multiArray
+    console.log(e.detail)
+    if(e.detail.column == 0){
+      data[1] = this.data.datadata[e.detail.value].city
+      data[2] = this.data.datadata[e.detail.value].city[0].area
+    }
+    if(e.detail.column == 1){
+      data[2] = data[1][e.detail.value].area
+    }
+    this.setData({
+      multiArray: data
+    })
   },
   // 跳转商品详情
   goodslist(e){
@@ -87,7 +181,9 @@ Page({
   },
   GetNewGoodsList(){
     var that = this
-    util.request(api.GetNewGoodsList,{uid: wx.getStorageSync('user').id}).then(
+    util.request(api.GetNewGoodsList,{
+      uid: wx.getStorageSync('user').id,
+    }).then(
       res =>{
         if(res.data.retcode == 1){
           that.setData({

@@ -18,6 +18,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    
+    seckillGoods(e){
+      this.triggerEvent('goodslist',e.currentTarget.dataset.id)
+    }
   }
 })

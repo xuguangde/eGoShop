@@ -44,14 +44,16 @@
     "pages/cashout/cashout",
     "pages/waitingprocess/waitingprocess",
     "pages/refunded/refunded",
+    "pages/rich/rich",
     "pages/customerserviceorder/customerserviceorder",
     "pages/obligation/obligation",
     "pages/myorder/myorder",
     "pages/noreceivingaddress/noreceivingaddress",
     "pages/shoppingnullcart/shoppingnullcart",
     "pages/mynullcollection/mynullcollection",
-    "pages/shoppingcart/shoppingcart",
+    "pages/commoditySeckill/commoditySeckill",
     "pages/reasonforrefund/reasonforrefund",
+    "pages/webview/webview",
     "pages/selectdeliveryaddress/selectdeliveryaddress"
   ],
   "window": {

@@ -1,8 +1,8 @@
 <!--pages/cashout/cashout.wxml-->
 <!--pages/addaddress/addaddress.wxml-->
 <view class="content">
-  <view class="row">
-    <text class="name">设置银行卡</text>
+  <view class="row" bindtap="navto">
+    <text class="name">{{data != ''?'收款人:'+data.oname+',开户行:'+data.obank:'设置银行卡'}}</text>
     <image src="/img/jty20.png"></image>
   </view>
 
@@ -10,7 +10,7 @@
     <text class="name">提现金额</text>
     <view class="shurufu">
         <text class="qian">￥</text>    
-        <input class="shuru" type="text" ></input>
+        <input bindinput="text" class="shuru" type="text" ></input>
     </view>
  
     <view class="linefu">
@@ -19,11 +19,11 @@
 
     <view class="tixian">
       <text>可提现金额</text>
-      <text>10.00元</text>
+      <text>{{money}}元</text>
     </view>
    
-    <view class="goShopping">
-            提现
+    <view class="goShopping" bindtap="tixian">
+      提现
     </view>  
   </view>
   

@@ -39,7 +39,22 @@ var hostApi = "http://symc.shengguweb.com/index.php/index";  //本地测试地�
   getUserShip: hostApi + "/user/getUserShip",   // 获取省市区
   removeShip: hostApi + "/user/removeShip",   // 删除地址
   editShip: hostApi + "/user/editShip",   // 编辑收货地址
-  getUserinfo: hostApi + "/user/getUserinfo", // 根据分类ID获取商品列表
-  addCart: hostApi + "/cart/addCart", // 根据分类ID获取商品列表
-  getCartList: hostApi + "/cart/getCartList", // 根据分类ID获取商品列表
+  newupload: hostApi + "/index/newupload",   // 图片上传
+  updShip: hostApi + "/user/updShip",   // 修改默认地址
+  cartdetial: hostApi + "/cart/cartdetial",   // 购物车详情
+  getShipdef: hostApi + "/user/getShipdef",   // 获取用户默认收货地址
+  chkcartnum: hostApi + "/cart/chkcartnum",   // 获取购物车数量
+  getOrderList: hostApi + "/order/getOrderList",   // 获取订单列表
+  PayOrder: hostApi + "/order/PayOrder",   // 生成支付订单
+  about: hostApi + "/index/about",   // 关于我们
+  getOrderdetail: hostApi + "/order/getOrderdetail",   // 订单详情
+  addBank: hostApi + "/index/addBank",   // 添加银行卡
+  editBank: hostApi + "/index/editBank",   // 编辑银行卡
+  GetbankList: hostApi + "/index/GetbankList",   // 银行卡列表
+  postApplycash: hostApi + "/user/postApplycash",   // 申请提现
+  jifen: hostApi + "/index/jifen",   // 积分说明
+  delOrder: hostApi + "/order/delOrder",   // 积分说明
+  Selspec: hostApi + "/index/Selspec",   // 根据规格查询商品库存价格
+  yongjin: hostApi + "/index/yongjin",   // 佣金说明
+  SelGoods: hostApi + "/index/SelGoods",   // 佣金说明
  }

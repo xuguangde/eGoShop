@@ -3,7 +3,16 @@
   <view class="header">
     <view class="location">
       <view class="locationName">
-        铁西区
+        <picker 
+          mode="multiSelector" 
+          bindchange="bindMultiPickerChange" 
+          bindcolumnchange="bindMultiPickerColumnChange"
+          value="{{multiIndex}}" 
+          range-key="name"
+          range="{{multiArray}}"
+          >
+          {{district}}
+        </picker>
       </view>
       <view class="jtcImg">
         <image src="/img/jtc20.png"></image>
@@ -15,7 +24,7 @@
     <swiper class='carousel_swiper' bindchange='swiperChange' indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='2000' circular='true'>
       <block wx:for="{{swiperImgUrls}}" wx:key="index">
         <swiper-item >
-          <image class="carouselImg" src='{{item.pic}}' mode='aspectFill' ></image>
+          <image bindtap="{{item.type == 2?'brnner':'brnnerGoods'}}" data-link="{{item.link}}" class="carouselImg" src='{{item.pic}}' mode='aspectFill' ></image>
         </swiper-item>
       </block>
     </swiper>
@@ -45,6 +54,8 @@
     <image src="/img/rqsp232x64.png"></image>
   </view>
   <popularity hotGoodsList="{{hotGoodsList}}" bind:goodslist="goodslist"></popularity>
+  <!-- 背景颜色 -->
+  <view class="background"></view>
   <view class="title">
     <image src="/img/xpss234x64.png"></image>
   </view>

@@ -1,58 +1,68 @@
 <view class="content">
-  <view class="middle-num">
+  <view class="middle-num" bindtap="navto" data-url="/pages/deliveryaddress/deliveryaddress?type=1">
     <view class="zuo">
       <image src="/img/dz58.png" class="left"></image>
-      <text>请选择收货地址</text> 
+      <text wx:if="{{address == ''}}">请选择收货地址</text> 
+      <view class="address">
+        <view class="namePhone">
+          <view class="name">{{address.name}}</view>
+          <view class="phone">{{address.mobile}}</view>
+        </view>
+        <view class="addressText">
+          {{address.province_name}}{{address.city_name}}{{address.area_name}}{{address.address}}
+        </view>
+      </view>
     </view>
     <image src="/img/jty20.png" class="right"></image>
   </view>
 
-
-  <view class="fu">
-       <text class="tit">多乐士（总店）</text>
-       <view class="row">
-        <image src="/img/tu220.png" class="shangpin"></image>
-
-        <view class="col">
-          <text class="bt">多乐士全效竹炭呼吸健康油漆多乐士全效竹炭呼吸健康油漆</text>
-          <view class="guige">
-            <text class="qq">规格：</text>        
-            <text class="money">20kg</text>
-          </view>
-
-          <view class="guige2">
-            <view class="we">
-              <text>x</text>
-              <text class="qq">1</text>      
+  <block wx:for="{{addcart}}" wx:key="index">
+    <view class="fu">
+        <text class="tit">{{item.name}}</text>
+        <block wx:for="{{item.list}}" wx:for-item="itemOne" wx:key="index">
+        <view class="row">
+          <image src="{{itemOne.goods_pic}}" class="shangpin"></image>
+          <view class="col">
+            <text class="bt">{{itemOne.store_name}}</text>
+            <view class="guige">
+              <text class="qq">规格：</text>        
+              <text class="qq">{{itemOne.spec}}</text>
             </view>
-            <view>
-              <text class="monlogo">￥</text>
-              <text class="money">299.00</text>
-            </view>      
-          </view>
-        </view>    
-    </view>
-
-      <view class="allmoney">
-        <text class="yunfei">运费</text>
-        <view>
-          <text class="monlogo">￥</text>
-          <text class="money">10.00</text>
-        </view>  
+            <view class="guige2">
+              <view class="we">
+                <text>x</text>
+                <text class="qq">{{itemOne.goods_num}}</text>      
+              </view>
+              <view>
+                <text class="monlogo">￥</text>
+                <text class="money">{{itemOne.goods_price}}</text>
+              </view>      
+            </view>
+          </view>    
       </view>
-  </view>
-   
+        <view class="allmoney">
+          <text class="yunfei">运费</text>
+          <view>
+            <text class="monlogo">￥</text>
+            <text class="money">{{itemOne.freight}}</text>
+          </view>  
+        </view>
+      </block>
+    </view>
+   </block>
   <view class="fu2"> 
     <view class="tuilist" style="margin-bottom:80rpx;">
         <text>优惠券</text>
-        <view>
-          <text class="wuyong">目前无可用优惠券</text>
+        <view bindtap="youhui">
+          <text class="wuyong" wx:if="{{ycard == ''}}">目前无可用优惠券</text>
+          <text class="wuyong" wx:if="{{ycard != ''}}">{{ycardPrice == 0?'请选择优惠券':"-"+ycardPrice}}</text>
           <image src="/img/jty20.png" class="right"></image>
         </view>  
     </view>
-    <view class="tuilist">
+    <view class="tuilist" wx:if="{{jifen != 0}}">
         <text>是否使用积分</text>
-        <image src="/img/xza44.png" class="xza"></image>
+        <image bindtap="jifen" data-id="2" wx:if="{{jifenType == 1}}" src="/img/xza44.png" class="xza"></image>
+        <image bindtap="jifen" data-id="1" wx:if="{{jifenType == 2}}" src="/img/xzb44.png" class="xza"></image>
     </view>
   </view>
 
@@ -61,15 +71,13 @@
       <view>
         <text class="heji">合计:</text>
         <text class="monlogo2">￥</text>
-        <text class="money2">299.00</text>  
+        <text class="money2">{{zong - ycardPrice}}</text>  
       </view>
-      <view class="goShopping">
+      <view class="goShopping" bindtap="PayOrder" data-price="{{zong - ycardPrice}}">
         提交订单
       </view>     
     </view>
   </view>
-
-
 </view>
 
 

@@ -17,16 +17,18 @@
 
   <view class="rows">
     <text class="idinfo">上传身份证信息</text>
-    <view class="addCamera">
-    <image src="/img/jia58.png"></image>
-  </view>
-  <text class="shuru">手持身份证正面</text>
+    <view class="addCamera" bindtap="cardIdImg" data-nameImg="cardImg" data-name="cardId">
+      <image wx:if="{{img.cardImg ==''}}" src="{{img.cardImg !=''?img.cardImg:'/img/jia58.png'}}"></image>
+      <image wx:if="{{img.cardImg !=''}}" class="imgimg" src="{{img.cardImg !=''?img.cardImg:'/img/jia58.png'}}"></image>
+    </view>
+    <text class="shuru">手持身份证正面</text>
   </view>
 
   <view class="rows" style="height:288rpx">
     <text class="idinfo">上传营业执照信息</text>
-    <view class="addCamera">
-    <image src="/img/jia58.png"></image>
+    <view class="addCamera" bindtap="cardIdImg" data-name="licenseId" data-nameImg="licenseImg">
+      <image wx:if="{{img.licenseImg ==''}}" src="/img/jia58.png"></image>
+      <image wx:if="{{img.licenseImg !=''}}" class="imgimg" src="{{img.licenseImg !=''?img.licenseImg:''}}"></image>
   </view>
   </view>  
    
@@ -35,6 +37,21 @@
     <input bindinput="inputedit" data-name="shopname" class="shuru" type="text" placeholder="请输入店铺名称"></input>
   </view>
 
+  <picker 
+mode="multiSelector" 
+bindchange="bindMultiPickerChange" 
+bindcolumnchange="bindMultiPickerColumnChange"
+ value="{{multiIndex}}" 
+ range-key="name"
+ range="{{multiArray}}"
+ >
+  <view class="row">
+    <text class="name">店铺地址</text>
+    <input disabled="true" value="{{addressText}}" value="{{addressText}}" class="shuru" type="text" placeholder="请选择所在地区"></input>
+    <!-- <image src="/img/jty20.png"></image> -->
+  </view>
+</picker>
+
   <view class="row">
     <text class="name">主营商品</text>
     <input bindinput="inputedit" data-name="shop_goods" class="shuru" type="text" placeholder="请输入店铺主营商品"></input>
@@ -42,14 +59,13 @@
 
   <view class="rows" style="height:288rpx">
     <text class="idinfo">上传店铺LOGO</text>
-    <view class="addCamera">
-    <image src="/img/jia58.png"></image>
+    <view class="addCamera" bindtap="cardIdImg" data-name="logoId" data-nameImg="logoImg">
+      <image wx:if="{{img.logoImg ==''}}" src="/img/jia58.png"></image>
+      <image wx:if="{{img.logoImg !=''}}" class="imgimg" src="{{img.logoImg !=''?img.logoImg:''}}"></image>
   </view>
   </view>    
 
    <view class="goShopping" bindtap="submit">
             提交申请
    </view>
-
-
 </view>

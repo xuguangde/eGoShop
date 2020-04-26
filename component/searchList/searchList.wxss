@@ -63,6 +63,7 @@
   justify-content: space-between;
   flex-direction: column;
   height: 130rpx;
+  width: 530rpx;
 }
 .searchListContent {
   background: #ffffff;
@@ -83,4 +84,7 @@
 }
 .searchListGoodsPrice {
   align-items: flex-end;
+}
+.fontColor {
+  color: #de443a;
 }

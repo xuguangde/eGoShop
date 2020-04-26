@@ -4,7 +4,7 @@
     <switchText bind:switch="switch" switchText="{{switchText}}"></switchText>
   </view>
   <view class="top" wx:if="{{type == 1}}">
-    <view class="topLeft">
+    <view class="topLeft" bindtap="navto">
       <image src="/img/wh44.png"></image>
       <text>积分说明</text>
     </view>
