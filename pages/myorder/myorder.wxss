@@ -16,6 +16,9 @@ page{
   height: 460rpx;
   width: 680rpx;
 }
+.kong {
+  margin-right: 40rpx;
+}
 .shopTwo {
   background: #ffffff;
   padding: 0 38rpx;

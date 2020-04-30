@@ -1,4 +1,4 @@
-<view>
+<view class="popularityContent">
   <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
     <block wx:for="{{hotGoodsList}}" wx:key="index">
       <view class="popularity" bindtap="goodslist" data-id="{{item.id}}">

@@ -20,6 +20,11 @@ Page({
     this.getTwoCategoryList(options.id)
     this.whole()
   },
+  search(e){
+    wx.navigateTo({
+      url: '/pages/search/search',
+    })
+  },
   // 跳转商品
   goods(e){
     wx.navigateTo({
@@ -60,7 +65,7 @@ Page({
   },
   threeClick(e){
     var that = this
-    util.request(api.getCategroyGoodsLsit,{cate_id_3:e.currentTarget.dataset.id}).then(
+    util.request(api.getCategroyGoodsLsit,{cate_id_3:e.currentTarget.dataset.id,uid: wx.getStorageSync('user').id}).then(
       res => {
         if(res.data.retcode == 1){
           that.setData({
@@ -78,7 +83,7 @@ Page({
   },
   whole(){
     var that = this
-    util.request(api.getCategroyGoodsLsit,{cate_id_3:''}).then(
+    util.request(api.getCategroyGoodsLsit,{cate_id_3:'',uid: wx.getStorageSync('user').id}).then(
       res => {
         if(res.data.retcode == 1){
           that.setData({

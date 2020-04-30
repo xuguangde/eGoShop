@@ -19,9 +19,10 @@ Page({
     redPack:[],
     flag: true,
     rgcData:{},
-    district:'铁西区',
+    district:'市区',
     multiArray: [[], [], []],
     multiIndex: [0, 0, 0],
+    phone: ''
   },
   //事件处理函数
   bindViewTap: function() {
@@ -33,6 +34,12 @@ Page({
   brnner(e){
     wx.navigateTo({
       url: '/pages/webview/webview?src=' + e.currentTarget.dataset.link,
+    })
+  },
+  // 打电话
+  phone(){
+    wx.makePhoneCall({
+      phoneNumber: this.data.phone,
     })
   },
   brnnerGoods(e){
@@ -69,7 +76,6 @@ Page({
     })
   },
   onLoad: function () {
-    
     this.Selarea()  // 获取全国的省市区
     this.banner() // 轮播
     this.getNoticeList()  //公告
@@ -77,15 +83,17 @@ Page({
     this.GetPopularityList()  //获取人气产品
     this.GetNewGoodsList()  //新品上市
     this.getFirstUserCouponList()  //弹窗优惠券
+    this.about()  // 关于我们获取手机号
     var that = this; 
     // 新建百度地图对象 
     var BMap = new bmap.BMapWX({ 
         ak: 'Z4tAyfm8ftz1ZD8xRNB4oaTykb6rF65N' 
     });  
     var fail = function(data) { 
-        console.log(data) 
+      console.log(data) 
     }; 
-    var success = function(data) { 
+    var success = function(data) {
+      console.log(data.originalData.result.addressComponent.district) 
       wx.setStorage({
         data: data.originalData.result.addressComponent.adcode,
         key: 'adcode',
@@ -103,6 +111,43 @@ Page({
       fail: fail, 
       success: success,  
     });
+  },
+  about(){
+    var that = this
+    util.request(api.about,{}).then(
+      res =>{
+        if(res.data.retcode == 1){
+          that.setData({
+            content: res.data.data.content,
+            phone: res.data.data.phone
+          })
+          wx.setStorage({
+            data: res.data.data.phone,
+            key: 'phone',
+          })
+        } else{
+          util.msg(res.data.msg)
+        }
+      }
+    )
+  },
+  onShow(){
+    if(wx.getStorageSync('user').id == undefined ||wx.getStorageSync('user').id == ''){
+      util.request(api.isLogin,{}).then(
+        res =>{
+          if(res.data.data == 1){
+            wx.redirectTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      )
+      var user = {id:''}
+      wx.setStorage({
+        data: user,
+        key: 'user',
+      })
+    }
   },
   Selarea(){
     var that = this

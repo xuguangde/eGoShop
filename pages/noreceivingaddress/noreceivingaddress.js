@@ -16,7 +16,11 @@ Page({
       price: options.price
     })
   },
-
+  phone(){
+    wx.makePhoneCall({
+      phoneNumber: wx.getStorageSync('phone'),
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

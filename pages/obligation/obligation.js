@@ -7,7 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    data:''
+    data:'',
+    day: 0,
+    hour: 0,
+    min: 0
   },
 
   /**
@@ -15,20 +18,48 @@ Page({
    */
   onLoad: function (options) {
     var that = this
+    var timestamp = Date.parse(new Date())/1000
     util.request(api.getOrderdetail,{id: options.id}).then(
       res =>{
-        console.log(res)
         if(res.data.retcode == 1){
           that.setData({
             data: res.data.data
           })
-        } else{
+          util.getDifValue(res.data.data.service_info.endtime,timestamp).then(
+            res =>{
+              that.setData({
+                day: res.day,
+                hour: res.hour,
+                min: res.min,
+              })
+            }
+          )
+        } else {
           util.msg(res.data.msg)
         }
       }
     )
   },
-
+  // 取消申请
+  cancel(e) {
+    util.request(api.removeService,{id: this.data.data.service_info.id}).then(
+      res =>{
+        util.msg(res.data.msg)
+        if(res.data.retcode == 1){
+          setTimeout(() => {
+            wx.switchTab({
+              url: '/pages/my/my',
+            })
+          }, 1500);
+        }
+      }
+    )
+  },
+  shouhou(){
+    wx.navigateTo({
+      url: '/pages/applyforsale/applyforsale?id='+ this.data.data.id,
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

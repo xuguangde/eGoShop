@@ -14,18 +14,18 @@
           <view class="onOpenH" wx:if="{{index == 1}}"></view>
         </view>
       </view>
-      <view class="status">
+      <view class="status" wx:if="{{data != ''}}">
         <view class="nzImg">
           <image src="/img/nz40.png"></image>
         </view>
         <view class="item">
-          17:30
+          {{time}}
         </view>
         <view class="onOpenTwo">
-          正在疯抢
+          {{index == 0?"正在疯抢":"即将开始"}}
         </view>
       </view>
-      <view class="endTime">
+      <view class="endTime" wx:if="{{data != ''}}">
         <view class="end">距离{{index == 0?"结束":"开始"}}</view>
         <countdown wx:if="{{type == 0}}" timeTrue="{{timeTrue}}" end_time="{{end_time}}" start_time="{{timestamp}}"></countdown>
         <countdown wx:if="{{type == 1}}" timeTrue="{{timeTrue}}" end_time="{{start_time}}" start_time="{{timestamp}}"></countdown>

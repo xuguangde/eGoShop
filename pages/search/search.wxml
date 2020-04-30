@@ -1,10 +1,11 @@
 <view>
   <view class="searchHeader">
-    <search bind:search="search"  width="540rpx"></search>
+    <search bind:search="search" text="{{text}}" width="540rpx"></search>
     <view class="searchText" bindtap="onClick">
       搜索
     </view>
   </view>
 </view>
-<statusBar bind:statusBar="statusBar"></statusBar>
-<searchList goodsList="{{goodsList}}"></searchList>
+<statusBar wx:if="{{type != 1}}" bind:statusBar="statusBar"></statusBar>
+<shopList wx:if="{{type == 1}}" bind:onClick="onClickOne" list="{{list}}"></shopList>
+<searchList wx:else  goodsList="{{goodsList}}"></searchList>

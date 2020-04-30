@@ -20,6 +20,10 @@ Page({
     multiArray:[],
     multiIndex:[],
     addressText:'',
+    shop_goods:'',
+    shopname:'',
+    phone:'',
+    cardidNum:''
   },
 
   /**
@@ -102,11 +106,14 @@ Page({
   // 提交
   submit(){
     var that = this
-    province = that.data.multiArray[0][that.data.multiIndex[0]].id
-    city = that.data.multiArray[1][that.data.multiIndex[1]].id
-    area = that.data.multiArray[2][that.data.multiIndex[2]].id
+    if(this.data.addressText == ''){
+      return util.msg('请完成全部填写')
+    }
+    var province = that.data.multiArray[0][that.data.multiIndex[0]].id
+    var city = that.data.multiArray[1][that.data.multiIndex[1]].id
+    var area = that.data.multiArray[2][that.data.multiIndex[2]].id
     util.request(api.Applicationshop,{
-      idcard: that.data.cardid,
+      idcard: that.data.cardidNum,
       license: that.data.licenseId,
       id_img: that.data.cardId,
       name: that.data.name,
@@ -121,6 +128,13 @@ Page({
     }).then(
       res => {
         util.msg(res.data.msg)
+        if(res.data.retcode == 1){
+          setTimeout(() => {
+            wx.switchTab({
+              url: '/pages/my/my',
+            })
+          }, 1500);
+        }
       }
     )
   },

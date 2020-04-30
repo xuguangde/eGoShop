@@ -18,10 +18,10 @@
         <image src="/img/jtc20.png"></image>
       </view>
     </view>
-    <search bind:search="search" ></search>
+    <search text="请输入店铺名称" disabled="true"  bind:onClick="search" ></search>
   </view>
   <view class="shopTwo">
-    <switchText bind:switch="switch" switchText="{{switchText}}"></switchText>
+    <switchText wx:if="{{list != ''}}" bind:switch="switch" switchText="{{switchText}}"></switchText>
   </view>
   <shopList bind:onClick="onClick" list="{{list}}"></shopList>
 </view>

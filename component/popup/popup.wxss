@@ -10,57 +10,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 99;
 }
 
-.fadeInUp01{
-  animation:fadeInUp 1200ms .1s ease both;
-}
-
-.fadeInUp03{
-  animation:fadeInUp 1400ms 1.2s ease both;
-}
-.fadeInUp04{
-  animation:fadeInUp 1600ms 1.4s ease both;
-}
 .maskTwo {
   opacity: 1;
   visibility: 1;
   width: 100%;
   height: 100%;
-}
-/* 设置遮罩内容样式 */
-.maskContent {
-  width: 70%;
-  background: #fff;
-  border-radius: 5rpx;
-  padding: 30rpx;
-}
-/* 设置关闭按钮图片的位置 */
-.closeImg {
-  position: fixed;
-  top: 40rpx;
-  right: 40rpx;
-}
-/* 设置关闭按钮宽高 */
-.closeImg_image {
-  width: 50rpx;
-  height: 50rpx;
-}
-.btn{
-  width: 80%;
-  margin: 20rpx auto;
-  background: #ff6600;
-  color: #fff;
-  line-height: 60rpx;
-  font-size: 32rpx;
-  text-align: center;
-  border-radius: 3px;
-}
-.input{
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 28rpx;
-  padding: 0 10rpx;
-  margin: 20rpx 0;
-  line-height: 60rpx;
 }

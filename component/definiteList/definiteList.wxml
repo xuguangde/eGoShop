@@ -2,7 +2,8 @@
   <view class="row">
     <view class="col">
       <text class="add" wx:if="{{type == 1}}"> {{item.type == 1?"积分增加":"积分减少"}}</text>
-      <text class="add" wx:else> {{item.type == 1?"下单成功":"提现成功"}}</text>
+      <text class="add" wx:else> {{item.status == 0?"下单成功":item.status == 1?"等待审核":item.status == 2?"提现成功":item.status == 3?"提现失败":""}}</text>
+      <!-- <text class="add" wx:else> {{item.status == 0?"下单成功":""}}</text> -->
       <text class="datetime">{{item.add_time}}</text>
     </view>
     <view wx:if="{{type == 1}}" class="rowright {{item.type == 1?'':'rowrightOne'}}">

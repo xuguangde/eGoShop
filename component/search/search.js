@@ -10,6 +10,10 @@ Component({
     disabled:{
       type: Boolean,
       value: false
+    },
+    text:{
+      type: String,
+      value: '请输入商品名称'
     }
   },
 

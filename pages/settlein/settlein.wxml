@@ -12,7 +12,7 @@
 
   <view class="row">
     <text class="name">身份证号</text>
-    <input  bindinput="inputedit" data-name="cardid" class="shuru" type="text" placeholder="请输入身份证号"></input>
+    <input  bindinput="inputedit" data-name="cardidNum" class="shuru" type="text" placeholder="请输入身份证号"></input>
   </view>
 
   <view class="rows">

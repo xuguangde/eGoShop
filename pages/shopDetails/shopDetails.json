@@ -3,6 +3,7 @@
   "usingComponents": {
     "goodslist": "/component/goodslist/goodslist",
     "statusBar": "/component/statusBar/statusBar",
-    "iconList": "/component/iconList/iconList"
+    "iconList": "/component/iconList/iconList",
+    "currencyButton": "/component/currencyButton/currencyButton"
   }
 }

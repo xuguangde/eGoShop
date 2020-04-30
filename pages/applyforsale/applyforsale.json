@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "申请退货退款",
+  "usingComponents": {
+    "popup": "/component/popup/popup"
+  }
 }

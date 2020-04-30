@@ -6,7 +6,11 @@
   height: 108rpx;
   border-bottom: 1px solid #f6f6f6;
 }
-
+.row image{
+  width: 44rpx;
+  height: 44rpx;
+  margin-left: 20rpx;
+}
 .name{
   font-size: 30rpx;
   color: #333333;
@@ -102,4 +106,139 @@ image{
   color: #333333;
   margin-top: 40rpx;
   margin-bottom: 40rpx;
+}
+
+
+.tuikuanalert{
+  background: #ffffff;
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
+  padding-top: 30rpx;
+  height: 426rpx;
+}
+
+.rowTitle{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 98rpx;
+  border-bottom: 2rpx solid #ebebeb;
+}
+
+.quxiao{
+  flex-grow: 1;
+  text-align: left;
+  font-size: 30rpx;
+  color: #999999;
+  margin-left: 30rpx;
+}
+
+.title{
+  flex-grow: 1;
+  text-align: center;
+  font-size: 36rpx;
+  color: #333333;
+  font-weight: bold;
+}
+
+.sure{
+  flex-grow: 1;
+  text-align: right;
+  font-size:30rpx;
+  color: #de443a;
+  margin-right: 30rpx;
+}
+
+.rowcontent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 108rpx;
+  border-bottom: 2rpx solid #f6f6f6;
+
+}
+
+.rowcontent image{
+  width: 44rpx;
+  height: 44rpx;
+  margin-left: 24rpx;
+  margin-right: 14rpx;
+}
+
+.rowcontent text{
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.modals {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    border-top-left-radius: 12rpx;
+    border-top-left-radius: 12rpx;
+}
+
+.modals .modals-cancel {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modals .bottom-dialog-body {
+    position: absolute;
+    z-index: 10001;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30rpx;
+    height: 300rpx;
+    /* background-color: #fff; */
+}
+
+/*动画前初始位置*/
+
+.modals .bottom-pos {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
+.modals .btn {
+    background: rgba(255, 255, 255, 0.82);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 97rpx;
+    justify-content: center;
+    font-size: 34rpx;
+    border-radius: 0;
+}
+
+.modals .sendFriends {
+    border-bottom: 1rpx solid #acacac;
+}
+
+.modals .borderCl {
+    border-radius: 12rpx;
+    overflow: hidden;
+}
+
+.modals .cancel {
+    margin: 16rpx 0;
+}
+.pingzheng {
+  width: 140rpx;
+  height: 140rpx;
+}
+.imgImg {
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
 }

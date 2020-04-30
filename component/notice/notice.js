@@ -23,7 +23,7 @@ Component({
   attached: function () {
     setInterval(() => {
       this.update(this.getListInfo())
-    }, 3000)
+    }, 5000)
   },
   /**
    * 组件的方法列表

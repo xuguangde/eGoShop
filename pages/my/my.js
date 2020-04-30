@@ -7,7 +7,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    data:'',
+    data:{
+      dai: 0,
+      fa: 0,
+      shou: 0,
+      hou:0,
+      yi: 0
+    },
     content: '',
     phone: '',
     userId: ''

@@ -8,14 +8,30 @@ Page({
    */
   data: {
     keywords:'',
-    goodsList:[]
+    goodsList:[],
+    down:'',
+    type:'',
+    list:[],
+    text:'请输入店铺名称',
+    top:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      type: options.id
+    })
+    if(options.id == 1){
+      this.setData({
+        text: '请输入店铺名称'
+      })
+    } else{
+      this.setData({
+        text: '请输入商品名称'
+      })
+    }
   },
   // 切换销量
   statusBar(e){
@@ -27,10 +43,19 @@ Page({
         top: '',
       })
     } else if(e.detail == 2){
-      that.setData({
-        sales: '',
-        top: 1,
-      })
+      if(that.data.top == 1) {
+        that.setData({
+          sales: '',
+          top: '',
+          down: 1
+        })
+      }else{
+        that.setData({
+          sales: '',
+          top: 1,
+          down: ''
+        })
+      }
     } else{
       that.setData({
         sales: '',
@@ -40,6 +65,12 @@ Page({
     // 点击搜索
     this.onClick()
   },
+  // 跳转店铺
+  onClickOne(e){
+    wx.navigateTo({
+      url: '/pages/shopDetails/shopDetails?id=' + e.detail,
+    })
+  },
   // 搜索关键字
   search(e){
     this.data.keywords = e.detail
@@ -48,22 +79,44 @@ Page({
   onClick(){
     var that = this
     if(this.data.keywords != ''){
-      util.request(api.SelGoods,{
-        uid: wx.getStorageSync('user').id,
-        keywords: that.data.keywords,
-        sales: that.data.sales,
-        top: that.data.top,
-      }).then(
-        res =>{
-          if(res.data.retcode == 1) {
-            that.setData({
-              goodsList: res.data.data
-            })
-          } else{
-            util.msg(res.data.msg)
+      if(that.data.type != 1){
+        util.request(api.SelGoods,{
+          uid: wx.getStorageSync('user').id,
+          keywords: that.data.keywords,
+          sales: '',
+          top: that.data.top,
+          down: that.data.down
+        }).then(
+          res =>{
+            if(res.data.retcode == 1) {
+              that.setData({
+                goodsList: res.data.data
+              })
+            } else{
+              util.msg(res.data.msg)
+            }
           }
-        }
-      )
+        )
+      } else{
+        util.request(api.getStoreList,{
+          lng: wx.getStorageSync('location').longitude,
+          lat: wx.getStorageSync('location').latitude,
+          keywords: that.data.keywords,
+          is_near: '',
+          is_gas: '',
+          area: wx.getStorageSync('adcode')
+        }).then(
+          res =>{
+            if(res.data.retcode == 1){
+              that.setData({
+                list: res.data.data
+              })
+            } else {
+              util.msg(res.data.msg)
+            }
+          }
+        )
+      }
     } else{
       util.msg('请输入商品名称')
     }

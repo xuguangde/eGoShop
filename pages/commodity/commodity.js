@@ -168,6 +168,11 @@ Page({
       url: '/pages/shopDetails/shopDetails?id=' + this.data.data.store_id,
     })
   },
+  index(){
+    wx.switchTab({  
+      url:'/pages/index/index'
+    });  
+  },
   // 收藏商品
   collectGoods(){
     var that = this

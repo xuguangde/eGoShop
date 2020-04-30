@@ -27,4 +27,8 @@
       </view>
     </view>
   </block>
+  <view class="bottom">
+    <nullPage wx:if="{{collectStoreList == ''&&type==0}}" img="/img/ksc364x308.png" text="还没有收藏哦~"></nullPage>
+    <nullPage wx:if="{{collectGoodsList == ''&&type==1}}" img="/img/ksc364x308.png" text="还没有收藏哦~"></nullPage>
+  </view>
 </view>

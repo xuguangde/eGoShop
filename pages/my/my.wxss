@@ -27,8 +27,14 @@ page{
   position: absolute;
   margin-left: 14rpx;
   color: #ffe275;
+  display: flex;
   align-items: center;
   line-height: 20rpx;
+  height: 32rpx;
+}
+.vipBack {
+  display: flex;
+  align-items: center;
 }
 .headerContent{
   height: 20%;
@@ -127,15 +133,12 @@ color: #999999;
 }
 
 .mydingdan{
-  display: flex;
-  flex-wrap: nowrap;
   background: #fff;
   width: 95%;
   height: 220rpx;
   margin-left: 20rpx;
   border-radius: 10px;
   margin-top: 150rpx;
-  flex-direction: column;
 }
 
 .mydingdan .row1{
@@ -173,7 +176,7 @@ font-weight: bold;
   height: 60rpx;
 }
 
-.zhifu view{
+.zhifu .bianbian{
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -181,27 +184,28 @@ font-weight: bold;
  color: #666666;
  flex-grow:1;
  height:180rpx;
+ position: relative;
 }
 
 .liebiao{
   height: 658rpx;
-  display: flex;
   align-items: center;
   flex-wrap: nowrap;
   background: #fff;
-  width: 95%;
+  width: 92%;
   border-radius: 10px;
   flex-direction: column;
-  padding: 20rpx;
-  margin-top: -30rpx;
+  margin-top: -35rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
 }
 
 .liebiao .left{
 font-size: 30rpx;
 color: #333333;
-font-weight: bold;
 width:5%;
 padding-top: 10rpx;
+text-align: left;
 }
 
 .liebiao .middle{
@@ -212,11 +216,9 @@ width:30%;
 
 
 .liebiao .right{ 
-width:65%;
+width:100%;
 text-align:right;
-font-size: 24rpx;
-color: #999999;
-font-weight: bold;
+
 }
 
 .liebiao .right image{
@@ -234,7 +236,8 @@ font-weight: bold;
   flex-direction: row;
   width: 100%;
   align-items: center;
-  border-bottom: 2rpx solid #000;
+  border-bottom: 2rpx solid #f6f6f6;
+  height: 108rpx;
 }
 .button {
   margin-top: 20rpx;
@@ -242,6 +245,7 @@ font-weight: bold;
   justify-content: center;
   margin-bottom: 20rpx;
 }
+
 .userinfo-avatar {  
   overflow:hidden;  
   display: block;  
@@ -255,3 +259,32 @@ font-weight: bold;
   position: absolute;
   z-index: 99999;
 } 
+
+
+.middle text{
+  font-size: 30rpx;
+  color: #333333;
+
+}
+
+.phone{
+  font-size: 26rpx;
+  color: #999999;
+}
+
+.typeOrder {
+  position: absolute;
+  height: 30rpx;
+  width: 30rpx;
+  border-radius: 30rpx;
+  color: #de443a;
+  border: 2rpx #de443a solid;
+  box-sizing: border-box;
+  font-size: 20rpx;
+  background: #ffffff;
+  right: 34rpx;
+  top: -6rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

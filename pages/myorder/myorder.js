@@ -27,6 +27,7 @@ Page({
   onLoad: function (options) {
     var that = this
     page = 1
+    console.log(options.type)
     this.setData({
       type: options.type
     })
@@ -74,6 +75,7 @@ Page({
   },
   // 切换订单状态
   switch(e){
+    console.log(e.detail)
     this.setData({
       type: e.detail,
       orderList: []

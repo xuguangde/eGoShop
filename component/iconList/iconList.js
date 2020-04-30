@@ -19,6 +19,9 @@ Component({
   methods: {
     phoneCall(){
       this.triggerEvent('phoneCall')
+    },
+    download(){
+      this.triggerEvent('download')
     }
   }
 })

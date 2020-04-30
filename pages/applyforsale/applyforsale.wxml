@@ -5,43 +5,68 @@
     <text class="ser" style="margin-left:30rpx;margin-top:30rpx;">请选择申请的服务类型:</text>
   </view>
 
-  <view class="row">
+  <view class="row" bindtap="onXza" data-type="1">
+    <image wx:if="{{type == 2}}" src="/img/xzb44.png"></image>
+    <image wx:if="{{type == 1}}" src="/img/xzc44.png"></image>
     <text class="name">退货退款</text>
   </view>
 
-  <view class="row">
+  <view class="row" bindtap="onXza" data-type="2">
+    <image  wx:if="{{type == 1}}" src="/img/xzb44.png"></image>
+    <image  wx:if="{{type == 2}}" src="/img/xzc44.png"></image>
     <text class="name">仅退款（不需要退货）</text>
   </view>
 
   <view class="rowjust">
     <text class="name">退款金额</text>
-    <input class="shuru" type="text" placeholder="请输入退款金额" style="text-align:right;margin-right:30rpx;"></input>
+    <input class="shuru" bindinput="input" type="text" placeholder="请输入退款金额" style="text-align:right;margin-right:30rpx;"></input>
   </view>  
 
   <view class="rowjust" bindtap="showModal">
     <text class="name">退款原因</text>
     <view>
-        <text class="shuru" > 请选择</text>
+        <text class="shuru" >{{text}}</text>
         <image src="/img/jty20.png"></image>
     </view>
   </view>
 
   <view class="colm">
     <text class="tuikuan">退款说明</text>
-    <text class="shuru">选填</text>
+    <textarea bindinput="textarea" placeholder="请输入退款说明(选填)"></textarea>
   </view>
 
   <view class="rows" style="height:288rpx">
     <text class="idinfo">上传凭证</text>
     <text class="ser">（最多上传5张）</text>
-    <view class="addCamera">
-    <image src="/img/jia58.png"></image>
-  </view>
+    <view class="imgImg">
+      <block wx:for="{{img}}" wx:key="index">
+        <image class="pingzheng" bindtap="cardIdImg" data-index="{{index}}" src="{{item}}"></image>
+      </block>
+      <view wx:if="{{img.length < 5}}" class="addCamera" bindtap="cardIdImg" data-index="99">
+        <image src="/img/jia58.png"></image>
+      </view>
+    </view>
   </view>    
 
-   <view class="goShopping">
-            提交
-   </view>
+  <view class="goShopping" bindtap="submit">
+    提交
+  </view>
 
+<popup flag="{{flag}}">
+  <view class="modals modals-bottom-dialog">
+  <view class="rowTitle">
+    <text class="quxiao" bindtap="hideModal">取消</text>
+    <text class="title">退款原因</text>
+    <text class="sure" bindtap="hideModal">确定</text>
+  </view>
+  <block wx:for="{{getService}}" wx:key="index">
+    <view class="rowcontent" bindtap="service" data-info="{{item.info}}" data-id="{{item.id}}" data-index="{{index}}">
+      <image wx:if="{{indexOne == index}}" src="/img/xzc44.png"></image>
+      <image wx:else src="/img/xzb44.png"></image>
+      <text>{{item.info}}</text>
+    </view>
+  </block>
 
+</view>
+</popup>
 </view>

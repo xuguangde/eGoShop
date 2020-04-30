@@ -10,6 +10,7 @@ Page({
   data: {
     couponList:[],
     type: 1,
+    fanhuiType: 1,
     switchText:[{text:'未使用',id:'1'},{text:'已使用',id:'2'},{text:'已过期',id:'3'}],
   },
 
@@ -23,13 +24,15 @@ Page({
         fanhuiType:1
       })
     } else {
-      fanhuiType:2
+      this.setData({
+        fanhuiType:2
+      })
       this.couponList() //优惠券列表
     }
   },
   navto(){
     wx.navigateTo({
-      url: '/pages/giftPack/giftPack?id=1',
+      url: '/pages/giftPack/giftPack?id=2',
     })
   },
   switch(e){

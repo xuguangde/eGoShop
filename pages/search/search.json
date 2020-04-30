@@ -3,6 +3,8 @@
   "usingComponents": {
     "search": "/component/search/search",
     "statusBar": "/component/statusBar/statusBar",
-    "searchList": "/component/searchList/searchList"
+    "searchList": "/component/searchList/searchList",
+    "shopList": "/component/shopList/shopList"
+
   }
 }

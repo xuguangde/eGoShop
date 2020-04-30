@@ -15,6 +15,7 @@ Page({
       state: false,
       interval: ''
     },
+    yaoqingtype: 1,
   },
 
   /**
@@ -28,6 +29,20 @@ Page({
     var value = e.detail.value
     var name = e.currentTarget.dataset.name
     that.data[name] = value
+    if(that.data['phone'].length == 11){
+      util.request(api.chkyaoqing,{phone: that.data['phone']}).then(
+        res =>{
+          if(res.data.retcode == 1){
+            console.log(res)
+            that.setData({
+              yaoqingtype: res.data.data
+            })
+          } else {
+
+          }
+        }
+      )
+    }
   },
   sendSms(){
     var that = this;

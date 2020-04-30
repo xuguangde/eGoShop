@@ -69,7 +69,7 @@ Page({
       integral: jifen,
     }).then(
       res =>{
-        if(res.data.retcode){
+        if(res.data.retcode == 1){
           wx.redirectTo({
             url: '/pages/noreceivingaddress/noreceivingaddress?price=' + e.currentTarget.dataset.price,
           })

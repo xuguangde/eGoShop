@@ -67,7 +67,6 @@ page{
   margin-left: 20rpx;
   border-radius: 15rpx;
   margin-top: 20rpx;
-  height: 413rpx;
   width: 675rpx;
 }
 

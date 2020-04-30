@@ -1,6 +1,7 @@
 .popularityImg image {
   height: 250rpx;
   width: 425rpx;
+  border-radius: 12rpx;
 }
 .popularityName {
   font-size: 30rpx;
@@ -16,6 +17,7 @@
 .priceTwo {
   font-size: 24rpx;
   color: #999;
+  margin-left: 15rpx;
 }
 .scroll-view_H {
   white-space: nowrap;
@@ -24,4 +26,12 @@
   margin-left: 20rpx;
   display: inline-block;
   width: 425rpx;
+}
+.popularityContent {
+  width: 750rpx;
+}
+.price {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
 }

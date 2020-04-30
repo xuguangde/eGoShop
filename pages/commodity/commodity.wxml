@@ -8,7 +8,7 @@
       <view class="price">
         <view class="priceIcon fontColor">￥</view>
         <view class="priceNum fontColor">{{price}}</view>
-        <view class="priceSui" >(含税)</view>
+        <view class="priceSui" wx:if="{{data.tax != 0}}">(含税)</view>
         <view class="priceOne" wx:if="{{is_ji == 1}}">购买商品可得积分</view>
       </view>
       <view class="shopNum">
@@ -39,6 +39,14 @@
         </view>
         <view class="footerLeftShop">
           店铺
+        </view>
+      </view>
+      <view class="footerLeftOne" wx:if="{{data.type != 6}}" bindtap="index">
+        <view class="footerLeftImg">
+          <image src="/img/dp44.png"></image>
+        </view>
+        <view class="footerLeftShop">
+          首页
         </view>
       </view>
       <view class="footerLeftOne" bindtap="collectGoods">

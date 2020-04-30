@@ -10,7 +10,7 @@
             {{item.goods_name}}
           </view>
           <view class="seckillListNum">
-            限量{{item.stock}}件
+            限量{{item.stock}}{{item.unit}}
           </view> 
         </view>
         <view class="seckillListRight">

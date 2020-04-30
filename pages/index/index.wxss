@@ -208,3 +208,35 @@ swiper-item{
   background: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 100%);
   position: absolute;
 }
+.kefu image,.phone image{
+  width: 84rpx;
+  height: 84rpx;
+}
+.buttonPhone {
+  width: 84rpx;
+  height: 84rpx;
+}
+.kefu {
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+.phone {
+  position: fixed;
+  right: 20rpx;
+  bottom: 104rpx;
+  width: 84rpx;
+}
+button::after {
+  border: none;
+}
+
+button {
+  background: transparent;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  display: inline;
+}

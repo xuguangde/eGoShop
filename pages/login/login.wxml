@@ -30,7 +30,7 @@
         </view>
       </view>
     </view>
-    <view class="two">
+    <view class="two" wx:if="{{yaoqingtype == 1}}">
       <view class="phone">
         <view class="img">
           <image src="/img/yqm44.png"></image>

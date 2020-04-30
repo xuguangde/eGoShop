@@ -12,6 +12,8 @@ Page({
     end_time:'',
     start_time:'',
     timestamp:'',
+    start_time:'',
+    time:''
   },
 
   /**
@@ -23,7 +25,8 @@ Page({
   onClick(e){
     console.log(e.currentTarget.dataset.id)
     this.setData({
-      index: e.currentTarget.dataset.id
+      index: e.currentTarget.dataset.id,
+      data: []
     })
     this.getSeckillList()
   },
@@ -48,6 +51,7 @@ Page({
           that.setData({
             data: res.data.data.lists,
             start_time: res.data.data.list.start_time,
+            time: res.data.data.list.time,
             timestamp: Date.parse(new Date())/1000,
             end_time: res.data.data.list.end_time,
             type: that.data.index
@@ -81,26 +85,6 @@ Page({
     console.log('这里改变了吗',this.data.timestamp)
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
 
   /**
    * 页面上拉触底事件的处理函数

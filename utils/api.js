@@ -1,6 +1,6 @@
 
-var host = "http://symc.shengguweb.com";   //本地测试地址
-var hostApi = "http://symc.shengguweb.com/index.php/index";  //本地测试地址
+var host = "https://symc.shengguweb.com";   //本地测试地址
+var hostApi = "https://symc.shengguweb.com/index.php/index";  //本地测试地址
  
  module.exports = {
 	host: host,
@@ -57,4 +57,10 @@ var hostApi = "http://symc.shengguweb.com/index.php/index";  //本地测试地�
   Selspec: hostApi + "/index/Selspec",   // 根据规格查询商品库存价格
   yongjin: hostApi + "/index/yongjin",   // 佣金说明
   SelGoods: hostApi + "/index/SelGoods",   // 佣金说明
+  orderService: hostApi + "/order/orderService",   // 申请售后
+  getService: hostApi + "/order/getService",   // 获取退款原因
+  removeService: hostApi + "/order/removeService",   // 取消售后
+  chkyaoqing: hostApi + "/index/chkyaoqing",   // 是否隐藏邀请码
+  store_erweima: hostApi + "/store/store_erweima",   // 店铺生成二维码
+  isLogin: hostApi + "/index/isLogin",   // 是否强制登录
  }

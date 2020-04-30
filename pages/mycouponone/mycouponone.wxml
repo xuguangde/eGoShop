@@ -1,11 +1,11 @@
 <!--pages/mycouponone.wxml-->
 <view class="content">
-  <view class="shopTwo">
+  <view class="shopTwo" wx:if="{{fanhuiType == 2}}">
     <switchText bind:switch="switch" switchText="{{switchText}}"></switchText>
   </view>
   <block wx:for="{{couponList}}" wx:key="index">
     <view>
-      <view class="backImg" bindtap="{{fanhuiType == 1?'':'fanhui'}}" data-id="{{item.id}}" data-price="{{item.jprice}}">
+      <view class="backImg" bindtap="{{fanhuiType == 1?'fanhui':''}}" data-id="{{item.id}}" data-price="{{item.jprice}}">
         <view class="imgOne">
           <image src="/img/byhq186x162.png"></image>
           <view class="text">
@@ -26,7 +26,7 @@
               <view class="time">
                 有效期至{{item.end_time}}
               </view>
-              <view class="button" bindtap="navto" wx:if="{{type == 1}}">
+              <view class="button" bindtap="navto" wx:if="{{type == 1 && fanhuiType!=1}}">
                 立即使用
               </view>
             </view>

@@ -15,12 +15,11 @@ Page({
     multiArray: [[], [], []],
     multiIndex: [0, 0, 0],
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.shopList()  //店铺列表
+    // this.shopL–ist()  //店铺列表
     this.Selarea() // 获取城市列表
   },
   shopList(id){
@@ -50,13 +49,14 @@ Page({
           that.setData({
             list: res.data.data
           })
+        } else{
+          util.msg(res.data.msg)
         }
       }
     )
   },
   // 接收组件参数
   switch(e){
-    console.log(e.detail)
     this.shopList(e.detail)
   },
   // 跳转店铺
@@ -87,8 +87,13 @@ Page({
       data: this.data.multiArray[2][e.detail.value[2]].id,
       key: 'adcode',
     })
+    this.setData({
+      list: [],
+      switchText: this.data.switchText
+    })
+    area = this.data.multiArray[2][e.detail.value[2]].id
     wx.setStorage({
-      data: that.data.multiArray[2][e.detail.value[2]].name,
+      data: this.data.multiArray[2][e.detail.value[2]].name,
       key: 'district',
     })
     var that = this
@@ -98,6 +103,7 @@ Page({
       addressText: this.data.multiArray[0][e.detail.value[0]].name + that.data.multiArray[1][e.detail.value[1]].name + that.data.multiArray[2][e.detail.value[2]].name
     })
     this.data['yesAddress'] = 1
+    this.shopList()  //店铺列表
   },
   // 滚动时执行
   bindMultiPickerColumnChange: function (e) {
@@ -119,10 +125,12 @@ Page({
    */
   onShow: function () {
     district = wx.getStorageSync('district');
-    console.log(wx.getStorageSync('district'))
+    area = wx.getStorageSync('adcode');
     this.setData({
+      list: [],
       district:wx.getStorageSync('district')
     })
+    this.shopList()
   },
 
   /**
@@ -138,7 +146,11 @@ Page({
   onUnload: function () {
 
   },
-
+  search(e){
+    wx.navigateTo({
+      url: '/pages/search/search?id=1',
+    })
+  },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */

@@ -10,7 +10,8 @@
           <text>订单号</text>
           <text>{{item.order_num}}</text>
         </view>
-        <text class="dfk">{{item.status == 3?'已完成':item.status == 0?'待付款':item.status == 1?'待发货':item.status == 2?'待收货':item.status == 4?'售后':''}}</text>
+        <text class="dfk" wx:if="{{type != 4}}">{{item.status == 3?'已完成':item.status == 0?'待付款':item.status == 1?'待发货':item.status == 2?'待收货':item.status == 4?'售后':''}}</text>
+        <text class="dfk" wx:else>{{item.service_type == 1?"退货退款":"仅退款"}}</text>
         <!-- <text class="dfk">{{item.status == 3?'已完成':item.status == 0?'代付款'}}</text> -->
       </view>
 
@@ -33,14 +34,23 @@
       <view class="allmoney">
         <text>￥{{item.total_price}}</text>
         <text>合计：</text>
+        <text class="kong"></text>
+        <text>￥{{item.freight}}</text>
+        <text>运费：</text>
       </view>
-
+      <view class="yuanjiao" wx:if="{{type == 4}}">
+        <text class="fukuan">{{item.service_status == 0?'申请中':'退款成功'}}</text>
+      </view>
       <view class="yuanjiao" wx:if="{{item.status == 0}}">
-        <text class="fukuan" data-id="{{item.id}}" bindtap="payment">付款</text>
+        <!-- <text class="fukuan" data-id="{{item.id}}" bindtap="payment">付款</text> -->
         <text class="qx" bindtap="cancelOrder" data-id="{{item.id}}">取消订单</text>
       </view>
     </view>
   </view>
 </block>
+<!-- <view>
+  <nullPage wx:if="{{orderList == ''}}" img="/img/ksc364x308.png" text="购物车里空空如也~"></nullPage>
+</view> -->
+
 
 

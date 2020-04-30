@@ -1,33 +1,47 @@
 <view class="content">
   <view class="header">
     <image class="headbgImage" src="/img/di750x240.png" ></image>
-    <view class='headerContent'>
-      <image src="/img/未标题-1.png" class="shangpin"></image>
-      <text>{{data.status == 3?'已完成':data.status == 0?'待付款':data.status == 1?'待发货':data.status == 2?'待收货':data.status == 4?'售后':''}}</text>
+    <view class='headerContent' wx:if="{{data.service != 1}}">
+      <image src="/img/weibiao.png" class="shangpin"></image>
+      <text wx:if="{{data.service == 0}}">{{data.status == 3?'已完成':data.status == 0?'待付款':data.status == 1?'待发货':data.status == 2?'待收货':data.status == 4?'售后':''}}</text>
+    </view>
+    <view class='cancel' wx:else>
+      <view class="cancelLeft">
+        <view class="cancelText">等待商家处理</view>
+        <view class="cancelTime">还剩{{day}}天{{hour}}小时{{min}}分钟</view>
+      </view>
+      <view class="cancelRight" bindtap="cancel" wx:if="{{data.service_info.status == 0}}">
+        取消申请
+      </view>
     </view>
   </view>
 
-  <view class="middle-num">
+  <view class="middle-num" wx:if="{{data.status != 4}}">
     <image src="/img/dz58.png"></image>
     <view class="sx">
       <view class="rower">
           <text class="name">{{data.name}}</text>
           <text class="phone">{{data.mobile}}</text> 
       </view>    
-
       <text class="dizhi" style="font-size:24rpx;color:#333333;">{{data.province_name}}{{data.city_name}}{{data.area_name}}{{data.address}}</text>
+    </view>  
+  </view>
+  <view class="ts" wx:else>
+    <image src="/img/ts40.png"></image>
+    <view class="sx">
+      <text class="dizhi" style="font-size:24rpx;color:#333333;">您已成功发起退款是申请，请耐心等待</text>
     </view>  
   </view>
 
 
   <view class="fu">
        <view class="row">
-        <image src="/img/tu220.png" class="shangpin"></image>
+        <image src="{{data.goods_pic}}" class="shangpin"></image>
 
         <view class="col">
           <text class="bt">{{data.goods_name}}</text>
           <view class="guige">
-            <text class="qq">规格：{{data.spec}}</text>    
+            <text class="qq" wx:if="{{data.spec != ''}}">规格：{{data.spec}}</text>    
           </view>
         </view>
 
@@ -41,12 +55,15 @@
         <text>商品总金额：</text>
         <text>￥{{data.total_price}}</text>
       </view>
+      <view bindtap="shouhou" class="yuanjiao" wx:if="{{data.status != 0 && data.service != 1}}">
+        <text>申请售后</text>
+      </view>
   </view>
    
   <view class="fu2"> 
-    <view class="tuilist" style="margin-bottom:82rpx;">
-        <text>商品备注：</text>
-        <text></text>
+    <view class="tuilist" wx:if="{{data.service == 1}}" style="margin-bottom:82rpx;">
+        <text>退款说明：</text>
+        <text> {{data.service_info.remark}}</text>
     </view>
     <view class="tuilist" style="margin-bottom:82rpx;">
         <text>订单编号：</text>

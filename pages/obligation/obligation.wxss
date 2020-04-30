@@ -191,6 +191,76 @@ page{
   font-size: 30rpx;
   color: #333333;
 }
+.cancel {
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 156rpx;
+}
+.cancelText {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #ffffff;
+}
+.cancelTime {
+  color: #ffffff;
+  opacity: 0.7;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.cancelRight {
+  color: #ffffff;
+  opacity: 0.7;
+  font-size: 26rpx;
+  height: 48rpx;
+  width: 150rpx;
+  border: 2rpx #ffffff solid;
+  box-sizing: border-box;
+  border-radius: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ts {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-wrap: nowrap;
+  background: white;
+  width: 710rpx;
+  margin-left: 20rpx;
+  height: 98rpx;
+  border-radius: 5px;
+  align-items: center;
+}
+.ts image {
+  height: 44rpx;
+  width: 44rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.yuanjiao{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.yuanjiao text{
+  width: 150rpx;
+  height: 48rpx;
+  border-radius: 33rpx;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2rpx solid #999999;
+  font-size:26rpx;
+  color: #666666; 
+}
 
 
 

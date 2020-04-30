@@ -15,7 +15,7 @@
           已售：{{item.sales}}
         </view>
         <view class="goodsPrice">
-          <text>￥</text>{{item.price}}<view>/通</view>
+          <text>￥</text>{{item.price}}<view wx:if="{{cart == true}}" class="xianjia">/{{item.unit}}</view><view wx:if="{{item.yprice != null}}" class="yuanjia">￥{{item.yprice}}</view>
         </view>
         <view class="shopCart" wx:if="{{cart == true}}">
           <image src="/img/gwc58.png"></image>

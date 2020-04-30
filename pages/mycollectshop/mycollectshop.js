@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    switchText:[{text:'商品',id:'0'},{text:'店铺',id:'1'}],
+    switchText:[{text:'店铺',id:'0'},{text:'商品',id:'1'}],
     collectGoodsList:[],
     collectStoreList:[],
     type: 0,

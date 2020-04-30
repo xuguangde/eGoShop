@@ -47,7 +47,13 @@
   margin-top: 12rpx;
   padding: 0 20rpx;
 }
-.goodsPrice text,.goodsPrice view{
+.goodsPrice text,.goodsPrice .xianjia{
   color: #de443a;
   font-size: 24rpx;
+}
+.yuanjia {
+  color: #999;
+  font-size: 24rpx;
+  text-decoration:line-through;
+  margin-left: 14rpx;
 }

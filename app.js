@@ -1,5 +1,6 @@
 //app.js
-
+var api = require("/utils/api.js");
+var util = require("/utils/util.js");
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -44,7 +45,16 @@ App({
     })
   },
   onShow(){
-    if(wx.getStorageSync('user').id == undefined){
+    if(wx.getStorageSync('user').id == undefined ||wx.getStorageSync('user').id == ''){
+      util.request(api.isLogin,{}).then(
+        res =>{
+          if(res.data.data == 1){
+            wx.redirectTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      )
       var user = {id:''}
       wx.setStorage({
         data: user,

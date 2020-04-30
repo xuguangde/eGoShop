@@ -7,6 +7,7 @@
 		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
@@ -67,9 +68,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "注册登录",
-					"pathName": "pages/logon/logon",
+					"id": 1,
+					"name": "登录",
+					"pathName": "pages/login/login",
 					"query": "",
 					"scene": null
 				},
@@ -299,13 +300,6 @@
 				},
 				{
 					"id": -1,
-					"name": "退款原因",
-					"pathName": "pages/reasonforrefund/reasonforrefund",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "pages/lianxi/lianxi",
 					"pathName": "pages/lianxi/lianxi",
 					"query": "",
@@ -343,6 +337,14 @@
 					"id": -1,
 					"name": "优惠券列表",
 					"pathName": "pages/mycouponone/mycouponone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单详情",
+					"pathName": "pages/obligation/obligation",
+					"query": "",
 					"scene": null
 				}
 			]

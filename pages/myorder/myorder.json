@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "我的订单",
   "usingComponents": {
-    "switchText":"/component/switchText/switchText"
+    "switchText":"/component/switchText/switchText",
+    "nullPage":"/component/nullPage/nullPage"
   }
 }

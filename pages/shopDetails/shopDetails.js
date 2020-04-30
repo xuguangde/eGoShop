@@ -23,6 +23,7 @@ Page({
     ],
     collect:'0',
     statusBar:'',
+    date:''
   },
 
   /**
@@ -46,7 +47,7 @@ Page({
       res => {
         this.data.iconList[0].text = res.data.data.store_name
         this.data.iconList[1].text = res.data.data.phone
-        this.data.iconList[2].text = res.data.data.store_add
+        this.data.iconList[2].text = res.data.data.city_name + res.data.data.area_name + res.data.data.address
         this.setData({
           collect: res.data.data.collect,
           iconList: this.data.iconList,
@@ -54,6 +55,25 @@ Page({
         })
       }
     )
+  },
+  // 下载到手机
+  download(){
+    util.request(api.store_erweima,{id: this.data.id}).then(
+      res =>{
+        if(res.data.retcode == 1){
+          console.log(res)
+          wx.downloadFile({
+            url: api.host + res.data.data,
+            success(res){
+              wx.saveImageToPhotosAlbum({
+                filePath: res.tempFilePath,
+              })
+            }
+          })
+        }
+      }
+    )
+    
   },
   // 取消关注店铺
   collectStore(){
@@ -99,9 +119,17 @@ Page({
     util.request(api.getStoreGoodsList,{store_id:id,is_t:is_t,is_x:is_x,sales:sales,top:top}).then(
       res => {
         if(res.data.retcode == 1) {
-          that.setData({
-            shopGoodsList: res.data.data
-          })
+          if(is_t != 1){
+            that.setData({
+              shopGoodsList: res.data.data[0].group,
+              date: res.data.data[0].date
+            })
+          } else {
+            console.log('这像女流氓',res.data.data)
+            that.setData({
+              shopGoodsList: res.data.data
+            })
+          }
         } else{
           util.msg(res.data.msg)
         }

@@ -14,7 +14,9 @@ page{
   border-radius: 15rpx;
   height: 140rpx;
 }
-
+.bottom {
+  margin-top: 250rpx;
+}
 .row .shangpin{
   height: 100rpx;
   width: 100rpx;

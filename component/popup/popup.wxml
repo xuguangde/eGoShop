@@ -1,3 +1,3 @@
-<view animation="{{animation}}" class="mask {{flag?'maskOne':'maskOne'}}" hidden="{{flag}}">
+<view class="mask maskOne" hidden="{{flag}}">
  <slot></slot>
 </view>

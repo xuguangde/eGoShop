@@ -26,8 +26,14 @@ Page({
     console.log(options.type)
     if(options.type == 1){
       this.getUserIntegral()  //获取积分明细
+      wx.setNavigationBarTitle({
+        title: '积分详情',
+      })
     } else{
       this.getUserCommission()
+      wx.setNavigationBarTitle({
+        title: '佣金详情',
+      })
     }
     this.getUserinfo()  //获取个人信息
     this.jifen()  // 积分说明

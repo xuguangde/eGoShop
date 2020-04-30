@@ -23,6 +23,9 @@
   color: #999999;
   font-size: 24rpx;
 }
+.shopListText {
+  margin-top: 10rpx;
+}
 .shopList {
   display: flex;
   align-items: center;
@@ -65,4 +68,5 @@
   border-radius: 50rpx;
   font-size: 26rpx;
   padding-top: 8rpx;
+  margin-top: 20rpx;
 }

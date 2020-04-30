@@ -20,6 +20,12 @@ Page({
   onLoad: function (options) {
 
   },
+  navto(e){
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/commodity/commodity?id=' + id,
+    })
+  },
   // 购物车列表
   getCartList(){
     var that = this;
@@ -72,6 +78,7 @@ Page({
       cartList: cartList
     })
     this.modifyCart(cid,cartList[e.currentTarget.dataset.index].list[e.currentTarget.dataset.indexone].goods_num)
+    this.totalPrice()
   },
   // 加入购物车
   goodsAdd(e){
@@ -82,6 +89,7 @@ Page({
       cartList: cartList
     })
     this.modifyCart(cid,cartList[e.currentTarget.dataset.index].list[e.currentTarget.dataset.indexone].goods_num)
+    this.totalPrice()
   },
   // 店铺全选
   shopAll(e){
@@ -203,7 +211,13 @@ Page({
         }
       }
     }
-    console.log(id.substr(0, id.length - 1))
+    if(id != ''){
+      wx.navigateTo({
+        url: '/pages/selectdeliveryaddress/selectdeliveryaddress?id=' + id.substr(0, id.length - 1),
+      })
+    } else{
+      util.msg('请选择结算商品')
+    }
   },
   /**
    * 生命周期函数--监听页面显示
@@ -214,8 +228,9 @@ Page({
       cartList:[]
     })
     this.getCartList()
+    this.totalPrice()
   },
-
+  
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */

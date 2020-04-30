@@ -1,6 +1,5 @@
 .notification_bar {
   top: 0;
-  width: 100%;
   z-index: 999;
   display: flex;
   align-items: center;

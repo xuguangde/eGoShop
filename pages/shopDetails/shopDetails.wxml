@@ -49,7 +49,7 @@
     </view>
     <view class="shopDetailsFont" wx:if="{{status == 2}}">
       <view class="shopDetailsHeng"></view>
-      <view class="shopDetailsFontOne">2月12日</view>
+      <view class="shopDetailsFontOne">{{date}}</view>
       <view class="shopDetailsHeng"></view>
     </view>
     <goodslist bind:goodslist="goods" wx:if="{{status != 3}}" goodsList="{{shopGoodsList}}"></goodslist>
@@ -60,6 +60,9 @@
       <view class="shopDetailsFontOne">店铺简介</view>
       <view class="shopDetailsHeng"></view>
     </view>
-    <iconList bind:phoneCall="phoneCall" iconList="{{iconList}}"></iconList>
+    <iconList bind:download="download" bind:phoneCall="phoneCall" iconList="{{iconList}}"></iconList>
+    <view class="buttom" bindtap="download" wx:if="{{data.admin != 0}}">
+      <currencyButton text="下载店铺二维码"></currencyButton>
+    </view>
   </view>
 </view>

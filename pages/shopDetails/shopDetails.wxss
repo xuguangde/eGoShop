@@ -67,14 +67,23 @@ page {
 }
 .shopDetailsHeng {
   height: 1rpx;
-  color: #cccccc;
   width: 100rpx;
+  background: #cccccc;
+}
+.shopPhone {
+  margin-right: 30rpx;
 }
 .shopDetailsFontOne {
   font-size: 26rpx;
   color: #666666;
   margin-left: 20rpx;
   margin-right: 20rpx;
+}
+.buttom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40rpx;
 }
 .title {
   padding: 0 54rpx;

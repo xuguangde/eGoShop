@@ -22,7 +22,7 @@
           </view>
         </view>
         <view class="seckillTimeText">
-          距离结束时间
+          距离{{buttontype == 0?'结束':'开始'}}时间
         </view>
         <view class="seckillTime">
           <countdown end_time="{{end_time}}" start_time="{{timestamp}}"></countdown>

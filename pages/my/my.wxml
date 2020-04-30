@@ -2,9 +2,9 @@
 <view class="content">
 	<view class="header">
 		<image class="headbgImage" src="/img/di750x280.png"></image>
-    <view class="userinfo-avatar">
+    <view class="userinfo-avatar" wx:if="{{userId != ''}}">
       <open-data wx:if="{{userId != ''}}" type="userAvatarUrl"></open-data>
-      <image wx:if="{{userId == ''}}" src="/img/person.jpg" class="touxiang"></image>
+      <!-- <image wx:if="{{userId == ''}}" src="/img/person.jpg" class="touxiang"></image> -->
     </view>
 		<view class='headerContent' wx:if="{{userId != ''}}">
 			<text>{{data.phone}}\n</text>
@@ -50,37 +50,42 @@
 			<image src="/img/jty20.png" class="jian"></image>
 		</view>
 
-		<view style="display:flex;margin-top:20rpx" class="zhifu">
-			<view bindtap="order" data-type="0">
+		<view class="bianbian" style="display:flex;margin-top:20rpx" class="zhifu">
+			<view bindtap="order" class="bianbian" data-type="0">
 				<image src="/img/dzfa56.png"></image>
+				<view class="typeOrder" wx:if="{{data.dai != 0}}">{{data.dai}}</view>
 				<text>待付款</text>
 			</view>
-			<view bindtap="order" data-type="1">
+			<view class="bianbian" bindtap="order" data-type="1">
 				<image src="/img/dfha56.png"></image>
+				<view class="typeOrder" wx:if="{{data.fa != 0}}">{{data.fa}}</view>
 				<text>待发货</text>
 			</view>
-			<view bindtap="order" data-type="2">
+			<view class="bianbian" bindtap="order" data-type="2">
 				<image src="/img/dsha56.png"></image>
+				<view class="typeOrder" wx:if="{{data.yi != 0}}">{{data.yi}}</view>
 				<text>待收货</text>
 			</view>
-			<view bindtap="order" data-type="3">
+			<view class="bianbian" bindtap="order" data-type="3">
 				<image src="/img/ywca56.png"></image>
+				<!-- <view class="typeOrder" wx:if="{{data.shou != 0}}">{{data.shou}}</view> -->
 				<text>已完成</text>
 			</view>
-			<view bindtap="order" data-type="4">
+			<view class="bianbian" bindtap="order" data-type="4">
 				<image src="/img/sha56.png"></image>
+				<view class="typeOrder" wx:if="{{data.hou != 0}}">{{data.hou}}</view>
 				<text>售后</text>
 			</view>
 		</view>
 
 
 		<view class="liebiao">
-			<view class="row1">
+			<view class="row1" bindtap="wdmoney">
 				<view class="left">
 					<image src="/img/yj40.png"></image>
 				</view>
 
-				<view class="middle" bindtap="wdmoney">
+				<view class="middle">
 					<text >我的佣金</text>
 				</view>
 
@@ -88,12 +93,12 @@
 					<image src="/img/jty20.png"></image>
 				</view>
 			</view>
-			<view class="row1">
+			<view class="row1" bindtap="wdsoucang">
 				<view class="left">
 					<image src="/img/sc40.png"></image>
 				</view>
 
-				<view class="middle" bindtap="wdsoucang">
+				<view class="middle">
 					<text >我的收藏</text>
 				</view>
 
@@ -101,12 +106,12 @@
 					<image src="/img/jty20.png"></image>
 				</view>
 			</view>
-			<view class="row1">
+			<view class="row1" bindtap="dizhi">
 				<view class="left">
 					<image src="/img/dzgl40.png"></image>
 				</view>
 
-				<view class="middle" bindtap="dizhi">
+				<view class="middle">
 					<text >地址管理</text>
 				</view>
 
@@ -114,12 +119,12 @@
 					<image src="/img/jty20.png"></image>
 				</view>
 			</view>
-			<view class="row1">
+			<view class="row1" bindtap="navto" data-url="/pages/settlein/settlein">
 				<view class="left">
 					<image src="/img/sjrz40.png"></image>
 				</view>
 
-				<view class="middle" bindtap="navto" data-url="/pages/settlein/settlein">
+				<view class="middle">
 					<text >商家入驻</text>
 				</view>
 
@@ -127,12 +132,12 @@
 					<image src="/img/jty20.png"></image>
 				</view>
 			</view>
-			<view class="row1">
+			<view class="row1" bindtap="guanyu">
 				<view class="left">
 					<image src="/img/gywm40.png"></image>
 				</view>
 
-				<view class="middle" bindtap="guanyu">
+				<view class="middle">
 					<text >关于我们</text>
 				</view>
 
@@ -140,12 +145,12 @@
 					<image src="/img/jty20.png"></image>
 				</view>
 			</view>
-			<view class="row1">
+			<view class="row1" bindtap="phone">
 				<view class="left">
 					<image src="/img/kf40.png"></image>
 				</view>
 
-				<view class="middle" bindtap="phone">
+				<view class="middle">
 					<text >客服电话</text>
 				</view>
 
