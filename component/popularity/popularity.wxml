@@ -1,7 +1,7 @@
 <view class="popularityContent">
-  <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+  <scroll-view class="scroll-view_H"  scroll-with-animation="true" scroll-left="{{id}}" scroll-x="true" style="width: 100%">
     <block wx:for="{{hotGoodsList}}" wx:key="index">
-      <view class="popularity" bindtap="goodslist" data-id="{{item.id}}">
+      <view class="popularity" id="a{{index}}" bindtap="goodslist" data-id="{{item.id}}">
         <view class="popularityImg">
           <image src="{{item.img_id}}"></image>
         </view>

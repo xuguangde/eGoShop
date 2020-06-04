@@ -12,10 +12,32 @@ Component({
   /**
    * 组件的初始数据
    */
-  data: { },
-  attached(){
+  data: {
+    id: 0,
+    idid: 1
   },
-  observers:{
+  attached(){
+    
+  },
+  observers: {
+    'hotGoodsList'(){
+      var that = this
+      if(this.data.hotGoodsList != ''){
+        setInterval(() => {
+          if(that.data.idid < that.data.hotGoodsList.length){
+            that.setData({
+              id:  that.data.id + 234,
+              idid: that.data.idid + 1
+            })
+          } else {
+            that.setData({
+              id:  0,
+              idid: 1
+            })
+          }
+        }, 2000);
+      }
+    }
   },
   /**
    * 组件的方法列表

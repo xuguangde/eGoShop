@@ -63,4 +63,5 @@ var hostApi = "https://symc.shengguweb.com/index.php/index";  //本地测试地�
   chkyaoqing: hostApi + "/index/chkyaoqing",   // 是否隐藏邀请码
   store_erweima: hostApi + "/store/store_erweima",   // 店铺生成二维码
   isLogin: hostApi + "/index/isLogin",   // 是否强制登录
+  teamuser: hostApi + "/user/teamuser",   // 是否强制登录
  }

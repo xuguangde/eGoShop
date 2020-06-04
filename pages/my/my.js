@@ -23,6 +23,11 @@ Page({
       url: e.currentTarget.dataset.url,
     })
   },
+  team(){
+    wx.navigateTo({
+      url: '/pages/team/team',
+    })
+  },
   onClick(){
     if(wx.getStorageSync('user').id == undefined){
       wx.navigateTo({

@@ -1,0 +1,101 @@
+page {
+  background: #f6f6f6;
+}
+.switchTitle {
+  color: #de443a;
+  font-weight: bold;
+}
+.switchTitleTen {
+  color: #666666;
+  margin-bottom: 20rpx;
+}
+.switchTextC {
+  height: 6rpx;
+  width: 50rpx;
+  background: #de443a;
+  margin-top: 20rpx;
+}
+.switchTextOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.switchText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30rpx;
+  padding-top: 30rpx;
+  background: #fff;
+  padding-right: 80rpx;
+  padding-left: 80rpx;
+}
+/* list */
+.yuanjiao{
+  width: 120rpx;
+  height: 40rpx;
+  border-top-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  background:#de443a;
+  font-size:20rpx; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.img image {
+  width: 142rpx;
+  height: 32rpx;
+  position: absolute;
+}
+.one {
+  display: flex;
+  align-items: center;
+}
+.left {
+  font-size: 26rpx;
+  color: #999999;
+}
+.num {
+  font-size: 26rpx;
+  color: #333333;
+}
+.team {
+  display: flex;
+  justify-content: space-between;
+  height: 140rpx;
+  width: 710rpx;
+  background: #ffffff;
+  border-radius: 12rpx;
+
+}
+.leftOne,.rightOne{
+  padding: 30rpx 20rpx;
+}
+.oneone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.vip {
+  position: absolute;
+  margin-left: 50rpx;
+  color: #ffe275;
+  display: flex;
+  align-items: center;
+  line-height: 20rpx;
+  height: 32rpx;
+  font-size: 20rpx;
+}
+.position {
+  position: relative;
+  height: 32rpx;
+  width: 142rpx;
+}
+.list {
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}

@@ -19,6 +19,7 @@
     "component/searchList/searchList",
     "component/switchText/switchText",
     "pages/logs/logs",
+    "pages/team/team",
     "pages/deliveryaddress/deliveryaddress",
     "pages/addaddress/addaddress",
     "pages/settlein/settlein",

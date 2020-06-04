@@ -34,7 +34,7 @@ Component({
   observers:{
     'spec'(spec){
       var that = this
-  }
+    }
   },
   /**
    * 组件的方法列表

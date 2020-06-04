@@ -1,0 +1,45 @@
+<view class="switchText">
+    <view class="switchTextOne" bindtap="switch" data-index="1">
+      <view class="{{1 == switchIndex?'switchTitle':'switchTitleTen'}}">
+        一级团队<span wx:if="{{list.one != '0'}}">({{list.one}})</span>
+      </view>
+      <view wx:if="{{1 == switchIndex}}" class="switchTextC"></view>
+    </view>
+    <view class="switchTextOne" bindtap="switch" data-index="2">
+      <view class="{{2 == switchIndex?'switchTitle':'switchTitleTen'}}">
+        二级团队<span wx:if="{{list.two != '0'}}">({{list.two}})</span>
+      </view>
+      <view wx:if="{{2 == switchIndex}}" class="switchTextC"></view>
+    </view>
+</view>
+<block wx:for="{{list.list}}" wx:key="index">
+  <view class="list">
+    <view class="team">
+      <view class="leftOne">
+        <view class="oneone">
+          <view class="one">
+            <view class="left">手机号码:</view>
+            <view class="num">{{item.phone}}</view>
+          </view>
+          <view class="one">
+            <view class="left">加入时间:</view>
+            <view class="num">{{item.bd_time}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="rightOne">
+        <view class="position" wx:if="{{item.level != 5}}">
+          <view class="img">
+            <image src="/img/hyd142x32.png"></image>
+          </view>
+          <view class="vip">
+            会员用户
+          </view>
+        </view>
+        <view class="yuanjiao" wx:else >
+          普通用户
+        </view>
+      </view>
+    </view>
+  </view>
+</block>

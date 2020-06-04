@@ -93,6 +93,19 @@
 					<image src="/img/jty20.png"></image>
 				</view>
 			</view>
+			<view class="row1" bindtap="team">
+				<view class="left">
+					<image src="/img/td40.png"></image>
+				</view>
+
+				<view class="middle">
+					<text >我的团队</text>
+				</view>
+
+				<view class="right">
+					<image src="/img/jty20.png"></image>
+				</view>
+			</view>
 			<view class="row1" bindtap="wdsoucang">
 				<view class="left">
 					<image src="/img/sc40.png"></image>
