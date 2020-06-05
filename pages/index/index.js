@@ -125,6 +125,10 @@ Page({
             data: res.data.data.phone,
             key: 'phone',
           })
+          wx.setStorage({
+            data: res.data.data.phonelist,
+            key: 'phonelist',
+          })
         } else{
           util.msg(res.data.msg)
         }

@@ -10,8 +10,10 @@
     </view>
 
     <text class="ding">暂不支持线上付款请拨打电话确认您的订单</text>
-    <view class="goShopping" bindtap="phone">
-      <image src="/img/dh34.png"></image>拨打电话
-    </view>
+    <block wx:for="{{phonelist}}" wx:key="index">
+      <view class="goShopping" bindtap="phone" data-phone="{{item}}">
+        <image src="/img/dh34.png"></image>拨打客服{{index + 1}}电话
+      </view>
+    </block>
   </view>
 </view>

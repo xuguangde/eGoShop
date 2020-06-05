@@ -3,7 +3,7 @@
     <view class="specsPopupSpecs">
       <view class="specsPopupTt">
         <view class="specsPopupGoodsImg">
-          <image src="/img/tu220.png"></image>
+          <image src="{{img_id}}"></image>
         </view>
         <view class="specsPopupTitle">
           <view class="specsPopupPrice">

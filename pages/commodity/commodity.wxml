@@ -12,7 +12,7 @@
         <view class="priceOne" wx:if="{{is_ji == 1}}">购买商品可得积分</view>
       </view>
       <view class="shopNum">
-        销量：{{data.sales}}
+        销量：{{data.sales + data.ssales}}
       </view>
     </view>
   </view>

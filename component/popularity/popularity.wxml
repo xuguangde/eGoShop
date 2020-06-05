@@ -13,7 +13,7 @@
             <text>￥</text>{{item.price}}
           </view>
           <view class="priceTwo">
-            销量: {{item.sales}}
+            销量: {{item.sales + item.ssales}}
           </view>
         </view>
       </view>

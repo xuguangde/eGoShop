@@ -55,9 +55,8 @@ image{
   border-radius: 88rpx;
   font-size: 36rpx;
   font-weight: bold;
-  margin-top: 535rpx;
+  margin-top: 30rpx;
   margin-bottom: 30rpx;
-  position: absolute;
   z-index: 1;
 }
 

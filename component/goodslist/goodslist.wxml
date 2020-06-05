@@ -12,7 +12,7 @@
           20/KG
         </view> -->
         <view class="goodsNnit">
-          已售：{{item.sales}}
+          已售：{{item.sales + item.ssales}}
         </view>
         <view class="goodsPrice">
           <text>￥</text>{{item.price}}<view wx:if="{{cart == true}}" class="xianjia">/{{item.unit}}</view><view wx:if="{{item.yprice != null}}" class="yuanjia">￥{{item.yprice}}</view>

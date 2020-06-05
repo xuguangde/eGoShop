@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    price:0
+    price:0,
+    phonelist:[]
   },
 
   /**
@@ -13,12 +14,15 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      price: options.price
+      price: options.price,
+      phonelist: wx.getStorageSync('phonelist')
     })
+    console.log(this.data.phonelist)
   },
-  phone(){
+  phone(e){
+    console.log(e)
     wx.makePhoneCall({
-      phoneNumber: wx.getStorageSync('phone'),
+      phoneNumber: e.currentTarget.dataset.phone,
     })
   },
   /**
